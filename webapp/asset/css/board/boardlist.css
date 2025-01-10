@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #F6F6F6;
+}
+header{
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+h1{
+    background-color: #fff;
+}
+ul{
+    background-color: #003161;
+    display: flex;
+   
+
+}
+li{
+    background-color: #003161;
+    flex-direction: row;
+}
+.borderlist-li-tableHead>li:nth-child(1)
+{
+    
+}
+.borderlist-li-tableHead>li:nth-child(2){
+    
+}
+.borderlist-li-tableHead>li:nth-child(3){
+    
+}
+.borderlist-li-tableHead>li:nth-child(4){
+}
