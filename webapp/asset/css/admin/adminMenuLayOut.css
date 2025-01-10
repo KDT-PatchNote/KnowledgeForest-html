@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+#ADMIN-DIV-LAYOUTCONTAINER {
+  display: flex;
+  flex-direction: row;
+}
+
+#ADMIN-MENUCONTAINER {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  padding: 70px 20px;
+  background-color: #003161;
+
+  color: #fff;
+  text-align: center;
+}
+
+#ADMIN-H2-TITLE {
+
+}
+
+.admin-ul-menuwrap {
+  text-align: right;
+}
+
+#ADMIN-DIV-HEADERCONTAINER {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 40px;
+  background-color: red;
+}
+
+#ADMIN-UL-HEADERWRAP {
+  display: flex;
+  flex-direction: row;
+}
