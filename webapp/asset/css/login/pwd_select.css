@@ -1,33 +1,36 @@
 *{
-  margin: 0;
+  margin : 0;
   padding: 0;
-
 }
-/* 페이지 이름 - 요소 - 기능 */
+
 header{
-  /* background-color: lightblue; */
-  display: flex;
+  /* background-color: blueviolet; */
   width: 100%;
   height: 20%;
+ 
 }
+
 body{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: whitesmoke;
-  
+  width: 100%;
+  height :60%
 }
+
 main{
   background-color: white;
   display: flex;
   justify-content: center;
   border: 1px solid lightgray;
-  width: 40vh;
-  height: 60%;
+  width: 60%;
+  height: 32vh;
   /* margin : 0 auto; */
   border-radius: 30px;
-} 
+  width: 50%;
+}
 
 .h1-title{
   display: flex;
@@ -35,10 +38,23 @@ main{
   margin-top: 20px;
 }
 
+.wrapper-all-box{
+  display: flex;
+  
+}
 
 .wrapper-input-box{
   display: flex;
   flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.wrapper-btn-box{
+
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 57px;
 }
 
 .input-id{
@@ -49,55 +65,54 @@ main{
   border: 1px solid lightgray;
   line-height: 20px;
   padding-left: 10px;
+  width: 250px;
 }
 
-.input-pwd{
+.input-phone-number{
   border-radius: 30px;
   height: 20px;
   margin-bottom: 15px;
   border: 1px solid lightgray;
   line-height: 20px;
   padding-left:10px;
+  width: 250px;
 }
 
-
-
-.wrapper-join-box{
-  display: flex;
-  justify-content: center;
-  font-size: 10px;
-  margin-bottom: 5px;
- 
+.input-authentication-number{
+  border-radius: 30px;
+  height: 20px;
+  margin-bottom: 15px;
+  border: 1px solid lightgray;
+  line-height: 20px;
+  padding-left:10px;
+  width: 250px;
+   
+  
 }
 
-a{
-  text-decoration: none;
-  color: #808080;
-}
-
-.wrapper-btn-box{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5px;
- 
-}
-.btn-join{
+.btn-send{
+  margin-bottom: 20px;
+  margin-left: 20px;
   width: 100px;
+  border-radius: 10px;
+  border: none;
   background-color: #003161;
   color: white;
-  border-radius: 3px;
- border: none;
 }
 
-.wrapper-pwd-box{
-  display: flex;
-  justify-content: center;
-  font-size: 10px;
+.btn-check{
+  width: 100px;
+  margin-left: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #003161;
+  color: white;
+
 }
 
 
 footer{
-  /* background-color: blanchedalmond; */
+  /* background-color: lightskyblue; */
   width: 100%;
   height: 20%;
 }
