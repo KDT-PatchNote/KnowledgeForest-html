@@ -6,56 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지식의 숲</title>
     <link rel="stylesheet" href="/webapp/asset/css/main.css">
-    <script src="./../asset/js/forest.js"></script>
-        <nav>
-            <img src="/webapp/asset/img/main/logo.png" class="main-img-logo">
-            <ul>
-                <li>공지</li>
-                <li>자유게시판</li>
-                <li>스터디 모집</li>
-                <li>회원가입</li>
-                <li>로그인</li>
-            </ul>
-        </nav>
+    <script src="/webapp/asset/js/main/main.js"></script>
+    <nav>
+        <img src="/webapp/asset/img/main/logo-1.png" class="main-img-logo">
+        <ul>
+            <li>공지</li>
+            <li>자유게시판</li>
+            <li>스터디 모집</li>
+            <li>회원가입</li>
+            <li>로그인</li>
+        </ul>
+    </nav>
 </head>
 <hr>
+
 <body>
-
     <main>
-        <div class="main-div-slideswrap">
-            <ul class="main-div-slidebox">
-                <li>
-                    <div class="main-div-bnimg1"></div>
-                </li>
-                <li>
-                    <div class="main-div-bnimg2"></div>
-                </li>
-            </ul>
-            <div class="main-div-prev">&lt;</div>
-            <div class="main-div-next">&gt;</div>
-        </div>
-        <div class="main-div-wishlist">위시리스트
-            <ul>
-                <li>공부 모임 1</li>
-                <li>공부 모임 2</li>
-                <li>공부 모임 3 ...</li>
-            </ul>
+        <div class="main-div-wrapper">
+            <div class="main-div-wishlist">
+                <br><br><br><br><br>
+                <h2 style="text-align: center;">Forest of Knowledge</h2>
+                <div class="main-div-wishlistcontainer">
+                    <div class="main-div-wishlistcontent">
+                        <div class="main-div-wishlisttitle">
+                            <h2>MY</h2>
+                            <br>
+                            <h2>WISH</h2>
+                            <h2>LIST</h2>
+                        </div>
+                        <ul class="main-div-ulist">
+                            <li>공부 모임 1</li>
+                            <li>공부 모임 2</li>
+                            <li>공부 모임 3 ...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-div-banner">
+                <div class="main-div-slide1">
+                    <img src="/webapp/asset/img/main/banner01.png" alt="이미지1" class="main-img-banner01 main-div-banneractive">
+                </div>
+                <div class="main-div-slide2">
+                    <img src="/webapp/asset/img/main/banner02.png" alt="이미지2" class="main-img-banner02">
+                </div>
+                <div class="main-div-slide3">
+                    <img src="/webapp/asset/img/main/banner03.png" alt="이미지3" class="main-img-banner03">
+                </div>
+
+            </div>
         </div>
 
-        <div class="main-div-newst"> 신규 등록 스터디
-            <ul>
-                <li> 신규 1</li>
-                <li> 신규 2</li>
-            </ul>
+<main class="main-div-container">
+    <div class="main-div-studycard main-div-studynew">
+        <header class="main-div-studycardheader">
+            <span class="main-span-label">NEW</span>
+            <span class="main-span-title">신규 등록 스터디</span>
+        </header>
+        <div class="main-div-studycontent">
+            <div class="main-div-studyitem">
+                <span class="main-span-icon">[개발]</span>
+                <p>개발 스터디 하실 분</p>
+                <p>내용입니다.</p>
+            </div>
+            <div class="main-div-studyitem">
+                <span class="main-span-icon">[보안]</span>
+                <p>보안 스터디 ㅋㅋ</p>
+                <p>여긴 보안 내용이네.</p>
+            </div>
         </div>
+    </div>
 
-        <div class="main-div-endst">마감 임박 스터디
-            <ul>
-                <li>마감 임박 1</li>
-                <li>마감 임박 2</li>
-            </ul>
+    <div class="main-div-studycard main-div-studyhurry">
+        <header class="main-div-studycardheader">
+            <span class="main-span-label">Hurry</span>
+            <span class="main-span-title"> 마감 임박 스터디</span>
+        </header>
+        <div class="main-div-studycontent">
+            <div class="main-div-studyitem">
+                <span class="main-span-icon">[보안]</span>
+                <p>ㅋㅋ</p>
+                <p>내용입니다.</p>
+            </div>
+            <div class="main-div-studyitem">
+                <span class="main-span-icon">[개발]</span>
+                <p>너만 오면 시작</p>
+                <p>대충 구한다는 내용.</p>
+            </div>
         </div>
-    </main>
+    </div>
+</main>
+
     <footer>
     </footer>
 </body>
