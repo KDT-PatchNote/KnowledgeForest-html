@@ -32,8 +32,8 @@ main {
 
 }
 
-/* 검색 창을 감싸는 div */
-.studylist-div-wrapper {
+/* 검색 창을 감싸는 form */
+.studylist-form-wrapper {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -42,6 +42,10 @@ main {
   background-color: white;
   padding: 0 20px;
 
+}
+button{
+  border: none;
+  background-color: transparent;
 }
 
 /* 검색 창*/
