@@ -25,177 +25,61 @@ main {
 .studylist-write-div-titlewrapper{
   display: flex;
   align-items: center;
+  align-self: flex-start;
+  width: 90%;
+  margin : 0 auto;
 
 }
 /* 각 화면 최상단 제목 */
 .studylist-h1-title {
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 50px;
   margin-top: 50px;
-
 }
-
 /* 뒤로가기 버튼 이미지 */
 .studylist-write-img-back{
-  width: 50px;
-  height: 50px;
-
+  width: 25px;
+  height: 25px;
+  margin-right: 100px;
 }
-
-/* 검색 창*/
-.studylist-input-search {
-  width: 100%;
-  height: 55px;
-  border: none;
-  background-color: transparent;
-  font-size: 18px;
-
-}
-
-/* 검색 창이 포커스 되었을때*/
-.studylist-input-search:focus {
-  outline: none;
-}
-
-/* 포커스 되었을 때 div의 스타일 (JS로 추가될 클래스) */
-.studylist-div-wrapper.focused {
-  border: solid 4px #003161;
-}
-
-/* 검색 창의 돋보기 버튼*/
-.studylist-img-search {
-  width: 50px;
-  height: 50px;
-}
-.studylist-img-search:hover{
-  cursor: pointer;
-}
-
 /* 하단 컨텐츠를 감싸는 래퍼 */
 .studylist-div-contentsWrapper {
   width: 90%;
+  min-height: 500px;
   margin-top: 50px;
-
-}
-
-/* 카테고리를 감싸는 래퍼 */
-.studylist-div-categoryWrapper {
-  display: flex;
-  margin: 0 auto;
-  border-bottom: 1px solid #888;
-}
-
-/* 카테고리 */
-.studylist-div-category {
-  width: 120px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 10px;
-}
-.studylist-div-category:hover{
-  cursor : pointer;
-}
-
-/* 카테고리를 선택했을때 적용되는 클래스 */
-.selected {
-  background-color: #003161;
-  color: white;
-}
-
-/* 스터디를 감싸는 래퍼 */
-.studylist-div-groupWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* 요소 간의 간격을 20px로 설정 */
-  padding: 20px;
-}
-/* 스터디 */
-.studylist-div-group {
-  width: 450px;
-  height: 360px;
-  margin: 10px;
-  border-radius: 50px;
   background-color: white;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  cursor: pointer;
-  border: 1px solid #555;
 }
-.studylist-div-groupinner{
-  width: 85%;
-  margin: auto;
+.studylist-div-wrapper{
+  border: 1px solid #ccc;
 }
-/* 스터디의 마감일과 모집상태를 감싸는 래퍼 */
-.studylist-div-groupinfowrapper {
-  margin-top: 40px;
+.studylist-div-wrapperlayer{
   display: flex;
-  justify-content: space-between;
+  height: 50px;
+  border-bottom: 1px solid #CCCCCC;
 }
-
-/*스터디의 마감일과 모집상태  */
-.studylist-div-enddate,
-.studylist-div-groupstatus {
-  color: #808080;
-}
-
-/* 스터디명 */
-.studylist-div-grouptitle {
+.studylist-div-inputwrapper{
   width: 50%;
-  height: 100px;
-  margin-top : 40px;
-  margin-bottom : 40px;
-  text-align: left;
+  display: flex;
+  align-items: center;
+
 }
-/* 스터디 카테고리*/
-.studylist-div-groupcategory {
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
-  background-color: #003161;
+label{
+  width : 200px;
+  line-height: 50px;
+  border: none;
+  border-right: 1px solid #ccc;
   text-align: center;
-  color: white;
-  border-radius: 100px;
-}
-/*스터디 멤버 수*/
-.studylist-div-groupmember{
   color : #808080;
 }
-/*스터디 개설자와 찜을 감싸는 래퍼*/
-.studylist-div-groupmakerwrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin:  20px auto;
-  border-top : 1px solid #888;
-  padding-top : 10px;
+input{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-right: 1px solid #ccc;
+  border-collapse: collapse;
+  outline: none;
 }
-
-/*스터디 개설자*/
-.studylist-div-groupmaker{
-  color : #333;
-}
-
-/*스터디 찜과 찜 수를 감싸는 래퍼*/
-.studylist-div-likewrapper{
-  display: flex;
-  align-items: center;
-}
-/*스터디 찜*/
-.studylist-img-like{
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-}
-/* 스터디 찜 수 */
-.studylist-div-likecount{
-  line-height :40px;
-  margin-left: 10px;
-}
-
 /*페이지네이션*/
-
 .studylist-div-paginationwrapper{
   width: 100%;
   margin : 50px 0;
