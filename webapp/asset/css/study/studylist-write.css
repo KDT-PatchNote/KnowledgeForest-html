@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   color: #333;
-  box-sizing: border-box;
 }
 
 body {
@@ -20,99 +19,244 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+
 }
-.studylist-write-div-titlewrapper{
+
+.studylist-write-div-titlewrapper {
   display: flex;
   align-items: center;
   align-self: flex-start;
-  width: 90%;
-  margin : 0 auto;
-
+  margin-top: 50px;
 }
+
 /* 각 화면 최상단 제목 */
 .studylist-h1-title {
   font-size: 30px;
   font-weight: bold;
-  margin-top: 50px;
 }
+
 /* 뒤로가기 버튼 이미지 */
-.studylist-write-img-back{
+.studylist-write-img-back {
   width: 25px;
   height: 25px;
   margin-right: 100px;
 }
+
 /* 하단 컨텐츠를 감싸는 래퍼 */
 .studylist-div-contentsWrapper {
-  width: 90%;
-  min-height: 500px;
+  width: 100%;
   margin-top: 50px;
   background-color: white;
+  border-top: 1.5px solid #333;
+
 }
-.studylist-div-wrapper{
-  border: 1px solid #ccc;
-}
-.studylist-div-wrapperlayer{
+
+/* 한 행*/
+.studylist-div-wrapperlayer {
   display: flex;
   height: 50px;
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #ccc;
+
 }
-.studylist-div-inputwrapper{
+
+/* 텍스트 area를 포함하는 행*/
+
+.studylist-div-wrapperlayer:last-child {
+  height: 300px;
+}
+
+
+.studylist-div-inputwrapper {
   width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
+  border-right: 1px solid #ccc;
 
 }
-label{
-  width : 200px;
-  line-height: 50px;
-  border: none;
-  border-right: 1px solid #ccc;
-  text-align: center;
-  color : #808080;
+
+.studylist-div-textareawrapper {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
 }
-input{
+
+/*라벨*/
+label {
+  width: 200px;
+  line-height: 50px;
+  text-align: center;
+  color: #808080;
+  border-right: 1px solid #ccc;
+}
+
+/*textarea 라벨*/
+.studylist-div-textareawrapper>label {
+  width: 173px;
+  line-height: 300px;
+  text-align: center;
+  color: #808080;
+  border-right: 1px solid #ccc;
+}
+
+/*입력창*/
+.studylist-input {
   width: 100%;
   height: 50px;
+  font-size: 18px;
   border: none;
-  border-right: 1px solid #ccc;
-  border-collapse: collapse;
   outline: none;
+  margin: 0 auto;
 }
-/*페이지네이션*/
-.studylist-div-paginationwrapper{
+
+/*본문 입력 칸*/
+#STUDYLIST-TEXTAREA-STUDYCONTENTS {
   width: 100%;
-  margin : 50px 0;
+  height: 300px;
+  font-size: 18px;
+  border: none;
+  resize: none;
+  padding: 20px;
+  box-sizing: border-box;
+  border-collapse: separate;
+}
+
+textarea:focus {
+  outline: none;
+
+}
+
+/* 등록 버튼 */
+.studylist-button-submit {
+  margin: 30px auto;
+  width: 150px;
+  height: 50px;
+  padding: 0 15px;
+  background-color: #003161;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 등록 버튼 호버시 */
+.studylist-button-submit:hover {
+  cursor: pointer;
+}
+
+/* 등록 버튼 눌렀을 때 */
+.studylist-button-submit:active {
+  background-color: #011a36;
+}
+
+/* 댓글 입력창을 감싸는 래퍼 */
+.studylist-div-commentinputwrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #333;
+  border-radius: 15px;
+  background-color: white;
+
+
+
+}
+
+/* 닉네임 */
+.studylist-div-userNickname {
+  font-size: 18px;
+  font-weight: bold;
+
+
+}
+
+.studylist-div-commentwrapper {
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+  padding: 20px;
+
 }
 
 
+/*댓글 입력 칸*/
+#STUDYLIST-TEXTAREA-COMMENT {
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border: none;
+  resize: none;
+  box-sizing: border-box;
+  border-collapse: separate;
+}
 
-#STUDYLIST-UL-PAGINATION{
+/* 댓글 글자수 표시 */
+.studylist-div-counter {
+  margin: 10px 0 10px 0;
+  align-self: flex-end;
+}
+
+
+.studylist-button-commentsubmit {
+  margin-left:auto;
+  width: 100px;
+  height: 50px;
+  padding: 0 15px;
+  background-color: #003161;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 등록 버튼 호버시 */
+.studylist-button-submit:hover {
+  cursor: pointer;
+}
+
+/* 등록 버튼 눌렀을 때 */
+.studylist-button-submit:active {
+  background-color: #011a36;
+}
+
+/*페이지네이션*/
+.studylist-div-paginationwrapper {
+  width: 100%;
+  margin: 50px 0;
+
+}
+
+#STUDYLIST-UL-PAGINATION {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top : 50px;
+  margin-top: 50px;
 }
 
 /*페이지네이션 리스트*/
-.studylist-li-paginationlist{
+.studylist-li-paginationlist {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50px;
-  height : 50px;
+  height: 50px;
   text-align: center;
   border-radius: 100px;
-  margin : 0 5px;
-  cursor : pointer;
+  margin: 0 5px;
+  cursor: pointer;
   list-style-type: none;
 }
 
-.currentpage{
+.currentpage {
   background: #003161;
   color: white;
 }
-.studylist-li-paginationlist:hover:not(.pre,.next){
+
+.studylist-li-paginationlist:hover:not(.pre, .next) {
 
   border: 3px solid #003161;
 }

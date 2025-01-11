@@ -20,23 +20,145 @@
       <!-- 전체 내용을 감싸는 래퍼-->
       <div class="studylist-div-contentsWrapper">
         <!-- 입력 폼을 감싸는 래퍼 -->
-        <div class="studylist-div-wrapper">
-          <form action="">
-            <div class="studylist-div-wrapperlayer">
-              <div class="studylist-div-inputwrapper">
-                <label for="">닉네임</label>
-                <input type="text" placeholder="" />
-              </div>
-              <div class="studylist-div-inputwrapper">
-                <label for="">닉네임</label>
-                <input type="text" placeholder="" />
-              </div>
+        <form action="" id="STUDYLIST-FORM-WRITE">
+          <!-- 한 행 -->
+          <div class="studylist-div-wrapperlayer">
+            <!-- label과 input을 묶은 div -->
+
+            <div class="studylist-div-inputwrapper">
+              <label for="">닉네임</label>
+              <input
+                type="text"
+                placeholder=""
+                name="userNickname"
+                class="studylist-input"
+              />
             </div>
+            <div class="studylist-div-inputwrapper">
+              <label for="">작성일</label>
+              <input
+                type="text"
+                placeholder=""
+                name="registerDate"
+                class="studylist-input"
+              />
+            </div>
+          </div>
+
+          <div class="studylist-div-wrapperlayer">
+            <div class="studylist-div-inputwrapper">
+              <label for="">정원 수</label>
+              <input
+                type="text"
+                placeholder=""
+                name="groupLimit"
+                class="studylist-input"
+              />
+            </div>
+            <div class="studylist-div-inputwrapper">
+              <label for="">신청 마감일</label>
+              <input
+                type="text"
+                placeholder=""
+                name="groupEndDate"
+                class="studylist-input"
+              />
+            </div>
+          </div>
+
+          <div class="studylist-div-wrapperlayer">
+            <div class="studylist-div-inputwrapper">
+              <label for="">활동 시간</label>
+              <input
+                type="text"
+                placeholder=""
+                name=""
+                class="studylist-input"
+              />
+            </div>
+            <div class="studylist-div-inputwrapper">
+              <label for="">활동 기간</label>
+              <input
+                type="text"
+                placeholder=""
+                name=""
+                class="studylist-input"
+              />
+            </div>
+          </div>
+          <div class="studylist-div-wrapperlayer">
+            <div class="studylist-div-inputwrapper">
+              <label for="">연락처</label>
+              <input
+                type="text"
+                placeholder=""
+                name="userPhone"
+                class="studylist-input"
+              />
+            </div>
+            <div class="studylist-div-inputwrapper">
+              <label for="">장소</label>
+              <input
+                type="text"
+                name="groupLocation"
+                class="studylist-input"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="studylist-div-wrapperlayer">
+            <div class="studylist-div-textareawrapper">
+              <label for="STUDYLIST-TEXTAREA-STUDYCONTENTS">본문</label>
+              <textarea
+                name="studyContents"
+                id="STUDYLIST-TEXTAREA-STUDYCONTENTS"
+                placeholder="내용을 입력해주세요"
+              >
+              </textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- 등록 버튼 -->
+      <button
+        class="studylist-button-submit"
+        type="submit"
+        form="STUDYLIST-FORM-WRITE"
+      >
+        스터디 신청
+      </button>
+
+      <!-- 댓글 입력 창 -->
+      <div class="studylist-div-commentinputwrapper">
+        <div class="studylist-div-userNickname">
+          <span>닉네임</span>
+        </div>
+        <div class="studylist-div-commentwrapper">
+          <form action="">
+            <textarea
+              name="studyContents"
+              id="STUDYLIST-TEXTAREA-COMMENT"
+              placeholder="내용을 입력해주세요"
+            >
+            </textarea>
           </form>
+        </div>
+
+        <div class="studylist-div-counter">
+          <span>0/200</span>
         </div>
       </div>
 
+      <button
+        class="studylist-button-commentsubmit"
+        type="submit"
+        form="STUDYLIST-FORM-WRITE"
+      >
+        등록
+      </button>
+
       <!-- 페이지네이션 -->
+
       <div class="studylist-div-paginationwrapper">
         <ul id="STUDYLIST-UL-PAGINATION">
           <li class="studylist-li-paginationlist pre">&lt;</li>
