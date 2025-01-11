@@ -22,7 +22,11 @@ main {
   align-items: center;
   width: 100%;
 }
+.studylist-write-div-titlewrapper{
+  display: flex;
+  align-items: center;
 
+}
 /* 각 화면 최상단 제목 */
 .studylist-h1-title {
   font-size: 30px;
@@ -32,15 +36,10 @@ main {
 
 }
 
-/* 검색 창을 감싸는 div */
-.studylist-div-wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  border-radius: 100px;
-  border: 1px solid #555;
-  background-color: white;
-  padding: 0 20px;
+/* 뒤로가기 버튼 이미지 */
+.studylist-write-img-back{
+  width: 50px;
+  height: 50px;
 
 }
 
