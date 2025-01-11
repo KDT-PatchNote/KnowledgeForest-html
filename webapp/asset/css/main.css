@@ -26,6 +26,15 @@ nav>ul {
     font-family: "GangwonEdu_OTFBoldA";
 }
 
+.main-div-wrapper,
+.main-div-container {
+    padding: 20px;
+    margin: 0 auto;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+
 /* 위시리스트 */
 .main-div-wrapper {
     display: flex;
@@ -83,6 +92,7 @@ nav>ul {
     width: 45%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin: 0 auto;
 }
 
 .main-div-studyheader {
@@ -154,6 +164,7 @@ nav>ul {
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
+
 }
 
 .main-div-studycard {
@@ -169,6 +180,7 @@ nav>ul {
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
@@ -250,26 +262,51 @@ nav>ul {
 
 /* 배너 */
 .main-div-banner {
-    width: 70%;
+    width: 100%;
     height: 50vh;
-    border: 1px solid black;
+
     display: flex;
     position: relative;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: 0;
-    justify-content: flex-end;
+    
+    padding: 20px;
+    margin: 0 auto;
+    
+}
+
+
+.main-div-banner img{
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.main-div-banner img.main-div-banneractive {
+    display: block;
 }
 
 .main-div-slide {
     display: flex;
-    width: 100%;
+    width: 70%;
     height: 100%;
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: relative;
     left: 0px;
+    float: left;
 }
+
+.main-img-banner01,
+main-img-banner02,
+main-img-banner03
+{
+    width: 100vh;
+    height: auto;
+}
+
+
 
 /* 폰트 설정 */
 @font-face {
