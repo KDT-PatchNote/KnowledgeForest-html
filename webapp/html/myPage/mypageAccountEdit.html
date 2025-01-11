@@ -28,43 +28,55 @@
         <h1>개인 정보 수정</h1>
       </div>
       <section class="mypage-section">
-        <div class="mypage-div-wrapper">
-          <label for="">이름</label>
-          <input type="text">
+        <div class="section1">
+          <div class="mypage-div-wrapper">
+            <label for="name">이름</label>
+            <input type="text" id="name" readonly>
+          </div>
+          <div class="mypage-div-wrapper">
+            <label for="birthdate">생년월일</label>
+            <input type="text" id="birthdate" readonly>
+          </div>
+          <div class="mypage-div-wrapper">
+            <label for="ID">ID</label>
+            <input type="text" id="ID" readonly>
+          </div>
+          <div class="mypage-div-wrapper2">
+            <div class="editpage-input-nickname">
+              <label for="nickname">닉네임</label>
+              <input type="text" id="nickname">
+            </div>
+            <button class="mypage-btn-nickname">수정</button>
+          </div>
         </div>
-        <div class="mypage-div-wrapper">
-          <label for="">생년월일</label>
-          <input type="text">
-        </div>
-        <div class="mypage-div-wrapper">
-          <label for="">ID</label>
-          <input type="text">
-        </div>
-        <div class="mypage-div-wrapper">
-          <label for="">닉네임</label>
-          <input type="text">
-          <button class="mypage-btn-nickname">수정</button>
-        </div>
-        <div class="mypage-div-wrapper">
-          <label for="">비밀번호</label>
-          <input type="text">
-        </div>
-        <div class="mypage-div-wrapper">
-          <label for="">비밀번호 확인</label>
-          <input type="text">
-        </div>
-        <div class="mypage-div-wrapper">
-          <label for="">전화번호</label>
-          <input type="text">
-          <button class="mypage-btn-phoneNum-send">전송</button>
-        </div>
-        <div class="mypage-div-wrapper">
-          <label for="">전화번호 확인</label>
-          <input type="text">
-          <button class="mypage-btn-phoneNum-check">확인</button>
+        <div class="section">
+          <div class="mypage-div-wrapper">
+            <label for="password">비밀번호</label>
+            <input type="text" id="password">
+          </div>
+          <div class="mypage-div-wrapper">
+            <label for="passwordchk">비밀번호 확인</label>
+            <input type="text" id="passwordchk">
+          </div>
+          <div class="mypage-div-wrapper2">
+            <div class="editpage-input-phoneNum">
+              <label for="phoneNum">전화번호</label>
+              <input type="text" id="phoneNum">
+            </div>
+            <button class="mypage-btn-phoneNum-send">전송</button>
+          </div>
+          <div class="mypage-div-wrapper2">
+            <div class="editpage-input-phoneNumchk">
+              <label for="phoneNumchk">전화번호 확인</label>
+              <input type="text" id="phoneNumchk">
+            </div>
+            <button class="mypage-btn-phoneNum-check">확인</button>
+          </div>
         </div>
       </section>
-      <button class="mypage-btn-edit">정보 수정</button>
+      <div class="mypage-div-edit">
+        <button class="mypage-btn-edit">정보 수정</button>
+      </div>  
     </main>    
   </div>
 
