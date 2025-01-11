@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'NanumGothic', sans-serif;
+  background-color: #F6F6F6;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 메인 컨텐츠 */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.main-container {
+  border: 1px solid black;
+  background-color: #F6F6F6;
+  height: 100%;
+  display: flex;
+}
+
+.mypage-div-asidetitle {
+  margin-top: 100px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.mypage-div-asidemenu {
+  margin: 50px 30px;
+  text-align: right;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: #86A788;
+  font-size: 16px;
+}
+
+aside {
+  background-color: #003161;
+  width: 260px;
+}
+
+/* 스터디를 감싸는 래퍼 */
+.mypage-div-groupWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* 요소 간의 간격을 20px로 설정 */
+  padding: 20px;
+}
+/* 스터디 */
+.mypage-div-group {
+  width: 450px;
+  height: 360px;
+  margin: 10px;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #555;
+}
+.mypage-div-groupinner{
+  width: 85%;
+  margin: auto;
+}
+/* 스터디의 마감일과 모집상태를 감싸는 래퍼 */
+.mypage-div-groupinfowrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*스터디의 마감일과 모집상태  */
+.mypage-div-enddate,
+.mypage-div-groupstatus {
+  color: #808080;
+}
+
+/* 스터디명 */
+.mypage-div-grouptitle {
+  width: 50%;
+  height: 100px;
+  margin-top : 40px;
+  margin-bottom : 40px;
+  text-align: left;
+}
+/* 스터디 카테고리*/
+.mypage-div-groupcategory {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #003161;
+  text-align: center;
+  color: white;
+  border-radius: 100px;
+}
+/*스터디 멤버 수*/
+.mypage-div-groupmember{
+  color : #808080;
+}
+/*스터디 개설자와 찜을 감싸는 래퍼*/
+.mypage-div-groupmakerwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:  20px auto;
+  border-top : 1px solid #888;
+  padding-top : 10px;
+}
+
+/*스터디 개설자*/
+.mypage-div-groupmaker{
+  color : #333;
+}
+
+/*스터디 찜과 찜 수를 감싸는 래퍼*/
+.mypage-div-likewrapper{
+  display: flex;
+  align-items: center;
+}
+/*스터디 찜*/
+.mypage-img-like{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+/* 스터디 찜 수 */
+.mypage-div-likecount{
+  line-height :40px;
+  margin-left: 10px;
+}
+
+/*페이지네이션*/
+
+.mypage-div-paginationwrapper{
+  width: 100%;
+  margin : 50px 0;
+}
+
+
+
+#mypage-UL-PAGINATION{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top : 50px;
+}
+
+/*페이지네이션 리스트*/
+.mypage-li-paginationlist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height : 50px;
+  text-align: center;
+  border-radius: 100px;
+  margin : 0 5px;
+  cursor : pointer;
+  list-style-type: none;
+}
+
+.currentpage{
+  background: #003161;
+  color: white;
+}
+.mypage-li-paginationlist:hover:not(.pre,.next){
+
+  border: 3px solid #003161;
+}
