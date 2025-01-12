@@ -44,8 +44,12 @@ main {
   margin-right: 100px;
 }
 
+.studylist-detail-img-back:hover {
+  cursor: pointer;
+}
+
 /* 수정/ 삭제 버튼을 감싸는 래퍼 */
-.studylist-detail-div-buttonwrapper {
+.studylist-detail-div-btnwrapper {
   display: flex;
   align-self: flex-end;
   margin-top: 20px;
@@ -160,7 +164,7 @@ textarea:focus {
 }
 
 /* 등록 버튼 */
-.studylist-button-submit{
+.studylist-btn-submit {
   margin: 30px auto;
   width: 150px;
   height: 50px;
@@ -172,12 +176,12 @@ textarea:focus {
 }
 
 /* 등록 버튼 호버시 */
-.studylist-button-submit:hover {
+.studylist-btn-submit:hover {
   cursor: pointer;
 }
 
 /* 등록 버튼 눌렀을 때 */
-.studylist-button-submit:active {
+.studylist-btn-submit:active {
   background-color: #011a36;
 }
 
@@ -231,7 +235,9 @@ textarea:focus {
 }
 
 
-.studylist-button-commentsubmit,.studylist-button-editcommentsubmit{
+.studylist-btn-commentsubmit,
+.studylist-btn-editcommentsubmit,
+.studylist-btn-couragewrite {
   margin-left: auto;
   width: 100px;
   height: 50px;
@@ -243,12 +249,12 @@ textarea:focus {
 }
 
 /* 등록 버튼 호버시 */
-.studylist-button-commentsubmit:hover {
+.studylist-btn-commentsubmit:hover {
   cursor: pointer;
 }
 
 /* 등록 버튼 눌렀을 때 */
-.studylist-button-commentsubmit:active {
+.studylist-btn-commentsubmit:active {
   background-color: #011a36;
 }
 
@@ -309,6 +315,7 @@ textarea:focus {
   color: #808080;
   max-width: 90%;
 }
+
 /* 댓글 작성 부분을 감싸는 form */
 #STUDYLIST-FORM-EDITCOMMENT {
   width: 100%;
@@ -321,6 +328,7 @@ textarea:focus {
   flex-direction: column;
   justify-content: flex-end;
 }
+
 /* 댓글 내용 수정할때 나오는 textarea */
 .studylist-textarea-commentcontents {
   width: 100%;
@@ -331,8 +339,9 @@ textarea:focus {
   resize: none;
 
 }
+
 /* 댓글 수정 버튼 */
-.studylist-button-editcommentsubmit{
+.studylist-btn-editcommentsubmit {
   align-self: flex-end;
 }
 
@@ -374,4 +383,98 @@ textarea:focus {
 .studylist-li-paginationlist:hover:not(.pre, .next) {
 
   border: 3px solid #003161;
+  box-sizing: border-box;
+
+}
+
+/* 모달 스타일 */
+#STUDYLIST-MODAL-APPLY {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+  position: fixed;
+  top: 0;
+}
+
+/* 모달 상자 */
+.studylist-div-applywrapper {
+  width: 80%;
+  height: 400px;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* 각오 작성 영역 */
+.studylist-div-commentwrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+}
+/* 각오 작성 폼 */
+#STUDYLIST-FORM-WRITECOURAGE{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+/* 각오 작성 에어리어 */
+
+#STUDYLIST-TEXTAREA-COURAGE{
+  height: 50px;
+  border: none;
+  resize: none;
+}
+/* 모달 타이틀을 감싸는 div */
+.studylist-div-titlewrapper{
+  width: 90%;
+  margin: 30px auto;
+}
+
+
+.studylist-div-bottomlayer{
+  width: 90%;
+  margin: 30px auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.studylist-p-infotext{
+  font-size : 12px;
+  color : #808080;
+}
+
+/* 버튼을 감싸는 div */
+.studylist-div-btnwrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.studylist-div-checkboxwrapper{
+  
+}
+/* 취소 버튼 스타일 */
+.studylist-btn-couragecancel{
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+  background-color: #808080;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  margin-left: 10px;
 }
