@@ -4,25 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./../../asset/css/mypage/mypageJimList.css" />
+    <link rel="stylesheet" href="./../../asset/css/mypage/mypageHostBoard.css" />
   </head>
   <body>
     <!-- <header></header> -->
     <div class="main-container">
-      <!-- <aside>
-        <div class="mypage-div-asidetitle">
-          <h1>마이페이지</h1>
-        </div>
-        <div class="mypage-div-asidemenu">
-          <ul>
-            <li>개인정보 수정</li>
-            <li>내가 찜한 목록</li>
-            <li>개최한 스터디 목록</li>
-            <li>신청한 스터디 목록</li>
-            <li>작성한 자유게시판 목록</li>
-          </ul>
-        </div>
-      </aside> -->
 
     <!-- 사이드 메뉴 -->
     <aside id="MYPAGE-MENUCONTAINER">
@@ -30,19 +16,20 @@
         <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
         <ul class="mypage-ul-menuwrap">
           <li><a href="">개인정보 수정</a></li>
-          <li class="mypage-li-menuactive"><a href="./admin-study-list.html">찜한 목록</a></li>
-          <li><a href="">만든 스터디</a></li>
+          <li><a href="./admin-study-list.html">찜한 목록</a></li>
+          <li class="mypage-li-menuactive"><a href="">만든 스터디</a></li>
           <li><a href="">신청한 스터디</a></li>
           <li><a href="">작성한 자유게시글</a></li>
         </ul>
       </nav>
     </aside>
     <!-- 사이드 메뉴 끝 -->
-     
-      <main>
+    <main>
+      <!-- 메인 컨텐츠 감싼 wrap 클래스 종료 -->
+      <div class="mypage-div-mainwrap">
         <div class="mypage-title">
-          <h1>찜한 목록</h1><br />
-          <p>''님의 찜한 게시글 목록 입니다</p>
+          <h1>만든 스터디</h1><br />
+          <p>''님이 만든 스터디 목록 입니다</p>
         </div>
         <div class="mypage-div-groupWrapper">
           <div class="mypage-div-wrapperinner">
@@ -237,7 +224,11 @@
             <li class="mypage-li-paginationlist next">&#62;</li>
           </ul>
         </div>
-      </main>
+      </div>
+      <!-- 메인 컨텐츠 감싼 wrap 클래스 종료 -->
+    </main>
+    <!-- 메인 컨텐츠 종료 -->
+
     </div>
   </body>
 </html>
