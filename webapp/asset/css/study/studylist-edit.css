@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
+@import url("//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css");
 
 * {
   margin: 0;
@@ -7,19 +7,39 @@
 }
 
 body {
-  font-family: 'NanumGothic', sans-serif;
-  background-color: #F6F6F6;
+  height: 100vh;
+  font-family: "NanumGothic", sans-serif;
+  background-color: #f6f6f6;
   font-size: 18px;
   font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+/* Nav 스타일 */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav-ul {
+  list-style: none;
+  display: flex;
+  margin-right: 100px;
+  gap: 50px;
+  color: #003161;
+  font-size: 24px;
+  font-family: "GangwonEdu_OTFBoldA";
 }
 
 /* 메인 컨텐츠 */
 main {
   width: 90%;
   margin: 0 auto;
-
 }
-
 
 /* 각 화면 최상단 제목 */
 .studylist-h1-title {
@@ -43,7 +63,6 @@ main {
   margin-bottom: 10px;
   background-color: white;
   overflow: hidden;
-
 }
 
 .studylist-div-longwrapperlayer {
@@ -52,8 +71,6 @@ main {
   margin-bottom: 10px;
   background-color: white;
   overflow: hidden;
-
-
 }
 
 .studylist-div-wrapperlayerDual {
@@ -61,7 +78,6 @@ main {
   height: 50px;
   margin-bottom: 10px;
   justify-content: space-between;
-
 }
 
 .studylist-div-infowrapper {
@@ -77,7 +93,6 @@ main {
   align-items: center;
   background-color: white;
   overflow: hidden;
-
 }
 
 /* 본문를 포함하는 행*/
@@ -132,7 +147,7 @@ main {
 }
 
 /*textarea 라벨*/
-.studylist-div-textareawrapper>.label {
+.studylist-div-textareawrapper > .label {
   width: 200px;
   line-height: 150px;
   text-align: center;
@@ -177,7 +192,6 @@ main {
   border: none;
   border-radius: 10px;
   margin-left: auto;
-
 }
 
 .studylist-div-selector {
@@ -187,13 +201,11 @@ main {
   color: #808080;
   font-size: 18px;
   text-align: center;
-
 }
 
 .selected {
   background-color: #003161;
   color: white;
-
 }
 
 /*본문 칸*/
@@ -211,5 +223,53 @@ main {
 
 textarea:focus {
   outline: none;
+}
 
+/* footer */
+
+.main-footer-container {
+  width: 100%;
+  background-color: #f9f9f9;
+  color: #666;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.main-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.main-footer-links a {
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+}
+
+.main-span-divider {
+  color: #aaa;
+  margin: 0 5px;
+}
+
+.main-paragraph-contact,
+.main-paragraph-copyright {
+  margin: 0;
+}
+
+/* 폰트 설정 */
+@font-face {
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
