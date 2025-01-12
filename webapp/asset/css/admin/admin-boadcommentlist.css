@@ -1,0 +1,21 @@
+/* 각 데이터의 가로 너비 */
+.adminBoardComment-li-boardcommentid { width: 9%; }
+
+.adminBoardComment-li-boardid { width: 14%; }
+
+.adminBoardComment-li-boardcommentcontent {
+  width: 32%;
+  padding: 0 5px;
+}
+.boardcommentcontent { text-align: left; }
+
+.adminBoardComment-li-userid { width: 13%; }
+
+.adminBoardComment-li-usernickname { width: 13%; }
+
+.adminBoardComment-li-boardcommentwritedate { width: 9%; }
+
+.adminBoardComment-li-boardcommentdelete {
+  width: 10%;
+  cursor: default;
+}
