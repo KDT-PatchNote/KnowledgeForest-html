@@ -389,6 +389,7 @@ textarea:focus {
 
 /* 모달 스타일 */
 #STUDYLIST-MODAL-APPLY {
+  display: none;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
@@ -399,7 +400,7 @@ textarea:focus {
 
 /* 모달 상자 */
 .studylist-div-applywrapper {
-  width: 80%;
+  width: 90%;
   height: 400px;
   border-radius: 10px;
   background-color: white;
@@ -410,7 +411,7 @@ textarea:focus {
   z-index: 10;
 }
 /* 각오 작성 영역 */
-.studylist-div-commentwrapper {
+.studylist-div-couragewrapper {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
@@ -447,10 +448,11 @@ textarea:focus {
 
 .studylist-div-bottomlayer{
   width: 90%;
-  margin: 30px auto;
+  margin: 10px auto;
   display:flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
 }
 
@@ -462,18 +464,30 @@ textarea:focus {
 /* 버튼을 감싸는 div */
 .studylist-div-btnwrapper{
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
 }
+/* 체크박스를 감싸는 div */
 .studylist-div-checkboxwrapper{
-  
+  display: flex;
+  align-items: center;
+}
+
+#STUDYLIST-CHECKBOX-AGREE{
+  margin-right: 10px;
+}
+/* 체크박스 이미지 */
+.studylist-img-checkboximg{
+  width: 20px;
+  height: 20px;
 }
 /* 취소 버튼 스타일 */
 .studylist-btn-couragecancel{
   width: 100px;
   height: 50px;
   margin-top: 30px;
-  background-color: #808080;
-  color: #fff;
+  border: 1px solid #808080;
+  
+  color: #808080;;
   border: none;
   border-radius: 100px;
   margin-left: 10px;
