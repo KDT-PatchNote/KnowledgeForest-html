@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -101,6 +102,7 @@ main {
 /* 자유게시판 상세 댓글확인  */
 .boardlistdetail-div-commenttitle {
   background-color: #003161;
+  color: #fff;
 }
 
 .boardlistdetail-div-checkcomment {
