@@ -52,7 +52,7 @@ li { list-style-type: none; }
 
 .admin-ul-menuwrap li {
   height: 30px;
-  padding: 8px 30px;
+  padding: 8px 25px;
   line-height: 30px;
   cursor: pointer;
 }
