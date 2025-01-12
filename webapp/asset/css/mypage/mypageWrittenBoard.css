@@ -1,0 +1,79 @@
+.board-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid #ddd; */
+}
+
+.board-header {
+  display: flex;
+  /* font-weight: bold; */
+  color: #FFFFFF;
+  background-color: #003161;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.board-item {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.board-item:last-child {
+  border-bottom: none;
+}
+
+.board-number,
+.board-title,
+.board-author,
+.board-date {
+  flex: 1;
+  text-align: center;
+}
+
+.board-title {
+  flex: 2; /* 제목은 더 넓게 */
+}
+
+.jimboard-div-listswrap {
+  display: flex;
+}
+
+/* 컨텐츠 1개에 대한 css */
+.jimboard-div-wrap{
+  border: 1px solid black;
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  display: flex;
+  /* padding: 50px; */
+}
+.section{
+  width: 100%;
+  padding: 20px;
+}
+.enddateandstatus{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.enddateandstatus > .enddate{
+  /* margin-right: 150px; */
+}
+.title{
+  margin: 20px 0;
+  height: 130px;
+  font-weight: bold;
+}
+.categoryandpeople{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+.nameandjim{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}

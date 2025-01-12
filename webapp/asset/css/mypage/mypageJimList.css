@@ -1,5 +1,3 @@
-@import url('//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css');
-
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +10,6 @@ body {
   background-color: #F6F6F6;
   font-size: 18px;
   font-weight: 500;
-
 }
 
 /* 메인 컨텐츠 */
@@ -23,101 +20,47 @@ main {
   width: 100%;
 }
 
-/* 각 화면 최상단 제목 */
-.studylist-h1-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  margin-top: 50px;
-
-}
-
-/* 검색 창을 감싸는 form */
-.studylist-form-wrapper {
+.main-container {
+  border: 1px solid black;
+  background-color: #F6F6F6;
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  border-radius: 100px;
-  border: 1px solid #555;
-  background-color: white;
-  padding: 0 20px;
-
-}
-button{
-  border: none;
-  background-color: transparent;
 }
 
-/* 검색 창*/
-.studylist-input-search {
-  width: 100%;
-  height: 55px;
-  border: none;
-  background-color: transparent;
-  font-size: 18px;
-
-}
-
-/* 검색 창이 포커스 되었을때*/
-.studylist-input-search:focus {
-  outline: none;
-}
-
-/* 포커스 되었을 때 div의 스타일 (JS로 추가될 클래스) */
-.studylist-div-wrapper.focused {
-  border: solid 4px #003161;
-}
-
-/* 검색 창의 돋보기 버튼*/
-.studylist-img-search {
-  width: 50px;
-  height: 50px;
-}
-.studylist-img-search:hover{
-  cursor: pointer;
-}
-
-/* 하단 컨텐츠를 감싸는 래퍼 */
-.studylist-div-contentsWrapper {
-  width: 90%;
-  margin-top: 50px;
-
-}
-
-/* 카테고리를 감싸는 래퍼 */
-.studylist-div-categoryWrapper {
-  display: flex;
-  margin: 0 auto;
-  border-bottom: 1px solid #888;
-}
-
-/* 카테고리 */
-.studylist-div-category {
-  width: 120px;
-  height: 50px;
-  line-height: 50px;
+.mypage-div-asidetitle {
+  margin-top: 100px;
   text-align: center;
-  border-radius: 10px;
-}
-.studylist-div-category:hover{
-  cursor : pointer;
+  color: #FFFFFF;
 }
 
-/* 카테고리를 선택했을때 적용되는 클래스 */
-.selected {
+.mypage-div-asidemenu {
+  margin: 50px 30px;
+  text-align: right;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: #86A788;
+  font-size: 16px;
+}
+
+aside {
   background-color: #003161;
-  color: white;
+  width: 260px;
 }
 
 /* 스터디를 감싸는 래퍼 */
-.studylist-div-groupWrapper {
+.mypage-div-groupWrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px; /* 요소 간의 간격을 20px로 설정 */
   padding: 20px;
 }
 /* 스터디 */
-.studylist-div-group {
+.mypage-div-group {
   width: 450px;
   height: 360px;
   margin: 10px;
@@ -128,25 +71,25 @@ button{
   cursor: pointer;
   border: 1px solid #555;
 }
-.studylist-div-groupinner{
+.mypage-div-groupinner{
   width: 85%;
   margin: auto;
 }
 /* 스터디의 마감일과 모집상태를 감싸는 래퍼 */
-.studylist-div-groupinfowrapper {
+.mypage-div-groupinfowrapper {
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
 
 /*스터디의 마감일과 모집상태  */
-.studylist-div-enddate,
-.studylist-div-groupstatus {
+.mypage-div-enddate,
+.mypage-div-groupstatus {
   color: #808080;
 }
 
 /* 스터디명 */
-.studylist-div-grouptitle {
+.mypage-div-grouptitle {
   width: 50%;
   height: 100px;
   margin-top : 40px;
@@ -154,7 +97,7 @@ button{
   text-align: left;
 }
 /* 스터디 카테고리*/
-.studylist-div-groupcategory {
+.mypage-div-groupcategory {
   width: 100px;
   height: 30px;
   line-height: 30px;
@@ -164,11 +107,11 @@ button{
   border-radius: 100px;
 }
 /*스터디 멤버 수*/
-.studylist-div-groupmember{
+.mypage-div-groupmember{
   color : #808080;
 }
 /*스터디 개설자와 찜을 감싸는 래퍼*/
-.studylist-div-groupmakerwrapper {
+.mypage-div-groupmakerwrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,37 +121,37 @@ button{
 }
 
 /*스터디 개설자*/
-.studylist-div-groupmaker{
+.mypage-div-groupmaker{
   color : #333;
 }
 
 /*스터디 찜과 찜 수를 감싸는 래퍼*/
-.studylist-div-likewrapper{
+.mypage-div-likewrapper{
   display: flex;
   align-items: center;
 }
 /*스터디 찜*/
-.studylist-img-like{
+.mypage-img-like{
   width: 35px;
   height: 35px;
   cursor: pointer;
 }
 /* 스터디 찜 수 */
-.studylist-div-likecount{
+.mypage-div-likecount{
   line-height :40px;
   margin-left: 10px;
 }
 
 /*페이지네이션*/
 
-.studylist-div-paginationwrapper{
+.mypage-div-paginationwrapper{
   width: 100%;
   margin : 50px 0;
 }
 
 
 
-#STUDYLIST-UL-PAGINATION{
+#mypage-UL-PAGINATION{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -216,7 +159,7 @@ button{
 }
 
 /*페이지네이션 리스트*/
-.studylist-li-paginationlist{
+.mypage-li-paginationlist{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,7 +176,7 @@ button{
   background: #003161;
   color: white;
 }
-.studylist-li-paginationlist:hover:not(.pre,.next){
+.mypage-li-paginationlist:hover:not(.pre,.next){
 
   border: 3px solid #003161;
 }
