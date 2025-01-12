@@ -6,7 +6,7 @@
 }
 
 .board-div-list{
-  margin-left: 210px;
+  margin: 10px;
 }
 
 /*-사이드 테이블 스타일 부분-*/
@@ -28,6 +28,42 @@ aside {
 
 /*사이드 테이블 제목*/
 #MYPAGE-H2-TITLE { margin-bottom: 40px; }
+
+
+
+
+/* 메인 컨텐츠가 들어갈 컨테이너 */
+#MYPAGE-DIV-LAYOUTCONTAINER {
+  height: 100%;
+  margin-left: 210px;
+}
+
+.mypage-div-container {
+  padding: 70px 0 40px;
+  margin-left: 130px;
+
+}
+
+/* 페이지 제목 */
+.mypage-h1-maintitle {
+  align-self: flex-start;
+  margin-top: 30px;
+ 
+}
+
+/* 게시판 컨텐츠 정렬을 위한 div */
+.mypage-div-contentscontainer {
+  width: 90%;
+  padding: 50px 0;
+}
+
+.mypage-div-contentswrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 
 /*리스트 부분*/
 .mypage-ul-menuwrap {
@@ -142,4 +178,40 @@ a{
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+}
+
+
+/*페이지네이션*/
+
+.mypage-div-paginationwrapper{
+  width: 100%;
+  margin : 50px 0;
+}
+
+
+
+#mypage-UL-PAGINATION{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top : 50px;
+}
+
+/*페이지네이션 리스트*/
+.mypage-li-paginationlist{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height : 50px;
+  text-align: center;
+  border-radius: 100px;
+  margin : 0 5px;
+  cursor : pointer;
+  list-style-type: none;
+}
+
+.currentpage{
+  background: #003161;
+  color: white;
 }

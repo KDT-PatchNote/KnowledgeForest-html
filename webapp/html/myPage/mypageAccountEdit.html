@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>개인정보 수정</title>
   <link rel="stylesheet" href="./../../asset/css/mypage/mypageAccountEdit.css">
+  <script defer src="./../../asset/js/mypage/mypageAccountEdit.js"></script>
 </head>
 <body>
   <!-- <header></header> -->
@@ -35,6 +36,7 @@
           <li><a href="">만든 스터디</a></li>
           <li><a href="">신청한 스터디</a></li>
           <li><a href="">작성한 자유게시글</a></li>
+          <li><a href="">회원 탈퇴</a></li>
         </ul>
       </nav>
     </aside>
@@ -42,7 +44,7 @@
     <main>
       <div class="mypage-div-main">
         <div class="mypage-title">
-          <h1>''님의 마이페이지 </h1><br />
+          <h1>개인정보 수정</h1><br />
           <p>개인 정보 설정을 관리하여 나에게 맞는 방식으로 지식의 숲을 사용할 수 있습니다. <a href="">자세히 알아보기</a></p>
         </div>
         <!-- <hr /><br /> -->
@@ -64,16 +66,21 @@
               <label for="nickname">닉네임</label>
               <input type="text" id="nickname">
             </div>
-            <button class="mypage-btn-nickname">수정</button>
+            <button class="mypage-btn-nickname">중복검사</button>
           </div>
+          <div id="nickname-error"></div>
           <div class="mypage-div-wrapper">
             <label for="password">비밀번호</label>
-            <input type="text" id="password">
+            <input type="password" id="password">
           </div>
+          <div id="password-error" ></div>
+
           <div class="mypage-div-wrapper">
             <label for="passwordchk">비밀번호 확인</label>
-            <input type="text" id="passwordchk" placeholder="비밀번호를 다시 입력해주세요">
+            <input type="password" id="passwordchk" placeholder="비밀번호를 한번 더 입력해주세요">            
           </div>
+          <div id="passwordchk-error" ></div>
+
           <div class="mypage-div-wrapper2">
             <div class="editpage-input-phoneNum">
               <label for="phoneNum">전화번호</label>
@@ -84,7 +91,7 @@
           <div class="mypage-div-wrapper2">
             <div class="editpage-input-phoneNumchk">
               <label for="phoneNumchk">전화번호 확인</label>
-              <input type="text" id="phoneNumchk" placeholder="숫자만 입력해주세요">
+              <input type="text" id="phoneNumchk" placeholder="번호를 한번 더 입력해주세요">
             </div>
             <button class="mypage-btn-phoneNum-check">확인</button>
           </div>

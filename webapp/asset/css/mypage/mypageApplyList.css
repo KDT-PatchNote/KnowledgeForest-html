@@ -215,7 +215,7 @@ a{
   cursor: pointer;
 }
 /* 스터디 찜 수 */
-.mypage-div-likecount{
+.mypage-div-progress{
   line-height :40px;
   margin-left: 10px;
 }
@@ -256,6 +256,17 @@ a{
 .currentpage{
   background: #003161;
   color: white;
+}
+
+
+.mypage-btn-cancel{
+  /* padding : 0 10px; */
+  width: 50px;
+  height: 30px;
+  border: 1px solid #afafaf;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  color: #003161;
 }
 .mypage-li-paginationlist:hover:not(.pre,.next){
 

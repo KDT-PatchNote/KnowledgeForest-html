@@ -12,28 +12,36 @@ body {
   /* font-weight: 500; */
 }
 
-/* 메인 컨텐츠 */
-main {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  width: 100%;
-  margin-left: 210px; /* 사이드바 너비만큼 margin을 줘서 가운데 정렬 설정됨 */
-  /* overflow: scroll; */
+/* 메인 컨텐츠가 들어갈 컨테이너 */
+#MYPAGE-DIV-LAYOUTCONTAINER {
+  height: 100%;
+  margin-left: 210px;
 }
 
-.mypage-div-mainwrap {
+.mypage-div-container {
+  padding: 70px 0 40px;
+}
+
+/* 페이지 제목 */
+.mypage-h1-maintitle {
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-left: 130px;
+  /* letter-spacing: 10px; */
+  /* text-align: center; */
+}
+
+.mypage-div-contentscontainer {
   width: 80%;
   margin: auto;
+  padding: 50px 0;
 }
 
-.main-container {
-  border: 1px solid black;
-  background-color: #F6F6F6;
-  height: 100%;
-  
-  /* display: flex;
-  flex-direction: row; */
+.mypage-div-contentswrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 /*-사이드 테이블 스타일 부분-*/
@@ -117,32 +125,36 @@ a{
 /* 스터디 */
 .mypage-div-group {
   width: 300px;
-  height: 230px;
+  /* height: 230px; */
   /* width: 400px;
   height: 300px; */
-  margin-left:75px;
-  margin-top: 50px;
+  /* margin-left:75px;
+  margin-top: 50px; */
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 30px 10px;
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   cursor: pointer;
-  border: 1px solid #555;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid #afafaf;
 }
 
 
 .mypage-div-groupinner{
   width: 85%;
-  margin: 20px;
+  margin: auto;
 }
 /* 스터디의 마감일과 모집상태를 감싸는 래퍼 */
 .mypage-div-groupinfowrapper {
   /* margin-top: 10px; */
   display: flex;
   justify-content: space-between;
+}
+
+.datecontent-wrap {
+  margin-bottom: 10px;
 }
 
 /*스터디의 마감일과 모집상태  */
@@ -158,12 +170,13 @@ a{
   height: 70px;
   /* margin-top : 30px; */
   /* margin-bottom : 40px; */
+  font-size: 18px;  /* 기본 폰트 사이즈 16px*/
   text-align: left;
   font-weight: bold;
 }
 /* 스터디 카테고리*/
 .mypage-div-groupcategory {
-  width: 100px;
+  width: 60px;
   height: 30px;
   line-height: 30px;
   background-color: #003161;
@@ -180,7 +193,7 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin:  20px auto;
+  margin:  20px auto 0;
   border-top : 1px solid #888;
   padding-top : 10px;
 }

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./../../asset/css/mypage/mypageHostBoard.css" />
-  </head>
-  <body>
-    <!-- <header></header> -->
-    <div class="main-container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>만든 스터디</title>
+  <link rel="stylesheet" href="./../../asset/css/mypage/mypageHostBoard.css" />
+</head>
+<body>
 
+  <!-- <div id="MYPAGE-DIV-LAYOUTCONTAINER"> -->
     <!-- 사이드 메뉴 -->
     <aside id="MYPAGE-MENUCONTAINER">
       <nav class="mypage-div-menuwrap">
@@ -20,215 +19,222 @@
           <li class="mypage-li-menuactive"><a href="">만든 스터디</a></li>
           <li><a href="">신청한 스터디</a></li>
           <li><a href="">작성한 자유게시글</a></li>
+          <li><a href="">회원 탈퇴</a></li>
         </ul>
       </nav>
     </aside>
     <!-- 사이드 메뉴 끝 -->
-    <main>
-      <!-- 메인 컨텐츠 감싼 wrap 클래스 종료 -->
-      <div class="mypage-div-mainwrap">
-        <div class="mypage-title">
+
+    <!-- 메인 컨텐츠가 들어갈 컨테이너 -->
+    <div id="MYPAGE-DIV-LAYOUTCONTAINER">
+      <main class="mypage-div-container">
+      
+        <!-- 현재 페이지 제목 -->
+        <div class="mypage-h1-maintitle">
           <h1>만든 스터디</h1><br />
-          <p>''님이 만든 스터디 목록 입니다</p>
+          <p>''님이 만드신 게시글 목록 입니다</p>
         </div>
-        <div class="mypage-div-groupWrapper">
-          <div class="mypage-div-wrapperinner">
-            <!-- 모임 항목-->
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-enddate">
-                    마감일 &nbsp;| &nbsp; 2025.01.05
+          <!-- 게시판 컨텐츠 정렬을 위한 div -->
+          <div class="mypage-div-contentscontainer">
+            <div class="mypage-div-contentswrap">
+
+              <!-- 모임 항목 컨텐츠 1 -->
+              <div class="mypage-div-group">
+                <div class="mypage-div-groupinner">
+                  <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                    <div class="mypage-div-enddate">
+                      마감일 &nbsp;| &nbsp; 2025.01.05
+                    </div>
+                    <div class="mypage-div-groupstatus">모집 중</div>
                   </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </div>
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">보안</div>
-                  <div class="mypage-div-groupmember">7/7</div>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">김철수</div>
-                  <div class="mypage-div-likewrapper">
-                    <img
-                      src="/webapp/asset//img/study/like.png"
-                      alt="찜"
-                      class="mypage-img-like"
-                    />
-                    <div class="mypage-div-likecount">7</div>
+                  <div class="mypage-div-grouptitle">
+                    웹 보안의 기초부터 간단한 토이 프로젝트까지
+                  </div>
+                  <div class="mypage-div-groupinfowrapper">
+                    <div class="mypage-div-groupcategory">보안</div>
+                    <div class="mypage-div-groupmember">7/7</div>
+                  </div>
+                  <div class="mypage-div-groupmakerwrapper">
+                    <div class="mypage-div-groupmaker">김철수</div>
+                    <div class="mypage-div-likewrapper">
+                      <img
+                        src="/webapp/asset//img/study/like.png"
+                        alt="찜"
+                        class="mypage-img-like"
+                      />
+                      <div class="mypage-div-likecount">7</div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- 모임 항목 컨텐츠 2 -->
+              <div class="mypage-div-group">
+                <div class="mypage-div-groupinner">
+                  <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                    <div class="mypage-div-enddate">
+                      마감일 &nbsp;| &nbsp; 2025.01.05
+                    </div>
+                    <div class="mypage-div-groupstatus">모집 중</div>
+                  </div>
+                  <div class="mypage-div-grouptitle">
+                    웹 보안의 기초부터 간단한 토이 프로젝트까지
+                  </div>
+                  <div class="mypage-div-groupinfowrapper">
+                    <div class="mypage-div-groupcategory">보안</div>
+                    <div class="mypage-div-groupmember">7/7</div>
+                  </div>
+                  <div class="mypage-div-groupmakerwrapper">
+                    <div class="mypage-div-groupmaker">김철수</div>
+                    <div class="mypage-div-likewrapper">
+                      <img
+                        src="/webapp/asset//img/study/like.png"
+                        alt="찜"
+                        class="mypage-img-like"
+                      />
+                      <div class="mypage-div-likecount">7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 모임 항목 컨텐츠 2 -->
+              <div class="mypage-div-group">
+                <div class="mypage-div-groupinner">
+                  <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                    <div class="mypage-div-enddate">
+                      마감일 &nbsp;| &nbsp; 2025.01.05
+                    </div>
+                    <div class="mypage-div-groupstatus">모집 중</div>
+                  </div>
+                  <div class="mypage-div-grouptitle">
+                    웹 보안의 기초부터 간단한 토이 프로젝트까지
+                  </div>
+                  <div class="mypage-div-groupinfowrapper">
+                    <div class="mypage-div-groupcategory">보안</div>
+                    <div class="mypage-div-groupmember">7/7</div>
+                  </div>
+                  <div class="mypage-div-groupmakerwrapper">
+                    <div class="mypage-div-groupmaker">김철수</div>
+                    <div class="mypage-div-likewrapper">
+                      <img
+                        src="/webapp/asset//img/study/like.png"
+                        alt="찜"
+                        class="mypage-img-like"
+                      />
+                      <div class="mypage-div-likecount">7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 모임 항목 컨텐츠 2 -->
+              <div class="mypage-div-group">
+                <div class="mypage-div-groupinner">
+                  <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                    <div class="mypage-div-enddate">
+                      마감일 &nbsp;| &nbsp; 2025.01.05
+                    </div>
+                    <div class="mypage-div-groupstatus">모집 중</div>
+                  </div>
+                  <div class="mypage-div-grouptitle">
+                    웹 보안의 기초부터 간단한 토이 프로젝트까지
+                  </div>
+                  <div class="mypage-div-groupinfowrapper">
+                    <div class="mypage-div-groupcategory">보안</div>
+                    <div class="mypage-div-groupmember">7/7</div>
+                  </div>
+                  <div class="mypage-div-groupmakerwrapper">
+                    <div class="mypage-div-groupmaker">김철수</div>
+                    <div class="mypage-div-likewrapper">
+                      <img
+                        src="/webapp/asset//img/study/like.png"
+                        alt="찜"
+                        class="mypage-img-like"
+                      />
+                      <div class="mypage-div-likecount">7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 모임 항목 컨텐츠 2 -->
+              <div class="mypage-div-group">
+                <div class="mypage-div-groupinner">
+                  <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                    <div class="mypage-div-enddate">
+                      마감일 &nbsp;| &nbsp; 2025.01.05
+                    </div>
+                    <div class="mypage-div-groupstatus">모집 중</div>
+                  </div>
+                  <div class="mypage-div-grouptitle">
+                    웹 보안의 기초부터 간단한 토이 프로젝트까지
+                  </div>
+                  <div class="mypage-div-groupinfowrapper">
+                    <div class="mypage-div-groupcategory">보안</div>
+                    <div class="mypage-div-groupmember">7/7</div>
+                  </div>
+                  <div class="mypage-div-groupmakerwrapper">
+                    <div class="mypage-div-groupmaker">김철수</div>
+                    <div class="mypage-div-likewrapper">
+                      <img
+                        src="/webapp/asset//img/study/like.png"
+                        alt="찜"
+                        class="mypage-img-like"
+                      />
+                      <div class="mypage-div-likecount">7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 모임 항목 컨텐츠 2 -->
+              <div class="mypage-div-group">
+                <div class="mypage-div-groupinner">
+                  <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                    <div class="mypage-div-enddate">
+                      마감일 &nbsp;| &nbsp; 2025.01.05
+                    </div>
+                    <div class="mypage-div-groupstatus">모집 중</div>
+                  </div>
+                  <div class="mypage-div-grouptitle">
+                    웹 보안의 기초부터 간단한 토이 프로젝트까지
+                  </div>
+                  <div class="mypage-div-groupinfowrapper">
+                    <div class="mypage-div-groupcategory">보안</div>
+                    <div class="mypage-div-groupmember">7/7</div>
+                  </div>
+                  <div class="mypage-div-groupmakerwrapper">
+                    <div class="mypage-div-groupmaker">김철수</div>
+                    <div class="mypage-div-likewrapper">
+                      <img
+                        src="/webapp/asset//img/study/like.png"
+                        alt="찜"
+                        class="mypage-img-like"
+                      />
+                      <div class="mypage-div-likecount">7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
-            <!-- 모임 항목-->
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-enddate">
-                    마감일 &nbsp;| &nbsp; 2025.01.05
-                  </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </div>
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">보안</div>
-                  <div class="mypage-div-groupmember">7/7</div>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">김철수</div>
-                  <div class="mypage-div-likewrapper">
-                    <img
-                      src="/webapp/asset//img/study/like.png"
-                      alt="찜"
-                      class="mypage-img-like"
-                    />
-                    <div class="mypage-div-likecount">7</div>
-                  </div>
-                </div>
-              </div>
+            <!-- 페이지네이션 -->
+            <div class="mypage-div-paginationwrapper">
+              <ul id="mypage-UL-PAGINATION">
+                <li class="mypage-li-paginationlist pre">&lt;</li>
+                <li class="mypage-li-paginationlist currentpage">1</li>
+                <li class="mypage-li-paginationlist">2</li>
+                <li class="mypage-li-paginationlist">3</li>
+                <li class="mypage-li-paginationlist">4</li>
+                <li class="mypage-li-paginationlist">5</li>
+                <li class="mypage-li-paginationlist next">&#62;</li>
+              </ul>
             </div>
-
-            <!-- 모임 항목-->
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-enddate">
-                    마감일 &nbsp;| &nbsp; 2025.01.05
-                  </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </div>
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">보안</div>
-                  <div class="mypage-div-groupmember">7/7</div>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">김철수</div>
-                  <div class="mypage-div-likewrapper">
-                    <img
-                      src="/webapp/asset//img/study/like.png"
-                      alt="찜"
-                      class="mypage-img-like"
-                    />
-                    <div class="mypage-div-likecount">7</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- 모임 항목-->
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-enddate">
-                    마감일 &nbsp;| &nbsp; 2025.01.05
-                  </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </div>
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">보안</div>
-                  <div class="mypage-div-groupmember">7/7</div>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">김철수</div>
-                  <div class="mypage-div-likewrapper">
-                    <img
-                      src="/webapp/asset//img/study/like.png"
-                      alt="찜"
-                      class="mypage-img-like"
-                    />
-                    <div class="mypage-div-likecount">7</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-enddate">
-                    마감일 &nbsp;| &nbsp; 2025.01.05
-                  </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </div>
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">보안</div>
-                  <div class="mypage-div-groupmember">7/7</div>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">김철수</div>
-                  <div class="mypage-div-likewrapper">
-                    <img
-                      src="/webapp/asset//img/study/like.png"
-                      alt="찜"
-                      class="mypage-img-like"
-                    />
-                    <div class="mypage-div-likecount">7</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-enddate">
-                    마감일 &nbsp;| &nbsp; 2025.01.05
-                  </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </div>
-                <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">보안</div>
-                  <div class="mypage-div-groupmember">7/7</div>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">김철수</div>
-                  <div class="mypage-div-likewrapper">
-                    <img
-                      src="/webapp/asset//img/study/like.png"
-                      alt="찜"
-                      class="mypage-img-like"
-                    />
-                    <div class="mypage-div-likecount">7</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
           </div>
-        </div>
-        <!-- 페이지네이션 -->
-        <div class="mypage-div-paginationwrapper">
-          <ul id="mypage-UL-PAGINATION">
-            <li class="mypage-li-paginationlist pre">&lt;</li>
-            <li class="mypage-li-paginationlist currentpage">1</li>
-            <li class="mypage-li-paginationlist">2</li>
-            <li class="mypage-li-paginationlist">3</li>
-            <li class="mypage-li-paginationlist">4</li>
-            <li class="mypage-li-paginationlist">5</li>
-            <li class="mypage-li-paginationlist next">&#62;</li>
-          </ul>
-        </div>
-      </div>
-      <!-- 메인 컨텐츠 감싼 wrap 클래스 종료 -->
-    </main>
-    <!-- 메인 컨텐츠 종료 -->
+          <!-- 게시판 컨텐츠 정렬을 위한 div 끝 -->
 
+      </main>
+      <!-- 메인 컨텐츠 끝 -->
     </div>
-  </body>
+    
+  <!-- </div> -->
+
+</body>
 </html>
