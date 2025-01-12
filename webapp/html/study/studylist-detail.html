@@ -4,21 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>지식의 숲</title>
-    <link
-      rel="stylesheet"
-      href="../../asset/css/study/studylist-detail.css"
-    />
+    <link rel="stylesheet" href="../../asset/css/study/studylist-detail.css" />
   </head>
-    <nav>
-      <img src="/webapp/asset/img/main/logo-1.png" class="main-img-logo" />
-      <ul class="main-nav-ul">
-        <li>공지</li>
-        <li>자유게시판</li>
-        <li>스터디 모집</li>
-        <li>마이페이지</li>
-        <li>로그아웃</li>
-      </ul>
-    </nav>
+  <nav>
+    <img src="/webapp/asset/img/main/logo-1.png" class="main-img-logo" />
+    <ul class="main-nav-ul">
+      <li>공지</li>
+      <li>자유게시판</li>
+      <li>스터디 모집</li>
+      <li>마이페이지</li>
+      <li>로그아웃</li>
+    </ul>
+  </nav>
 
   <body>
     <main>
@@ -137,13 +134,19 @@
               name="studyContents"
               id="STUDYLIST-TEXTAREA-COMMENT"
               placeholder="덧글을 남겨 보세요"
+              data-counter="WRITE-COMMENT-COUNTER"
+              oninput="updateCharacterCount(this, 200)"
             >
             </textarea>
           </form>
         </div>
 
         <div class="studylist-div-counterwrapper">
-          <span class="studylist-span-counter">0/200</span>
+          <span
+            class="studylist-span-counter"
+            id="WRITE-COMMENT-COUNTER"
+            >0/200</span
+          >
         </div>
       </div>
 
@@ -211,9 +214,17 @@
           </div>
           <div class="studylist-div-commentlayer">
             <form action="" id="STUDYLIST-FORM-EDITCOMMENT">
-              <textarea class="studylist-textarea-commentcontents"> </textarea>
+              <textarea
+                class="studylist-textarea-commentcontents"
+                data-counter="EDIT-COMMENT-COUNTER"
+                oninput="updateCharacterCount(this, 200)"
+              >
+              </textarea>
               <div class="studylist-div-counterwrapper">
-                <span class="studylist-span-counter">0/200</span>
+                <span id="EDIT-COMMENT-COUNTER" 
+                class="studylist-span-counter"
+                  >0/200</span
+                >
               </div>
             </form>
           </div>
@@ -243,7 +254,7 @@
         </ul>
       </div>
     </main>
-    
+
     <footer class="main-footer-container">
       <div class="main-footer-content">
         <div class="main-footer-links">
@@ -281,13 +292,15 @@
           <textarea
             name="studyContents"
             id="STUDYLIST-TEXTAREA-COURAGE"
+            data-counter="COURAGE-COUNTER"
             placeholder="덧글을 남겨 보세요"
+            oninput="updateCharacterCount(this, 200)"
           >
           </textarea>
         </form>
 
         <div class="studylist-div-counterwrapper">
-          <span class="studylist-span-counter">0/200</span>
+          <span id="COURAGE-COUNTER" class="studylist-span-counter">0/200</span>
         </div>
       </div>
       <div class="studylist-div-bottomlayer">

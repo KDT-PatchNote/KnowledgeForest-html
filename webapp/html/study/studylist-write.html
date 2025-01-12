@@ -6,7 +6,6 @@
     <title>지식의 숲</title>
     <link rel="stylesheet" href="../../asset/css/study/studylist-write.css" />
   </head>
-   
 
   <body>
     <nav>
@@ -40,23 +39,26 @@
               />
             </div>
           </div>
-
+          <!-- 2개씩 나눠진 div layer -->
           <div class="studylist-div-wrapperlayerDual">
             <div class="studylist-div-infowrapperDual">
               <div class="label">카테고리</div>
-              <div class="studylist-div-selectwrapper">
-                <div class="studylist-div-selector">개발</div>
-                <div class="studylist-div-selector selected">보안</div>
+              <div class="studylist-div-categoryselectwrapper">
+                <div class="studylist-div-categoryselector categoryselected">개발</div>
+                <div class="studylist-div-categoryselector">보안</div>
               </div>
             </div>
             <div class="studylist-div-infowrapperDual">
               <div class="label">전화번호</div>
-              <div class="studylist-div-selectwrapper">
-                <div class="studylist-div-selector">보이기</div>
-                <div class="studylist-div-selector selected">숨기기</div>
+              <div class="studylist-div-phoneselectwrapper">
+                <div class="studylist-div-shownumberselector phoneselected">
+                  보이기
+                </div>
+                <div class="studylist-div-shownumberselector">숨기기</div>
               </div>
             </div>
           </div>
+          <!-- 2개씩 나눠진 div layer -->
           <div class="studylist-div-wrapperlayerDual">
             <div class="studylist-div-infowrapperDual">
               <div class="label">정원 수</div>
@@ -75,6 +77,9 @@
               />
             </div>
           </div>
+
+          <!-- 2개씩 나눠진 div layer -->
+
           <div class="studylist-div-wrapperlayerDual">
             <div class="studylist-div-infowrapperDual">
               <div class="label">시작날짜</div>
@@ -126,28 +131,20 @@
           <div class="studylist-div-longwrapperlayer">
             <div class="studylist-div-textareawrapper">
               <div class="label">설명</div>
-              <textarea class="studylist-div-studycontents">
-                6개월 동안 JAVA 코딩테스트 문제 풀이하고 코드해석 해보는 스터디
-                모임입니다. 화, 목 13시부터 16시까지 총 3시간동안 진행
-                예정입니다 다른 분들과 코드 공유해보며 여러 풀이 방법도 경험하고
-                또 색다른 코드들을 경험하며 배울 수 있습니다. 원하시는 분들은
-                코디신청서 작성시 전화번호 또는 카톡 아이디 같이 작성해주세요.
-              </textarea>
+              <textarea class="studylist-div-studycontents"> </textarea>
             </div>
             <div class="studylist-div-filewrap">
               <div class="label">첨부파일</div>
               <label id="STUDYLIST-INPUT-FILELABEL" for="STUDYLIST-INPUT-FILE">
                 <input type="file" id="STUDYLIST-INPUT-FILE" />
-                <div
-                class="studylist-div-filebtn"
-                >첨부</div>
+                <div class="studylist-div-filebtn">첨부</div>
               </label>
             </div>
           </div>
         </form>
       </div>
     </main>
-    
+
     <footer class="main-footer-container">
       <div class="main-footer-content">
         <div class="main-footer-links">
