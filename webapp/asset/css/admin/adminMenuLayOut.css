@@ -58,16 +58,17 @@ li { list-style-type: none; }
 }
 
 /* 사이드 메뉴에 마우스오버시 */
-.admin-ul-menuwrap li:hover {
+.admin-ul-menuwrap li:hover:not(.admin-li-menuactive) {
   background-color: #0b2d52;
   color: inherit;
 }
 
 /* 메뉴 클릭했을 때 */
 .admin-li-menuactive {
-  background-color: #fff;
+  background-color: #F6F6F6;
   color: #003161;
 }
+.admin-li-menuactive:hover { background-color: #dedede; }
 
 /* 사이드메뉴 기준 우측 요소들 감싸는 태그 */
 #ADMIN-DIV-CONTENTWRAP {
@@ -173,6 +174,7 @@ li { list-style-type: none; }
 /* 테이블 양식 */
 .admin-div-listwrap {
   width: 90%;
+  min-height: 200px;
   margin: auto;
   text-align: center;
 }
