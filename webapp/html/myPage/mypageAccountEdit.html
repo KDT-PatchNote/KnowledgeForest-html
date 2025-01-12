@@ -9,7 +9,8 @@
 <body>
   <!-- <header></header> -->
   <div class="main-container">
-    <aside>
+
+    <!-- <aside>
       <div class="mypage-div-asidetitle">
         <h1>마이페이지</h1>
       </div>
@@ -22,13 +23,30 @@
           <li>작성한 자유게시판 목록</li>
         </ul>
       </div>
+    </aside> -->
+    
+    <!-- 사이드 메뉴 -->
+    <aside id="MYPAGE-MENUCONTAINER">
+      <nav class="mypage-div-menuwrap">
+        <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
+        <ul class="mypage-ul-menuwrap">
+          <li class="mypage-li-menuactive"><a href="">개인정보 수정</a></li>
+          <li><a href="./admin-study-list.html">찜한 목록</a></li>
+          <li><a href="">만든 스터디</a></li>
+          <li><a href="">신청한 스터디</a></li>
+          <li><a href="">작성한 자유게시글</a></li>
+        </ul>
+      </nav>
     </aside>
+
     <main>
-      <div class="mypage-title">
-        <h1>개인 정보 수정</h1>
-      </div>
-      <section class="mypage-section">
-        <div class="section1">
+      <div class="mypage-div-main">
+        <div class="mypage-title">
+          <h1>''님의 마이페이지 </h1><br />
+          <p>개인 정보 설정을 관리하여 나에게 맞는 방식으로 지식의 숲을 사용할 수 있습니다. <a href="">자세히 알아보기</a></p>
+        </div>
+        <!-- <hr /><br /> -->
+        <section class="mypage-section">
           <div class="mypage-div-wrapper">
             <label for="name">이름</label>
             <input type="text" id="name" readonly>
@@ -48,35 +66,33 @@
             </div>
             <button class="mypage-btn-nickname">수정</button>
           </div>
-        </div>
-        <div class="section">
           <div class="mypage-div-wrapper">
             <label for="password">비밀번호</label>
             <input type="text" id="password">
           </div>
           <div class="mypage-div-wrapper">
             <label for="passwordchk">비밀번호 확인</label>
-            <input type="text" id="passwordchk">
+            <input type="text" id="passwordchk" placeholder="비밀번호를 다시 입력해주세요">
           </div>
           <div class="mypage-div-wrapper2">
             <div class="editpage-input-phoneNum">
               <label for="phoneNum">전화번호</label>
-              <input type="text" id="phoneNum">
+              <input type="text" id="phoneNum" placeholder="숫자만 입력해주세요">
             </div>
             <button class="mypage-btn-phoneNum-send">전송</button>
           </div>
           <div class="mypage-div-wrapper2">
             <div class="editpage-input-phoneNumchk">
               <label for="phoneNumchk">전화번호 확인</label>
-              <input type="text" id="phoneNumchk">
+              <input type="text" id="phoneNumchk" placeholder="숫자만 입력해주세요">
             </div>
             <button class="mypage-btn-phoneNum-check">확인</button>
           </div>
+        </section>
+        <div class="mypage-div-edit">
+          <button class="mypage-btn-edit">저장</button>
         </div>
-      </section>
-      <div class="mypage-div-edit">
-        <button class="mypage-btn-edit">정보 수정</button>
-      </div>  
+      </div>
     </main>    
   </div>
 

@@ -7,151 +7,93 @@
   <link rel="stylesheet" href="./../../asset/css/mypage/mypageWrittenBoard.css">
 </head>
 <body>
-  <div class="board-div-list">
-    <ul class="board-list">
-      <li class="board-header">
-        <span class="board-number">번호</span>
-        <span class="board-title">제목</span>
-        <span class="board-author">작성자</span>
-        <span class="board-date">작성일</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">1</span>
-        <span class="board-title">게시판 제목 1</span>
-        <span class="board-author">작성자1</span>
-        <span class="board-date">2025-01-11</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">2</span>
-        <span class="board-title">게시판 제목 2</span>
-        <span class="board-author">작성자2</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">3</span>
-        <span class="board-title">게시판 제목 3</span>
-        <span class="board-author">작성자3</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">4</span>
-        <span class="board-title">게시판 제목 4</span>
-        <span class="board-author">작성자4</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">5</span>
-        <span class="board-title">게시판 제목 5</span>
-        <span class="board-author">작성자5</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">6</span>
-        <span class="board-title">게시판 제목 6</span>
-        <span class="board-author">작성자6</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">7</span>
-        <span class="board-title">게시판 제목 7</span>
-        <span class="board-author">작성자7</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">8</span>
-        <span class="board-title">게시판 제목 8</span>
-        <span class="board-author">작성자8</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">9</span>
-        <span class="board-title">게시판 제목 9</span>
-        <span class="board-author">작성자9</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-      <li class="board-item">
-        <span class="board-number">10</span>
-        <span class="board-title">게시판 제목 10</span>
-        <span class="board-author">작성자10</span>
-        <span class="board-date">2025-01-10</span>
-      </li>
-    </ul>
-  </div>
-
-  <div class="jimboard-div-listswrap">
-
-    <!-- 글 1개 (컨텐츠) -->
-    <div class="jimboard-div-wrap">
-
-      <div class="section">
-        <div class="enddateandstatus">
-          <div class="enddate">
-            마감일|'2024.01.03'
-          </div>
-          <div class="endstatus">
-            마감
-          </div>
-        </div>  
-        <div class="title">
-          웹 보안의 기초부터 간단한 토이 프로젝트까지 
-        </div>
-
-        <div class="categoryandpeople">
-          <div class="category">
-            보안
-          </div>
-          <div class="peoplecount">
-            3/5
-          </div>
-        </div>
-        
-        <div class="nameandjim">
-          <div class="name">
-            뽕미
-          </div>
-          <div class="jim">
-            이미지 | 3
-          </div>
-        </div>
+  <div class="main-container">
+    <!-- 사이드 메뉴 -->
+    <aside id="MYPAGE-MENUCONTAINER">
+      <nav class="mypage-div-menuwrap">
+        <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
+        <ul class="mypage-ul-menuwrap">
+          <li class="mypage-li-menuactive"><a href="">개인정보 수정</a></li>
+          <li><a href="./admin-study-list.html">찜한 목록</a></li>
+          <li><a href="">만든 스터디</a></li>
+          <li><a href="">신청한 스터디</a></li>
+          <li><a href="">작성한 자유게시글</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- 사이드 메뉴 끝 -->
+    <div class="mypage-div-freeboard"></div>
+      <div class="board-div-list">
+        <ul class="board-list">
+          <li class="board-header">
+            <span class="board-number">번호</span>
+            <span class="board-title">제목</span>
+            <span class="board-author">작성자</span>
+            <span class="board-date">작성일</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">1</span>
+            <span class="board-title">게시판 제목 1</span>
+            <span class="board-author">작성자1</span>
+            <span class="board-date">2025-01-11</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">2</span>
+            <span class="board-title">게시판 제목 2</span>
+            <span class="board-author">작성자2</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">3</span>
+            <span class="board-title">게시판 제목 3</span>
+            <span class="board-author">작성자3</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">4</span>
+            <span class="board-title">게시판 제목 4</span>
+            <span class="board-author">작성자4</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">5</span>
+            <span class="board-title">게시판 제목 5</span>
+            <span class="board-author">작성자5</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">6</span>
+            <span class="board-title">게시판 제목 6</span>
+            <span class="board-author">작성자6</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">7</span>
+            <span class="board-title">게시판 제목 7</span>
+            <span class="board-author">작성자7</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">8</span>
+            <span class="board-title">게시판 제목 8</span>
+            <span class="board-author">작성자8</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">9</span>
+            <span class="board-title">게시판 제목 9</span>
+            <span class="board-author">작성자9</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+          <li class="board-item">
+            <span class="board-number">10</span>
+            <span class="board-title">게시판 제목 10</span>
+            <span class="board-author">작성자10</span>
+            <span class="board-date">2025-01-10</span>
+          </li>
+        </ul>
       </div>
     </div>
-    <!-- 글 1개 끝 -->
-    <!-- 글 1개 (컨텐츠) -->
-    <div class="jimboard-div-wrap">
-
-      <div class="section">
-        <div class="enddateandstatus">
-          <div class="enddate">
-            마감일|'2024.01.03'
-          </div>
-          <div class="endstatus">
-            마감
-          </div>
-        </div>  
-        <div class="title">
-          제목
-        </div>
-
-        <div class="categoryandpeople">
-          <div class="category">
-            보안
-          </div>
-          <div class="peoplecount">
-            3/5
-          </div>
-        </div>
-        <div class="nameandjim">
-          <div class="name">
-            뽕미
-          </div>
-          <div class="jim">
-            이미지 | 3
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 글 1개 끝 -->
-
   </div>
 </body>
 </html>
