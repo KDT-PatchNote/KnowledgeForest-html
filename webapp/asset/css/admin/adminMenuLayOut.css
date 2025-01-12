@@ -48,18 +48,20 @@ li { list-style-type: none; }
 .admin-ul-menuwrap { width: 100%; }
 
 .admin-ul-menuwrap li {
+  position: relative;
   height: 50px;
   line-height: 50px;
+  padding: 0 10px;
   cursor: pointer;
+  text-align: right;
 }
 
-.admin-ul-menuwrap li a {
-  display: block;
-  width: 100%;
+.admin-ul-menuwrap a {
+  position: absolute;
+  left: 0;
+  width: 76%;
   height: 100%;
-  position: relative;
-  left: -20px;
-  text-align: right;
+  padding: 0 25px;
 }
 
 /* 사이드 메뉴에 마우스오버시 */
