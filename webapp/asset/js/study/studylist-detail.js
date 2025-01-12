@@ -47,10 +47,33 @@ function deleteComment() {
   }
 }
 
-//댓글을 입력할때마다 글자수를 세는 함수
+/**
+ * 글자 수를 실시간 업데이트하는 함수
+ * @param {HTMLElement} textarea - 텍스트 영역 요소
+ * @param {number} maxCharacters - 최대 글자 수
+ * @author 황어진
+ * @since 2025-01-13
+ *
+ */
+function updateCharacterCount(textarea, maxCharacters) {
+  // 데이터 속성을 기반으로 카운터 요소 가져오기
+  console.log(textarea.dataset)
+  const counterId = textarea.dataset.counter;
+  const counter = document.getElementById(counterId);
 
-function countChar(val) {}
+  // 현재 입력된 글자 수 계산
+  const currentLength = textarea.value.trim().length;
 
+  // 카운터 업데이트
+  counter.textContent = `${currentLength}/${maxCharacters}`;
+
+// 200자 초과시 글자 입력 불가
+  if(currentLength > maxCharacters){
+    textarea.value = textarea.value.substring(0,maxCharacters);
+    counter.textContent = `${maxCharacters}/${maxCharacters}`;
+  }
+
+}
 // 스터디 신청시 모달 띄우기
 function applyStudy() {
   document.getElementById("STUDYLIST-MODAL-APPLY").style.display = "block";
