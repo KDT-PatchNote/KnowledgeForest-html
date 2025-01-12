@@ -1,20 +1,18 @@
 /* 각 데이터의 가로 너비 */
-.adminStudy-li-applyid { width: 13%; }
+.adminStudyComment-li-studycommentid { width: 10%; }
 
-.adminStudy-li-studyid { width: 10%; }
+.adminStudyComment-li-studyid { width: 10%; }
 
-.adminStudy-li-studymemberwrap { width: 15%; }
+.adminStudyComment-li-studycommentcontent { width: 30%; }
 
-.adminStudy-li-studystatus { width: 9%; }
+.adminStudyComment-li-userid { width: 15%; }
 
-.adminStudy-li-applystatus { width: 10%; }
+.adminStudyComment-li-usernickname { width: 15%; }
 
-.adminStudy-li-userid { width: 15%; }
+.adminStudyComment-li-studycommentwritedate { width: 10%; }
 
-.adminStudy-li-usernickname { width: 15%; }
-
-.adminStudy-li-studydelete {
-  width: 13%;
+.adminStudyComment-li-commentdelete {
+  width: 10%;
   cursor: default;
 }
 
