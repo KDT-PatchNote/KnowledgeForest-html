@@ -6,7 +6,7 @@
     <title>지식의 숲</title>
     <link
       rel="stylesheet"
-      href="/webapp/asset/css/study/studylist-detail.css"
+      href="../../asset/css/study/studylist-detail.css"
     />
   </head>
   <body>
@@ -14,7 +14,7 @@
       <!-- 페이지 타이틀 -->
       <div class="studylist-detail-div-titlewrapper">
         <img
-          src="/webapp/asset/img/study/back.png"
+          src="../../asset/img/study/back.png"
           alt="뒤로가기"
           class="studylist-detail-img-back"
           onclick="goBack()"
@@ -240,7 +240,7 @@
         <h1>STUDY 신청</h1>
       </div>
 
-      <div class="studylist-div-commentwrapper">
+      <div class="studylist-div-couragewrapper">
         <form action="" id="STUDYLIST-FORM-WRITECOURAGE">
           <textarea
             name="studyContents"
@@ -256,11 +256,16 @@
       </div>
       <div class="studylist-div-bottomlayer">
         <div class="studylist-div-checkboxwrapper">
-          <div>
-            <img src="/webapp/asset/img/study/check.png" alt="체크">
-          </div>
+          <!-- <img 
+            src="/webapp/asset/img/study/checkboxOut.png"
+             alt="체크" 
+             class="studylist-img-checkboximg"
+             /> -->
+          <input type="checkbox" id="STUDYLIST-CHECKBOX-AGREE" onchange="" />
           <p class="studylist-p-infotext">
-            스터디 모임 참여 후 발생할 수 있는 모든 문제는 참여자 간의 사적 문제로 간주되며, 본 게시판 및 운영자는 이에 대해 어떠한 법적 책임도 지지 않음을 알려드립니다.
+            스터디 모임 참여 후 발생할 수 있는 모든 문제는 참여자 간의 사적
+            문제로 간주되며, 본 게시판 및 운영자는 이에 대해 어떠한 법적 책임도
+            지지 않음을 알려드립니다.
           </p>
         </div>
         <div class="studylist-div-btnwrapper">
@@ -284,5 +289,5 @@
     </div>
   </div>
 
-  <script defer src="/webapp/asset/js/study/studylist-detail.js"></script>
+  <script defer src="../../asset/js/study/studylist-detail.js"></script>
 </html>
