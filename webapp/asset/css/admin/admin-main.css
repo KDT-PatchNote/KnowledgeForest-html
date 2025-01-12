@@ -81,13 +81,7 @@
   margin-right: 5px;
 }
 
-/* 공통 속성 - 데이터 중 회색 글씨 */
-.lightdata {
-  color: #808080;
-  font-weight: 500;
-}
-
-/* 공지  */
+/* 공지 목록 컬럼 너비  */
 .adminMain-li-noticetitle {
   width: 80%;
   margin-left: 5px;
