@@ -71,34 +71,39 @@
             </ul>
 
             <!-- 데이터 넣는 부분 - 임시데이터 (1) -->
-            <ul class="admin-ul-datawrap" onclick="moveDetail(this)">
-              <li class="adminStudy-li-studyid lightdata">319</li>
-              <li class="adminStudy-li-studytitle">스터디 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</li>
-              <li class="adminStudy-li-studymemberwrap">(3 / 7)</li>
-              <!-- 스터디 진행 상태(1) - 모집인원 = 제한인원 or 현재 날짜 > 마감날짜 일때 마감 출력 -->
-              <li class="adminStudy-li-studystatus lightdata">마감</li>
-              <!-- 스터디 진행 상태(2) - 그 외 -->
-              <!-- <li class="adminStudy-li-studystatus">모집 중</li> -->
-              <li class="adminStudy-li-userid lightdata">sdklfnewirfni97231</li>
-              <li class="adminStudy-li-usernickname lightdata">풀잎나무</li>
-              <li class="adminStudy-li-studywritedate lightdata">1999.01.01</li>
-              <li class="adminStudy-li-studydelete">
-                <input type="button" class="admin-btn-delete" onclick="deleteBtn(event)" value="삭제">
-              </li>
-            </ul>
+            <a href="https://www.naver.com/">
+              <ul class="admin-ul-datawrap">
+                <li class="adminStudy-li-studyid lightdata">319</li>
+                <li class="adminStudy-li-studytitle">스터디 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</li>
+                <li class="adminStudy-li-studymemberwrap">(3 / 7)</li>
+                <!-- 스터디 진행 상태(1) - 모집인원 = 제한인원 or 현재 날짜 > 마감날짜 일때 마감 출력 -->
+                <li class="adminStudy-li-studystatus lightdata">마감</li>
+                <!-- 스터디 진행 상태(2) - 그 외 -->
+                <!-- <li class="adminStudy-li-studystatus">모집 중</li> -->
+                <li class="adminStudy-li-userid lightdata">sdklfnewirfni97231</li>
+                <li class="adminStudy-li-usernickname lightdata">풀잎나무</li>
+                <li class="adminStudy-li-studywritedate lightdata">1999.01.01</li>
+                <li class="adminStudy-li-studydelete">
+                  <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제">
+                </li>
+              </ul>
+            </a>
 
-            <ul class="admin-ul-datawrap" onclick="moveDetail(this)">
-              <li class="adminStudy-li-studyid lightdata">319</li>
-              <li class="adminStudy-li-studytitle">스터디 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</li>
-              <li class="adminStudy-li-studymemberwrap">(4 / 5)</li>
-              <li class="adminStudy-li-studystatus">모집 중</li>
-              <li class="adminStudy-li-userid lightdata">sdklfnewirfni97231</li>
-              <li class="adminStudy-li-usernickname lightdata">풀잎나무</li>
-              <li class="adminStudy-li-studywritedate lightdata">1999.01.01</li>
-              <li class="adminStudy-li-studydelete">
-                <button class="admin-btn-delete" onclick="deleteBtn(this)">삭제</button>
-              </li>
-            </ul>
+            <!-- 임시데이터 (2) -->
+            <a href="">
+              <ul class="admin-ul-datawrap">
+                <li class="adminStudy-li-studyid lightdata">319</li>
+                <li class="adminStudy-li-studytitle">스터디 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</li>
+                <li class="adminStudy-li-studymemberwrap">(4 / 5)</li>
+                <li class="adminStudy-li-studystatus">모집 중</li>
+                <li class="adminStudy-li-userid lightdata">sdklfnewirfni97231</li>
+                <li class="adminStudy-li-usernickname lightdata">풀잎나무</li>
+                <li class="adminStudy-li-studywritedate lightdata">1999.01.01</li>
+                <li class="adminStudy-li-studydelete">
+                  <button class="admin-btn-delete" onclick="clickDeleteBtn(this)">삭제</button>
+                </li>
+              </ul>
+            </a>
 
           </div>
           <!-- 스터디 글 테이블 끝 -->

@@ -1,13 +1,5 @@
-// 리스트 중 게시글 하나 클릭 시
-function moveDetail(e) {
-  console.log("######");
-  // location.href = "./admin-userdetail.html";
-}
-
 // 삭제버튼 클릭 시
-function deleteBtn(e) {
-  console.log(this);
-  console.log(this);
+function clickDeleteBtn(e) {
   // 확인, 취소 버튼 선택
   const isdelete = confirm('정말 삭제하시겠습니까?');
 
@@ -17,8 +9,6 @@ function deleteBtn(e) {
     // 삭제 후 알람
     alert('삭제가 완료되었습니다.');
   }
-  console.log("3##");
-  e.target.stopPropagation();
-}
 
-onclick
+  // 부모 요소의 페이지 이동 이벤트 막아야함
+}
