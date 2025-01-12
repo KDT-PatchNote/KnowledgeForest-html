@@ -12,20 +12,20 @@
       <!-- 페이지 타이틀 -->
       <h1 class="studylist-h1-title">STUDY</h1>
       <!-- 검색창 -->
-        <form class="studylist-form-wrapper" action="">
-          <input
-            type="text"
-            class="studylist-input-search"
-            placeholder="검색어를 입력하세요."
+      <form class="studylist-form-wrapper" action="">
+        <input
+          type="text"
+          class="studylist-input-search"
+          placeholder="검색어를 입력하세요."
+        />
+        <button type="submit" class="studylist-btn-search">
+          <img
+            src="/webapp/asset/img/study/search-btn.png"
+            alt="search"
+            class="studylist-img-search"
           />
-          <button type="submit" class="studylist-btn-search">
-            <img
-              src="/webapp/asset/img/study/search-btn.png"
-              alt="search"
-              class="studylist-img-search"
-            />
-          </button>
-        </form>
+        </button>
+      </form>
       <!-- 전체 내용을 감싸는 래퍼-->
       <div class="studylist-div-contentsWrapper">
         <div class="studylist-div-categoryWrapper">
@@ -156,8 +156,14 @@
             </div>
           </div>
         </div>
+
+        <div class="studylist-div-btnwrapper">
+          <button class="studylist-btn-write" onclick="registerStudy()">등록</button>
+        </div>
+  
       </div>
 
+      
       <!-- 페이지네이션 -->
       <div class="studylist-div-paginationwrapper">
         <ul id="STUDYLIST-UL-PAGINATION">
