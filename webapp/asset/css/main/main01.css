@@ -16,7 +16,7 @@ nav {
     justify-content: space-between;
 }
 
-nav>ul {
+.main-nav-ul {
     list-style: none;
     display: flex;
     margin-right: 100px;
@@ -41,16 +41,30 @@ nav>ul {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    height: 52vh;
 }
 
 .main-div-wishlist {
     width: 30%;
     padding: 10px;
-    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .main-div-wishlistcontainer {
+    flex-grow: 1;
+    display: flex;
     padding: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px;
+
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     border-top: 1px solid black;
@@ -59,7 +73,7 @@ nav>ul {
 
 .main-div-wishlistcontent {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
 }
 
@@ -184,6 +198,7 @@ nav>ul {
     margin-bottom: 15px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
+    gap: 10px;
 }
 
 .main-span-label {
@@ -209,7 +224,7 @@ nav>ul {
     padding: 5px 10px;
     border-radius: 20px;
     background-color: inherit;
-    
+
 }
 
 .main-div-studynew .main-span-label {
@@ -268,14 +283,13 @@ nav>ul {
     display: flex;
     position: relative;
     overflow: hidden;
-    
+
     padding: 20px;
     margin: 0 auto;
-    
+
 }
 
-
-.main-div-banner img{
+.main-div-banner img {
     display: none;
     width: 100%;
     height: 100%;
@@ -298,12 +312,44 @@ nav>ul {
     float: left;
 }
 
-.main-img-banner01,
-main-img-banner02,
-main-img-banner03
-{
-    width: 100vh;
-    height: auto;
+/* footer */
+
+.main-footer-container {
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #666;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.main-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-footer-links a {
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+}
+
+.main-span-divider {
+    color: #aaa;
+    margin: 0 5px;
+}
+
+.main-paragraph-contact,
+.main-paragraph-copyright {
+    margin: 0;
 }
 
 
