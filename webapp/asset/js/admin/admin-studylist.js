@@ -1,30 +1,24 @@
-// 스터디 상태 표시
-$studymember = $(".studymember")
-console.log($studymember);
-let $currentMember = $studymember.find(".adminStudy-current");
-let $limitMember = $studymember.find(".adminStudy-limit");
-let $studystatus = $studymember.next('.studystatus')
-console.log("!!! : " + $currentMember.text());
-console.log("333 : " + $limitMember.text());
+// 리스트 중 게시글 하나 클릭 시
+function moveDetail(e) {
+  console.log("######");
+  // location.href = "./admin-userdetail.html";
+}
 
+// 삭제버튼 클릭 시
+function deleteBtn(e) {
+  console.log(this);
+  console.log(this);
+  // 확인, 취소 버튼 선택
+  const isdelete = confirm('정말 삭제하시겠습니까?');
 
-$studymember.each((item) => {
-  console.log(item);
-  let $currentMember = item.find(".adminStudy-current");
-  let $limitMember = item.find(".adminStudy-limit");
-  let $studystatus = item.next('.studystatus')
-  console.log($currentMember.text());
-  console.log($limitMember.text());
-  
-  if ($currentMember === $limitMember) {
-    console.log("dd");
-    $studystatus.addClass("lightdata");
-    $studystatus.text("마감");
+  // 확인 버튼 클릭시
+  if (isdelete) {
+    // 해당 글 삭제 먼저 진행되어야 함
+    // 삭제 후 알람
+    alert('삭제가 완료되었습니다.');
   }
-});
+  console.log("3##");
+  e.target.stopPropagation();
+}
 
-// studyStatus.forEach((item) => {
-//   console.log(item.nextSibling);
-
-//   // item.nextSibling
-// });
+onclick
