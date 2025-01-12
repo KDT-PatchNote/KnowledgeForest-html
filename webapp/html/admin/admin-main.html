@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>지식의 숲 - 관리자</title>
   <link rel="stylesheet" href="./../../asset/css/admin/adminMenuLayOut.css">
-  <link rel="stylesheet" href="./../../asset/css/admin/adminMain.css">
+  <link rel="stylesheet" href="./../../asset/css/admin/admin-main.css">
 </head>
 <body>
   <div id="ADMIN-DIV-LAYOUTCONTAINER">
     <!-- 사이드 메뉴 -->
     <aside id="ADMIN-MENUCONTAINER">
       <nav class="admin-div-menuwrap">
-        <h1 id="ADMIN-H2-TITLE">관리자 페이지</h1>
+        <h1 id="ADMIN-H2-TITLE"><a href="./admin-main.html">관리자 페이지</a></h1>
         <ul class="admin-ul-menuwrap">
-          <li class="admin-li-menuactive"><a href="">유저 목록</a></li>
-          <li><a href="./admin-study-list.html">스터디 목록</a></li>
-          <li><a href="">스터디 신청 관리</a></li>
-          <li><a href="">스터디 댓글 목록</a></li>
-          <li><a href="">자유게시판 관리</a></li>
-          <li><a href="">공지 목록</a></li>
-          <li><a href="">배너 목록</a></li>
+          <li><a href="./admin-userlist.html">유저 목록</a></li>
+          <li><a href="./admin-studylist.html">스터디 목록</a></li>
+          <li><a href="./admin-studyapplylist.html">스터디 신청 관리</a></li>
+          <li><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
+          <li><a href="./admin-boardlist">자유게시판 관리</a></li>
+          <li><a href="./admin-noticelist">공지 목록</a></li>
+          <li><a href="./admin-bannerlist.html">배너 목록</a></li>
         </ul>
       </nav>
     </aside>
@@ -28,11 +28,11 @@
 
     <!-- 상단 헤더 + 헤더 아래 컨텐츠 요소들 -->
     <div id="ADMIN-DIV-CONTENTWRAP">
-
       <!-- 상단 헤더 -->
       <div id="ADMIN-DIV-HEADERCONTAINER">
+        <img src="./../../asset/img/main/logo.png" class="admin-img-logo" alt="Logo">
         <ul id="ADMIN-UL-HEADERWRAP">
-          <li><a href="">홈</a></li>
+          <li><a href="./../main/main.html">홈</a></li>
           <li><a href="">로그아웃</a></li>
         </ul>
       </div>
@@ -46,7 +46,7 @@
             <!-- 관리할 테이블 이름 -->
             <div class="adminMain-div-contentheaderWrap">
               <div class="adminMain-div-contentstitle">유저 목록</div>
-              <div class="adminMain-div-contentsall"><a href="">전체보기 &gt;</a></div>
+              <div class="adminMain-div-contentsall"><a href="./admin-userlist.html">전체보기 &gt;</a></div>
             </div>
             <!-- 테이블 형식 시작 -->
             <div class="adminMain-div-tablewrap">
@@ -62,7 +62,7 @@
                 <!-- 테이블 제목 끝 -->
                 <!-- 임시 유저 데이터 (1) - 데이터가 들어가는 부분 -->
                 <li>
-                  <a href="">
+                  <a href="./admin-userdetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-userid">유저명1</li>
                       <li class="adminMain-li-usernickname">닉네임</li>
@@ -74,7 +74,7 @@
                 
                 <!-- 임시 유저 데이터 (2) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-userdetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-userid">유저명2</li>
                       <li class="adminMain-li-usernickname">닉네임</li>
@@ -85,7 +85,7 @@
                 
                 <!-- 임시 유저 데이터 (3) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-userdetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-userid">유저명3</li>
                       <li class="adminMain-li-usernickname">닉네임</li>
@@ -96,7 +96,7 @@
                 
                 <!-- 임시 유저 데이터 (4) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-userdetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-userid">유저명4</li>
                       <li class="adminMain-li-usernickname">닉네임</li>
@@ -107,7 +107,7 @@
                 
                 <!-- 임시 유저 데이터 (5) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-userdetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-userid">유저명5</li>
                       <li class="adminMain-li-usernickname">닉네임</li>
@@ -127,7 +127,7 @@
             <!-- 관리할 테이블 이름 -->
             <div class="adminMain-div-contentheaderWrap">
               <div class="adminMain-div-contentstitle">스터디 목록</div>
-              <div class="adminMain-div-contentsall"><a href="">전체보기 &gt;</a></div>
+              <div class="adminMain-div-contentsall"><a href="./admin-studylist.html">전체보기 &gt;</a></div>
             </div>
             <!-- 테이블 형식 시작 -->
             <div class="adminMain-div-tablewrap">
@@ -141,8 +141,9 @@
                   </ul>
                 </li>
 
-                <!-- 임시 스터디 데이터 (1) - 데이터가 들어가는 부분 -->
+                <!-- 데이터가 들어가는 부분 - 임시 스터디 데이터 (1) -->
                 <li>
+                  <!-- 상세 페이지 링크 넣어줘야함 -->
                   <a href="">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-posttitle">
@@ -223,7 +224,7 @@
             <!-- 관리할 테이블 이름 -->
             <div class="adminMain-div-contentheaderWrap">
               <div class="adminMain-div-contentstitle">자유게시판 목록</div>
-              <div class="adminMain-div-contentsall"><a href="">전체보기 &gt;</a></div>
+              <div class="adminMain-div-contentsall"><a href="./admin-boardlist.html">전체보기 &gt;</a></div>
             </div>
             <!-- 테이블 형식 시작 -->
             <div class="adminMain-div-tablewrap">
@@ -236,8 +237,9 @@
                     <li class="adminMain-li-writerdate">작성일</li>
                   </ul>
                 </li>
-                <!-- 임시 자유게시판 데이터 (1) - 데이터가 들어가는 부분 -->
+                <!-- 데이터가 들어가는 부분 - 임시 자유게시판 데이터 (1) -->
                 <li>
+                  <!-- 사용자 화면에 상세페이지 링크 넣어줘야함 -->
                   <a href="">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-posttitle">
@@ -316,7 +318,7 @@
             <!-- 관리할 테이블 이름 -->
             <div class="adminMain-div-contentheaderWrap">
               <div class="adminMain-div-contentstitle">공지 목록</div>
-              <div class="adminMain-div-contentsall"><a href="">전체보기 &gt;</a></div>
+              <div class="adminMain-div-contentsall"><a href="./admin-noticelist.html">전체보기 &gt;</a></div>
             </div>
             <!-- 테이블 형식 시작 -->
             <div class="adminMain-div-tablewrap">
@@ -328,9 +330,9 @@
                     <li class="adminMain-li-writerdate">작성일</li>
                   </ul>
                 </li>
-                <!-- 임시 공지 데이터 (1) - 데이터가 들어가는 부분 -->
+                <!-- 데이터가 들어가는 부분 - 임시 공지 데이터 (1) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-noticedetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-noticetitle adminMain-notice-title">[공지사항] 안녕하세요 지식의 숲입니다.</li>
                       <li class="adminMain-li-writerdate lightdata">2025.01.03</li>
@@ -341,7 +343,7 @@
 
                 <!-- 임시 공지 데이터 (2) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-noticedetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-noticetitle adminMain-notice-title">[공지사항] 새해가 밝았습니다.</li>
                       <li class="adminMain-li-writerdate lightdata">2025.01.03</li>
@@ -351,7 +353,7 @@
 
                 <!-- 임시 공지 데이터 (3) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-noticedetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-noticetitle adminMain-notice-title">[양식] 스터디 등록 양식입니다.</li>
                       <li class="adminMain-li-writerdate lightdata">2025.01.03</li>
@@ -361,7 +363,7 @@
 
                 <!-- 임시 공지 데이터 (4) -->
                 <li>
-                  <a href="">
+                  <a href="./admin-noticedetail.html">
                     <ul class="list-datatable adminMain-lists-dataswrap">
                       <li class="adminMain-li-noticetitle adminMain-notice-title">[공지사항] 새해가 밝았습니다.</li>
                       <li class="adminMain-li-writerdate lightdata">2025.01.03</li>
