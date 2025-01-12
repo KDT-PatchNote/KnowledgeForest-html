@@ -199,12 +199,19 @@ li { list-style-type: none; }
   border-bottom: 1px solid #ccc;
 }
 
+.admin-ul-datawrap li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
 /* 모든 데이터 중 회색 글씨 */
 .lightdata {
   color: #808080;
   font-weight: 500;
 }
-
 
 /* 모든 탈퇴, 삭제 공용 스타일 */
 .admin-btn-delete {
