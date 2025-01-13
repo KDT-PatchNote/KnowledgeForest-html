@@ -15,8 +15,36 @@ function goBack() {
 
 // 글 등록을 눌렀을 때  alert, 스터디 목록 페이지로 이동
 function updateBoard() {
-  if (confirm("게시글을 수정하시겠습니까?")) {
-    alert("스터디가 수정되었습니다.");
-    location.href = "./boardlist.html";
+  if (validateForm()) {
+    if (confirm("게시글을 수정 하시겠습니까?")) {
+      alert("스터디가 수정 되었습니다.");
+      location.href = "./boardlist.html";
+    }
   }
+}
+
+
+const titleInput = document.querySelector("input[name='boardlistName']");
+const descriptionInput = document.querySelector(
+  "textarea[name='boardDescription']"
+);
+/**
+ * 유효성 검사
+ * @return boolean
+ * @author 황어진
+ * @since 2025-01-14
+ *
+ */
+function validateForm() {
+  if (!titleInput.value.trim()) {
+    alert("제목을 입력해주세요.");
+    titleInput.focus();
+    return false;
+  }
+  if (!descriptionInput.value.trim()) {
+    alert("설명을 입력해주세요.");
+    descriptionInput.focus();
+    return false;
+  }
+  return true;
 }
