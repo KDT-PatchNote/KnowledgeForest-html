@@ -72,23 +72,31 @@
             </ul>
 
             <!-- 데이터 넣는 부분 - 임시데이터 (1) -->
-            <a href="">
-              <ul class="admin-ul-datawrap">
-                <li class="adminStudyApply-li-applyid lightdata">319</li>
-                <li class="adminStudyApply-li-studyid lightdata">342</li>
-                <li class="adminStudyApply-li-studymemberwrap">(3 / 7)</li>
-                <!-- 스터디 진행 상태(1) - 모집인원 = 제한인원 or 현재 날짜 > 마감날짜 일때 마감 출력 -->
-                <li class="adminStudyApply-li-studystatus">마감</li>
-                <!-- 스터디 진행 상태(2) - 그 외 -->
-                <!-- <li class="adminStudyApply-li-studystatus">모집 중</li> -->
-                <li class="adminStudyApply-li-applystatus">수락</li>
-                <li class="adminStudyApply-li-userid lightdata">sdklfnewirfni97231</li>
-                <li class="adminStudyApply-li-usernickname lightdata">풀잎나무</li>
-                <li class="adminStudyApply-li-studydelete">
-                  <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="신청취소">
-                </li>
-              </ul>
-            </a>
+            <ul class="admin-ul-datawrap">
+              <li class="adminStudyApply-li-applyid lightdata">
+                <!-- 관리자 화면의 스터디 신청 상세페이지로 이동 -->
+                <a href="./admin-studyapplydetail.html">
+                  319
+                </a>
+              </li>
+              <li class="adminStudyApply-li-studyid lightdata">
+                <!-- 사용자 화면의 스터디 상세페이지로 이동 -->
+                <a href="./../study/studylist-detail.html">
+                  342
+                </a>
+              </li>
+              <li class="adminStudyApply-li-studymemberwrap">(3 / 7)</li>
+              <!-- 스터디 진행 상태(1) - 모집인원 = 제한인원 or 현재 날짜 > 마감날짜 일때 마감 출력 -->
+              <li class="adminStudyApply-li-studystatus">마감</li>
+              <!-- 스터디 진행 상태(2) - 그 외 -->
+              <!-- <li class="adminStudyApply-li-studystatus">모집 중</li> -->
+              <li class="adminStudyApply-li-applystatus">수락</li>
+              <li class="adminStudyApply-li-userid lightdata">sdklfnewirfni97231</li>
+              <li class="adminStudyApply-li-usernickname lightdata">풀잎나무</li>
+              <li class="adminStudyApply-li-studydelete">
+                <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="신청취소">
+              </li>
+            </ul>
 
           </div>
           <!-- 스터디 글 테이블 끝 -->

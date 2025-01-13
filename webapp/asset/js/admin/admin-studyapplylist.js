@@ -9,6 +9,4 @@ function clickDeleteBtn(event) {
     // 취소 후 알람
     alert('취소가 완료되었습니다.');
   }
-
-  // 부모 요소의 페이지 이동 이벤트 막아야함
 }
