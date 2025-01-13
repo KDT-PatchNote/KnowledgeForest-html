@@ -6,10 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입</title>
   <link rel="stylesheet" href="./../../asset/css/login/join.css">
+  <link rel="stylesheet" href="./../../asset/css/main/header.css">
+  <link rel="stylesheet" href="./../../asset/css/main/footer.css">
+  <script defer src="./../../asset/js/login/join.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>test</header>
+  <header>
+        <!-- 상단 메뉴바 -->
+        <nav class="main-nav-menuwrap">
+          <img src="./../../asset/img/logo.png" class="main-img-logo">
+          <ul class="main-nav-ul">
+              <li><a href="./../notice/noticelist.html">공지</a></li>
+              <li><a href="./../board/boardlist.html">자유게시판</a></li>
+              <li><a href="./../study/studylist.html">스터디 모집</a></li>
+              <li><a href="./../login/join.html">회원가입</a></li>
+              <li><a href="./../login/login.html">로그인</a></li>
+          </ul>
+      </nav>
+
+  </header>
   <main>
     <div class="section-up">
       <div class="wrapper-h1-box">
@@ -38,22 +55,27 @@
             <p class="join-p-label">닉네임
             </p>
           </div>
-          <input type="text" class="join-input">
+          <input type="text" class="join-input" >
           <button class="join-btn-checkid">닉네임중복검사</button>
         </div>
         <div class="wrapper-text-alarm">중복된 닉네임입니다</div>
 
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
-            <p class="join-p-label">비밀번호</p>
+            <p class="join-p-label" id="join-p-pwd">비밀번호</p>
           </div>
-          <input type="text" class="join-input">
+          <input type="text" class="join-input" id="password" >
         </div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
-            <p class="join-p-label">비밀번호 재확인</p>
+            <p class="join-p-label" id="p-repassword">비밀번호 재확인</p>
           </div>
-          <input type="text" class="join-input">
+          <input 
+          type="text" 
+          class="join-input" 
+          id="repassword"
+         
+          >
         </div>
         <div class="wrapper-text-alarm">비밀번호가 일치하지 않습니다</div>
         <div class="join-div-inputlayer">
@@ -89,7 +111,7 @@
       </div>
       </div>
       </div>
-    </form>
+   
   </main>
   <hr>
 
@@ -97,11 +119,17 @@
     <div class="section-middle">
       <p class="join-p-labeltitle">개인정보 수집 및 처리 방침에 관한 동의사항</p>
       <div class="join-div-labelwrapper">
-        <img src="./../../asset/img/login/checkboxOut.png" alt="이미지 깨짐" class="img-checkbox">
+
+        <input type="checkbox" class="join-input-checkbox-big" name="join-input-checkbox-big">
+        <label for="join-input-checkbox"></label>
+        <!-- <img src="./../../asset/img/login/checkboxOut.png" alt="이미지 깨짐" class="img-checkbox"> -->
         <p class="join-p-labelall">전체동의</p>
       </div>
       <div class="join-div-labelwrapper">
-        <img src="./../../asset/img/login/checkboxOut.png" alt="이미지 깨짐" class="img-checkboxsmall">
+
+        <input type="checkbox" class="join-input-checkbox-small" name="join-input-checkbox-small">
+        <label for="join-input-checkbox-small"></label>
+        <!-- <img src="./../../asset/img/login/checkboxOut.png" alt="이미지 깨짐" class="img-checkboxsmall"> -->
         <p class="join-p-labelagree">이용약관 동의</p>
       </div>
       <div class="join-div-wrapperprivacy">
@@ -253,7 +281,10 @@
       </div>
 
       <div class="join-div-labelwrapper">
-        <img src="./../../asset/img/login/checkboxOut.png" alt="이미지 깨짐" class="img-checkboxsmall">
+
+        <input type="checkbox" class="join-input-checkbox-small" name="join-input-checkbox-small">
+        <label for="join-input-checkbox-small" ></label>
+        <!-- <img src="./../../asset/img/login/checkboxOut.png" alt="이미지 깨짐" class="img-checkboxsmall"> -->
         <p class="join-p-labelagree">이용약관 동의</p>
       </div>
       <div class="join-div-wrapperprivacy">
@@ -307,9 +338,26 @@
       <button class="btn-check">가입하기</button>
 
     </div>     <!-- section-middle /div -->
+  </form>
   </main>
 
-  <footer>test</footer>
+  <footer class="main-footer-container">
+    <div class="main-footer-content">
+        <div class="main-footer-links">
+            <div class="main-footer-policies">
+                <a href="#" class="main-link-policy">개인정보처리방침</a>
+                <span class="main-span-divider">|</span>
+                <a href="#" class="main-link-terms">이용약관</a>
+            </div>
+            <p class="main-paragraph-contact">Contact: team.patchnote.official@gmail.com</p>
+            <p class="main-paragraph-copyright">Copyright Forest Info. All rights reserved</p>
+        </div>
+        <div class="main-footer-logo">
+            <img src="./../../asset/img/main/logo-1.png" alt="Forest of Knowledge Logo"
+                class="main-img-footerlogo">
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
