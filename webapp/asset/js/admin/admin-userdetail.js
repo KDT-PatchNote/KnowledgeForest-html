@@ -1,3 +1,10 @@
+// 유저 관리 목록으로 되돌아가기 버튼
+const backUserList = document.querySelector('.adminUserDetail-span-backbtn');
+
+backUserList.addEventListener("click", () => {
+  history.back();
+});
+
 // 탈퇴 버튼 클릭시
 function quitBtn(event) {
   // 확인, 취소 버튼 선택
