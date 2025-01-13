@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.boardlistregistration-div-header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #333;
+}
+
+.boardlistregistration-div-flexwrap {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  /* height: 50px; */
+  margin-bottom: 20px;
+}
+
+.flexwrap-nomargin {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.boardlistregistration-div-titlewrap{
+  display: flex;
+  flex-direction: row;
+  border-right: 1px solid;
+  width: 20%;
+  line-height: 50px;
+  /* height: 100px; */
+}
+
+.boardlistregistration-input {
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+.boardlistregistration-btn-registration{
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+
+.boardlistregistration-div-btn{
+  display: flex;
+  flex-direction: row;
+  /* margin-top: 20px; */
+  float: right;
+}
+.boardlistregistration-btn-registration{
+  background-color: #003161;
+  color: #fff;
+  cursor: pointer;
+}
+.boardlistregistration-btn-cancel{
+  cursor: pointer;
+}
+.long{
+  height: 500px;
+}
