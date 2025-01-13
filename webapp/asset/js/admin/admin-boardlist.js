@@ -1,5 +1,5 @@
-// 삭제버튼 클릭 시
-function clickDeleteBtn(e) {
+// 삭제 버튼 클릭시
+function clickDeleteBtn(event) {
   // 확인, 취소 버튼 선택
   const isdelete = confirm('정말 삭제하시겠습니까?');
 

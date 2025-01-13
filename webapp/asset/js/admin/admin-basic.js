@@ -1,3 +1,4 @@
+// --------------- 검색 ---------------
 // 검색칸
 const searchInput = document.querySelector(".admin-input-search");
 const wrapper = document.querySelector(".admin-div-wrapper");
@@ -11,3 +12,4 @@ searchInput.addEventListener("focus", () => {
 searchInput.addEventListener("blur", () => {
   wrapper.classList.remove("focused");
 });
+// ------------------------------------
