@@ -31,12 +31,12 @@
       <nav class="mypage-div-menuwrap">
         <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
         <ul class="mypage-ul-menuwrap">
-          <li class="mypage-li-menuactive"><a href="">개인정보 수정</a></li>
-          <li><a href="./admin-study-list.html">찜한 목록</a></li>
-          <li><a href="">만든 스터디</a></li>
-          <li><a href="">신청한 스터디</a></li>
-          <li><a href="">작성한 자유게시글</a></li>
-          <li><a href="">회원 탈퇴</a></li>
+          <li class="mypage-li-menuactive"><a href="./mypageAccountEdit.html">개인정보 수정</a></li>
+          <li><a href="./mypageJimList.html">찜한 목록</a></li>
+          <li><a href="./mypageHostBoard.html">만든 스터디</a></li>
+          <li><a href="./mypageApplyList.html">신청한 스터디</a></li>
+          <li><a href="./mypageWrittenBoard.html">작성한 자유게시글</a></li>
+          <li><a href="./mypageDeleteAccount.html">회원 탈퇴</a></li>
         </ul>
       </nav>
     </aside>
@@ -88,12 +88,15 @@
             </div>
             <button class="mypage-btn-phoneNum-send">전송</button>
           </div>
+          <div id="phoneNum-error" style="color: red;"></div>
+
           <div class="mypage-div-wrapper2">
             <div class="editpage-input-phoneNumchk">
-              <label for="phoneNumchk">전화번호 확인</label>
-              <input type="text" id="phoneNumchk" placeholder="번호를 한번 더 입력해주세요">
+              <label for="phoneNumchk">인증번호 확인</label>
+              <input type="text" id="phoneNumchk" placeholder="인증번호를 입력해주세요">
             </div>
             <button class="mypage-btn-phoneNum-check">확인</button>
+            <div id="phoneNumchk-error" style="color: red;"></div>
           </div>
         </section>
         <div class="mypage-div-edit">

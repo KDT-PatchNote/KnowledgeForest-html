@@ -41,7 +41,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 /*-사이드 테이블 스타일 부분-*/
@@ -137,10 +137,13 @@ a{
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  cursor: pointer;
+  /* cursor: pointer; */
   border: 1px solid #afafaf;
 }
 
+.mypage-div-grouptitle a {
+  color: #000;
+}
 
 .mypage-div-groupinner{
   width: 85%;

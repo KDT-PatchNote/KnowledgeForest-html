@@ -191,7 +191,7 @@ input:read-only {
   border: 1px solid #afafaf;
 }
 
-#password-error,#nickname-error
+#password-error, #nickname-error, #passwordchk-error
  {
   color: red;
   font-size: 12px;

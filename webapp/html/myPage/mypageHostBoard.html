@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>만든 스터디</title>
   <link rel="stylesheet" href="./../../asset/css/mypage/mypageHostBoard.css" />
+  <script defer src="./../../asset/js/mypage/mypageHostBoard.js"></script>
 </head>
 <body>
 
@@ -14,12 +15,12 @@
       <nav class="mypage-div-menuwrap">
         <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
         <ul class="mypage-ul-menuwrap">
-          <li><a href="">개인정보 수정</a></li>
-          <li><a href="./admin-study-list.html">찜한 목록</a></li>
-          <li class="mypage-li-menuactive"><a href="">만든 스터디</a></li>
-          <li><a href="">신청한 스터디</a></li>
-          <li><a href="">작성한 자유게시글</a></li>
-          <li><a href="">회원 탈퇴</a></li>
+          <li><a href="./mypageAccountEdit.html">개인정보 수정</a></li>
+          <li><a href="./mypageJimList.html">찜한 목록</a></li>
+          <li class="mypage-li-menuactive"><a href="./mypageHostBoard.html">만든 스터디</a></li>
+          <li><a href="./mypageApplyList.html">신청한 스터디</a></li>
+          <li><a href="./mypageWrittenBoard.html">작성한 자유게시글</a></li>
+          <li><a href="./mypageDeleteAccount.html">회원 탈퇴</a></li>
         </ul>
       </nav>
     </aside>
@@ -46,10 +47,19 @@
                       마감일 &nbsp;| &nbsp; 2025.01.05
                     </div>
                     <div class="mypage-div-groupstatus">모집 중</div>
+                    <div class="mypage-div-morebtn" onclick="openModal(this)">...</div>
+                          <!-- 모달 리스트 -->
+                    <div id="modal-list" class="modal hidden">
+                      <ul>
+                        <li onclick="handleModalAction('수정페이지')">수정</li>
+                        <li onclick="handleModalAction('삭제페이지')">삭제</li>
+                        <li onclick="openApplicantModal()">신청자</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="mypage-div-grouptitle">
+                  <div class="mypage-div-grouptitle"><a href="">
                     웹 보안의 기초부터 간단한 토이 프로젝트까지
-                  </div>
+                  </a></div>
                   <div class="mypage-div-groupinfowrapper">
                     <div class="mypage-div-groupcategory">보안</div>
                     <div class="mypage-div-groupmember">7/7</div>
@@ -61,6 +71,13 @@
                         src="/webapp/asset//img/study/like.png"
                         alt="찜"
                         class="mypage-img-like"
+                        style="width: 30px; height: 30px;"
+                      />
+                      <img
+                        src="/webapp/asset//img/study/no-like.png"
+                        alt="찜"
+                        class="mypage-img-nolike"
+                        style="width: 30px; height: 30px;"
                       />
                       <div class="mypage-div-likecount">7</div>
                     </div>
@@ -76,9 +93,9 @@
                     </div>
                     <div class="mypage-div-groupstatus">모집 중</div>
                   </div>
-                  <div class="mypage-div-grouptitle">
+                  <div class="mypage-div-grouptitle"><a href="">
                     웹 보안의 기초부터 간단한 토이 프로젝트까지
-                  </div>
+                  </a></div>
                   <div class="mypage-div-groupinfowrapper">
                     <div class="mypage-div-groupcategory">보안</div>
                     <div class="mypage-div-groupmember">7/7</div>
@@ -90,6 +107,7 @@
                         src="/webapp/asset//img/study/like.png"
                         alt="찜"
                         class="mypage-img-like"
+                        style="width: 30px; height: 30px;"
                       />
                       <div class="mypage-div-likecount">7</div>
                     </div>
@@ -105,9 +123,9 @@
                     </div>
                     <div class="mypage-div-groupstatus">모집 중</div>
                   </div>
-                  <div class="mypage-div-grouptitle">
+                  <div class="mypage-div-grouptitle"><a href="">
                     웹 보안의 기초부터 간단한 토이 프로젝트까지
-                  </div>
+                  </a></div>
                   <div class="mypage-div-groupinfowrapper">
                     <div class="mypage-div-groupcategory">보안</div>
                     <div class="mypage-div-groupmember">7/7</div>
@@ -119,6 +137,7 @@
                         src="/webapp/asset//img/study/like.png"
                         alt="찜"
                         class="mypage-img-like"
+                        style="width: 30px; height: 30px;"
                       />
                       <div class="mypage-div-likecount">7</div>
                     </div>
@@ -134,9 +153,9 @@
                     </div>
                     <div class="mypage-div-groupstatus">모집 중</div>
                   </div>
-                  <div class="mypage-div-grouptitle">
+                  <div class="mypage-div-grouptitle"><a href="">
                     웹 보안의 기초부터 간단한 토이 프로젝트까지
-                  </div>
+                  </a></div>
                   <div class="mypage-div-groupinfowrapper">
                     <div class="mypage-div-groupcategory">보안</div>
                     <div class="mypage-div-groupmember">7/7</div>
@@ -148,6 +167,7 @@
                         src="/webapp/asset//img/study/like.png"
                         alt="찜"
                         class="mypage-img-like"
+                        style="width: 30px; height: 30px;"
                       />
                       <div class="mypage-div-likecount">7</div>
                     </div>
@@ -163,9 +183,9 @@
                     </div>
                     <div class="mypage-div-groupstatus">모집 중</div>
                   </div>
-                  <div class="mypage-div-grouptitle">
+                  <div class="mypage-div-grouptitle"><a href="">
                     웹 보안의 기초부터 간단한 토이 프로젝트까지
-                  </div>
+                  </a></div>
                   <div class="mypage-div-groupinfowrapper">
                     <div class="mypage-div-groupcategory">보안</div>
                     <div class="mypage-div-groupmember">7/7</div>
@@ -177,6 +197,7 @@
                         src="/webapp/asset//img/study/like.png"
                         alt="찜"
                         class="mypage-img-like"
+                        style="width: 30px; height: 30px;"
                       />
                       <div class="mypage-div-likecount">7</div>
                     </div>
@@ -192,9 +213,9 @@
                     </div>
                     <div class="mypage-div-groupstatus">모집 중</div>
                   </div>
-                  <div class="mypage-div-grouptitle">
+                  <div class="mypage-div-grouptitle"><a href="">
                     웹 보안의 기초부터 간단한 토이 프로젝트까지
-                  </div>
+                  </a></div>
                   <div class="mypage-div-groupinfowrapper">
                     <div class="mypage-div-groupcategory">보안</div>
                     <div class="mypage-div-groupmember">7/7</div>
@@ -206,6 +227,7 @@
                         src="/webapp/asset//img/study/like.png"
                         alt="찜"
                         class="mypage-img-like"
+                        style="width: 30px; height: 30px;"
                       />
                       <div class="mypage-div-likecount">7</div>
                     </div>
@@ -228,13 +250,87 @@
               </ul>
             </div>
           </div>
-          <!-- 게시판 컨텐츠 정렬을 위한 div 끝 -->
 
+          
+          <!-- 게시판 컨텐츠 정렬을 위한 div 끝 -->
+          
+          
       </main>
       <!-- 메인 컨텐츠 끝 -->
     </div>
     
   <!-- </div> -->
-
+  <!-- 모달 HTML 추가 -->
+  <div id="REQUEST-LIST-MODAL" class="overlay hidden">
+    <div class="modal-content">
+      <h2>신청자 목록</h2>
+      <div class="applicant-list">
+        <!-- 신청자 항목 -->
+        <div class="applicant-item">
+          <div class="applicant-header">
+            <span class="applicant-name">김철수</span>
+            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+            <div class="applicant-actions">
+              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button>
+          </div>
+          <div class="applicant-body hidden">
+            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+          </div>
+          <div class="applicant-header">
+            <span class="applicant-name">김철수</span>
+            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+            <div class="applicant-actions">
+              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button>
+          </div>
+          <div class="applicant-body hidden">
+            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+          </div>
+          <div class="applicant-header">
+            <span class="applicant-name">김철수</span>
+            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+            <div class="applicant-actions">
+              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button>
+          </div>
+          <div class="applicant-body hidden">
+            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+          </div>
+          <div class="applicant-header">
+            <span class="applicant-name">김철수</span>
+            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+            <div class="applicant-actions">
+              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button>
+          </div>
+          <div class="applicant-body hidden">
+            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+          </div>
+          <div class="applicant-header">
+            <span class="applicant-name">김철수</span>
+            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+            <div class="applicant-actions">
+              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+            </div>
+            <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button>
+          </div>
+          <div class="applicant-body hidden">
+            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+          </div>
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeApplicantModal()">닫기</button>
+    </div>
+  </div>
 </body>
 </html>
