@@ -1,0 +1,37 @@
+.admin-h1-bannerdetailtitle { margin-top: 15px; }
+
+/* 배너 관리 목록으로 가기 버튼 */
+.adminBannerDetail-span-backbtn {
+  margin-right: 30px;
+  color: #808080;
+  font-weight: 300;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* 수정, 삭제 버튼 */
+#ADMINBANNERDETAIL-DIV-DELETEWRAP {
+  width: 90%;
+  min-height: 200px;
+  margin: auto;
+  text-align: right;
+}
+
+.admin-btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #003161;
+}
+
+.btn-update {
+  background-color: #fff;
+  color: #003161;
+  border: none;
+}
