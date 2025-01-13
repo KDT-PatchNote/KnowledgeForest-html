@@ -21,36 +21,19 @@ terms.forEach((term)=>{
 const pwd = document.getElementById('password');
 const repwd = document.getElementById('repassword');
 const p_repwd = document.getElementById('join-p-repwd');
-// function pwCheck(e){
-//   pwd =e.target;
-//   console.log("ssss"+pwd);
-  
-//   // if($(pwd).val() === $(repwd).val()){
-//   //   console.log(pwd+"pwd");
-//   //   console.log(pwd.val+"pwd.val");
-    
-//   //   $('p_pwd').text('일치').css('color','green');
-      
-//   // }else{
-//   //   $('p_pwd').text('불일치').css('color','red')
-//   // }
-// }
 
+function pwdCheck() {
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("repassword").value;
+ 
+  if (password !== confirmPassword) {
+    document.getElementById("JOIN-DIV-PWALARM").innerText =
+      "비밀번호가 일치하지 않습니다. 다시 입력해주십시오.";
+      document.getElementById("JOIN-DIV-PWALARM").style.color = "red";
 
-function pwChcek() {
-  let p1 = document.getElementById('password1').value;
-  let p2 = document.getElementById('password2').value;
-  
-  if(p1.length < 6) {
-          alert('입력한 글자가 6글자 이상이어야 합니다.');
-          return false;
-      }
-      
-      if( p1 != p2 ) {
-        alert("비밀번호불일치");
-        return false;
-      } else{
-        alert("비밀번호가 일치합니다");
-        return true;
-      }
+  } else {
+    document.getElementById("JOIN-DIV-PWALARM").innerText =
+      "비밀번호가 일치합니다.";
+      document.getElementById("JOIN-DIV-PWALARM").style.color = "green";
+  }
 }

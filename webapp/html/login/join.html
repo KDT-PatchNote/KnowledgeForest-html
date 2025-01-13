@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="./../../asset/css/main/header.css">
   <link rel="stylesheet" href="./../../asset/css/main/footer.css">
   <script defer src="./../../asset/js/login/join.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+ 
 </head>
 
 <body>
   <header>
         <!-- 상단 메뉴바 -->
         <nav class="main-nav-menuwrap">
-          <img src="./../../asset/img/logo.png" class="main-img-logo">
+          <img src="../../asset/img/main/logo-1.png" class="main-img-logo">
           <ul class="main-nav-ul">
               <li><a href="./../notice/noticelist.html">공지</a></li>
               <li><a href="./../board/boardlist.html">자유게시판</a></li>
@@ -52,7 +52,7 @@
 
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
-            <p class="join-p-label">닉네임
+            <p class="join-p-label" >닉네임
             </p>
           </div>
           <input type="text" class="join-input" >
@@ -64,7 +64,7 @@
           <div class="join-div-labelwrapper">
             <p class="join-p-label" id="join-p-pwd">비밀번호</p>
           </div>
-          <input type="text" class="join-input" id="password" >
+          <input type="text" class="join-input" id="password"  >
         </div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
@@ -74,10 +74,10 @@
           type="text" 
           class="join-input" 
           id="repassword"
-         
+          onblur="pwdCheck()"
           >
         </div>
-        <div class="wrapper-text-alarm">비밀번호가 일치하지 않습니다</div>
+        <div class="wrapper-text-alarm" id="JOIN-DIV-PWALARM"></div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
             <p class="join-p-label">이름</p>
@@ -104,7 +104,7 @@
           <div class="join-div-labelwrapper">
           </div>
           <input type="text" class="join-input">
-          <button class="join-btn-checkid">인증번호 확인</button>
+          <button class="join-btn-checkid" onclick="함수()">인증번호 확인</button>
   
         </div>
       </div>
