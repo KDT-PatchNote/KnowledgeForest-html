@@ -1,11 +1,12 @@
-.adminBanner-li-bannerid { width: 20%; }
-.adminBanner-li-bannertitle { width: 50%; }
-.admin-ul-datawrap > .adminBanner-li-bannertitle {
+.adminNotice-li-noticeid { width: 15%; }
+.adminNotice-li-noticetitle { width: 45%; }
+.admin-ul-datawrap > .adminNotice-li-noticetitle {
   text-align: left;
   padding: 0 5px;
 }
-.adminBanner-li-bannerwritedate { width: 20%; }
-li.adminBanner-li-bannerbtncontainer {
+.adminNotice-li-noticewriter { width: 10%; }
+.adminNotice-li-noticewritedate { width: 20%; }
+li.adminNotice-li-noticebtncontainer {
   position: relative;
   overflow: visible;
   display: flex;
@@ -13,14 +14,14 @@ li.adminBanner-li-bannerbtncontainer {
   width: 10%;
 }
 
-.adminBanner-li-bannerbtncontainer > img {
+.adminNotice-li-noticebtncontainer > img {
   height: 30px;
   margin-top: 10px;
   transform: rotate(90deg);
   cursor: pointer;
 }
 
-.adminBanner-div-buttonswrap {
+.adminNotice-div-buttonswrap {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -34,19 +35,19 @@ li.adminBanner-li-bannerbtncontainer {
   z-index: 1;
 }
 
-.adminBanner-a-button {
+.adminNotice-a-button {
   line-height: 40px;
   color: #808080;
   font-size: 15px;
 }
 
-.adminBanner-a-button:hover {
+.adminNotice-a-button:hover {
   background-color: #eee;
   border-radius: 5px;
 
 }
 
-.adminBanner-div-buttonswrap a:nth-child(2)::after {
+.adminNotice-div-buttonswrap a:nth-child(2)::after {
   content: "";
   position: absolute;
   right: 3px;

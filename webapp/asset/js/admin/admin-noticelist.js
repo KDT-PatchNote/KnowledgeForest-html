@@ -1,6 +1,6 @@
-// 각 배너의 ... 클릭 시 메뉴 펼쳐지기
-const menuBtn = document.querySelectorAll('.adminBanner-img-menubtn');
-const menubtnWrap = document.querySelectorAll('.adminBanner-div-buttonswrap');
+// 각 공지의 ... 클릭 시 메뉴 펼쳐지기
+const menuBtn = document.querySelectorAll('.adminNotice-img-menubtn');
+const menubtnWrap = document.querySelectorAll('.adminNotice-div-buttonswrap');
 
 menuBtn.forEach((btn, idx) => {
   btn.addEventListener("click", (e) => {
@@ -17,7 +17,7 @@ menuBtn.forEach((btn, idx) => {
 // 메뉴나 수정 삭제 외 버튼 클릭시 메뉴 닫기
 document.addEventListener("click", (e) => {
   // 클릭한 요소의 클래스명이 아닐 경우
-  if (!e.target.classList.contains('adminBanner-img-menubtn') && !e.target.classList.contains('adminBanner-a-button')) {
+  if (!e.target.classList.contains('adminNotice-img-menubtn') && !e.target.classList.contains('adminBanner-a-button')) {
     // 메뉴 닫기
     menubtnWrap.forEach((item) => {
       item.style.display = 'none';
