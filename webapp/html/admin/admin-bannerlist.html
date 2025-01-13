@@ -20,10 +20,10 @@
           <li><a href="./admin-studylist.html">스터디 목록</a></li>
           <li><a href="./admin-studyapplylist.html">스터디 신청 관리</a></li>
           <li><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
-          <li class="admin-li-menuactive"><a href="./admin-boardlist.html">자유게시판 관리</a></li>
+          <li><a href="./admin-boardlist.html">자유게시판 관리</a></li>
           <li><a href="./admin-boardcommentlist.html">자유게시판 댓글 관리</a></li>
           <li><a href="./admin-noticelist.html">공지 목록</a></li>
-          <li><a href="./admin-bannerlist.html">배너 목록</a></li>
+          <li class="admin-li-menuactive"><a href="./admin-bannerlist.html">배너 목록</a></li>
         </ul>
       </nav>
     </aside>
@@ -45,7 +45,7 @@
         <div class="admin-div-contentcontainer adminMain-div-mainwrap">
 
           <!-- 현재 페이지 제목 -->
-          <h1 class="admin-h1-maintitle">자유게시판 관리</h1>
+          <h1 class="admin-h1-maintitle">배너 관리</h1>
 
           <!-- 검색창 -->
           <form action="" method="">
@@ -73,9 +73,25 @@
               <li class="adminBanner-li-bannertitle">배너 1</li>
               <li class="adminBanner-li-bannerwritedate lightdata">1999.01.01</li>
               <li class="adminBanner-li-bannerbtncontainer">
-                <img src="./../../asset/img/admin/menu-btn.png" alt="메뉴 버튼">
-                <div class="adminBanner-div-buttonwrap">
-                  
+                <img src="./../../asset/img/admin/menu-btn.png" class="adminBanner-img-menubtn" alt="메뉴 버튼">
+                <div class="adminBanner-div-buttonswrap">
+                  <a href="./../admin/admin-bannerupdatefrom.html" class="adminBanner-a-button">수정</a>
+                  <a href="#" onclick="clickDeleteBtn(this)" class="adminBanner-a-button">삭제</a>
+                </div>
+                <!-- <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제"> -->
+              </li>
+            </ul>
+
+            <!-- 데이터 넣는 부분 - 임시데이터 (1) -->
+            <ul class="admin-ul-datawrap">
+              <li class="adminBanner-li-bannerid lightdata">319</li>
+              <li class="adminBanner-li-bannertitle">배너 1</li>
+              <li class="adminBanner-li-bannerwritedate lightdata">1999.01.01</li>
+              <li class="adminBanner-li-bannerbtncontainer">
+                <img src="./../../asset/img/admin/menu-btn.png" class="adminBanner-img-menubtn" alt="메뉴 버튼">
+                <div class="adminBanner-div-buttonswrap">
+                  <a href="./../admin/admin-bannerupdatefrom.html" class="adminBanner-a-button">수정</a>
+                  <a href="#" onclick="clickDeleteBtn(this)" class="adminBanner-a-button">삭제</a>
                 </div>
                 <!-- <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제"> -->
               </li>
