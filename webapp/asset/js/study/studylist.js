@@ -38,6 +38,6 @@ categoryList.forEach((item) => {
 
   //메인으로 가기 버튼을 눌렀을때 메인으로 이동시키는 함수
   function registerStudy(){
-    window.location.href="/webapp/html/study/study-write.html";
+    window.location.href="./studylist-write.html";
   }
 
