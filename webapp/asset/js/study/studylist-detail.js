@@ -37,6 +37,7 @@ function updateComment() {
     // 수정 기능 구현 필요
   }
 }
+
 //댓글 삭제를 눌렀을 때 띄워지는 alert
 function deleteComment() {
   if (confirm("해당 댓글을 삭제하시겠습니까?")) {

@@ -18,22 +18,6 @@ body {
   
 }
 
-/* Nav 스타일 */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-nav-ul {
-  list-style: none;
-  display: flex;
-  margin-right: 100px;
-  gap: 50px;
-  color: #003161;
-  font-size: 24px;
-  font-family: "GangwonEdu_OTFBoldA";
-}
 
 /* 메인 컨텐츠 */
 main {
@@ -109,7 +93,8 @@ main {
   align-items: center;
 }
 
-.studylist-div-selectwrapper {
+.studylist-div-categoryselectwrapper,
+.studylist-div-phoneselectwrapper {
   flex: 1;
   display: flex;
   align-items: center;
@@ -194,7 +179,9 @@ main {
   margin-left: auto;
 }
 
-.studylist-div-selector {
+/* 탭 선택 */
+.studylist-div-categoryselector,
+.studylist-div-shownumberselector {
   flex: 1;
   height: 50px;
   line-height: 50px;
@@ -203,7 +190,8 @@ main {
   text-align: center;
 }
 
-.selected {
+.categoryselected,
+.phoneselected {
   background-color: #003161;
   color: white;
 }

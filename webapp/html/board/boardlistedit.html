@@ -6,14 +6,12 @@
     <title>지식의 숲</title>
     <link
       rel="stylesheet"
-      href="./../../asset/css/board/boardlistregistration.css"
+      href="./../../asset/css/board/boardlistedit.css"
     />
     <link rel="stylesheet" href="./../../asset/css/main/header.css" />
     <link rel="stylesheet" href="./../../asset/css/main/footer.css" />
-    <script
-      defer
-      src="./../../asset/js/board/boardlistregistration.js"
-    ></script>
+    <script defer src="./../../asset/js/board/boardlistedit.js"></script>
+
   </head>
 
   <body>
@@ -30,7 +28,7 @@
     </nav>
     <main>
       <!-- 페이지 타이틀 -->
-      <h1 class="board-h1-title">게시글 등록</h1>
+      <h1 class="board-h1-title">게시글 수정</h1>
 
       <!-- 전체 내용을 감싸는 래퍼-->
       <div class="board-div-contentsWrapper">
@@ -44,7 +42,7 @@
               <input
                 type="text"
                 class="board-input-groupinfo"
-                name="boardlistName"
+                name="groupName"
                 placeholder="제목을 입력해주세요"
               />
             </div>
@@ -53,7 +51,7 @@
           <div class="board-div-longwrapperlayer">
             <div class="board-div-textareawrapper">
               <div class="label">설명</div>
-              <textarea class="board-div-studycontents" name="boardDescription"></textarea>
+              <textarea class="board-div-studycontents"> </textarea>
             </div>
             <div class="board-div-filewrap">
               <div class="label">첨부파일</div>
