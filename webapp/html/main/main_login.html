@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지식의 숲</title>
     <link rel="stylesheet" href="./../../asset/css/main/main01.css">
+    <link rel="stylesheet" href="./../../asset/css/main/header.css">
+    <link rel="stylesheet" href="./../../asset/css/main/footer.css">
     <script src="./../../asset/js/main/main.js"></script>
+</head>
+<body>
+
+    <!-- 상단 메뉴바 -->
     <nav class="main-nav-menuwrap">
         <img src="./../../asset/img/main/logo-1.png" class="main-img-logo" onclick="location.href='./main_login.html'">
+        
         <ul class="main-nav-ul">
             <li><a href="./../notice/noticelist.html">공지</a></li>
             <li><a href="./../board/boardlist.html">자유게시판</a></li>
@@ -17,10 +24,9 @@
             <li><a href="">로그아웃</a></li>
         </ul>
     </nav>
-</head>
-<hr>
+    <hr>
 
-<body>
+    <!-- 위시 리스트 -->
     <main>
         <div class="main-div-wrapper">
             <div class="main-div-wishlist">
@@ -52,10 +58,10 @@
                 <div class="main-div-slide3">
                     <img src="./../../asset/img/main/banner03.png" alt="이미지3" class="main-img-banner03">
                 </div>
-
             </div>
         </div>
 
+        <!-- 신규/마감 임박 스터디 -->
         <main class="main-div-container">
             <div class="main-div-studycard main-div-studynew">
                 <header class="main-div-studycardheader">
@@ -66,20 +72,19 @@
                     <a href="./../study/studylist-detail.html">
                     <div class="main-div-studyitem">
                         <span class="main-span-icon">[개발]</span>
-                        <p>개발 스터디 하실 분</p>
-                        <p>내용입니다.</p>
+                        <div>스터디 이름</div>
+                        <div class="main-div-studytext">개발 스터디개발 스터디개발 스터디개발 스터디개발 스터디개발 스터디개발 스터디개발 스터디</div>
                     </div>
                 </a>
                 <a href="./../study/studylist-detail.html">
                     <div class="main-div-studyitem">
                         <span class="main-span-icon">[보안]</span>
-                        <p>보안 스터디 ㅋㅋ</p>
-                        <p>여긴 보안 내용이네.</p>
+                        <div>스터디 이름</div>
+                        <div class="main-div-studytext">보안 스터디 이다.</div>
                     </div>
                 </a>
                 </div>
             </div>
-
             <div class="main-div-studycard main-div-studyhurry">
                 <header class="main-div-studycardheader">
                     <span class="main-span-label">Hurry </span>
@@ -89,21 +94,22 @@
                     <a href="./../study/studylist-detail.html">
                         <div class="main-div-studyitem">
                             <span class="main-span-icon">[보안]</span>
-                            <p>ㅋㅋ</p>
-                            <p>내용입니다.</p>
+                            <div>스터디 제목</div>
+                            <div class="main-div-studytext">내용입니다.</div>
                         </div>
                     </a>
                     <a href="./../study/studylist-detail.html">
                         <div class="main-div-studyitem">
                             <span class="main-span-icon">[개발]</span>
-                            <p>너만 오면 시작</p>
-                            <p>대충 구한다는 내용.</p>
+                            <div class="main-div-studyname">123123123123123123123123</div>
+                            <div class="main-div-studytext">내용내용내내용내용내용내용내용내용내용내용내용용내용내용내용내용내용내용내용내용내용내용내용내용</div>
                         </div>
                     </a>
                 </div>
             </div>
         </main>
 
+        <!-- footer -->
         <footer class="main-footer-container">
             <div class="main-footer-content">
                 <div class="main-footer-links">
@@ -121,6 +127,7 @@
                 </div>
             </div>
         </footer>
+        
 </body>
 
 </html>

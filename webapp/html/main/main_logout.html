@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지식의 숲</title>
     <link rel="stylesheet" href="/webapp/asset/css/main/main01.css">
+    <link rel="stylesheet" href="/webapp/asset/css/main/header.css">
+    <link rel="stylesheet" href="/webapp/asset/css/main/footer.css">
     <script src="/webapp/asset/js/main/main.js"></script>
-    <nav>
-        <img src="/webapp/asset/img/main/logo-1.png" class="main-img-logo">
-        <ul class="main-nav-ul">
-            <li>공지</li>
-            <li>자유게시판</li>
-            <li>스터디 모집</li>
-            <li>회원가입</li>
-            <li>로그인</li>
-        </ul>
-    </nav>
 </head>
-<hr>
+
 
 <body>
+    <!-- 상단 메뉴바 -->
+    <nav class="main-nav-menuwrap">
+        <img src="/webapp/asset/img/main/logo-1.png" class="main-img-logo">
+        <ul class="main-nav-ul">
+            <li><a href="./../notice/noticelist.html">공지</a></li>
+            <li><a href="./../board/boardlist.html">자유게시판</a></li>
+            <li><a href="./../study/studylist.html">스터디 모집</a></li>
+            <li><a href="./../login/join.html">회원가입</a></li>
+            <li><a href="./../login/login.html">로그인</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <!-- 위시 리스트 -->
     <main>
         <div class="main-div-wrapper">
             <div class="main-div-wishlist">
@@ -54,6 +60,7 @@
             </div>
         </div>
 
+        <!-- 신규/마감 임박 스터디 -->
         <main class="main-div-container">
             <div class="main-div-studycard main-div-studynew">
                 <header class="main-div-studycardheader">
@@ -61,39 +68,47 @@
                     <span class="main-span-title"> 신규 등록 스터디</span>
                 </header>
                 <div class="main-div-studycontent">
+                    <a href="#" onclick="notLogin(this)">
                     <div class="main-div-studyitem">
                         <span class="main-span-icon">[개발]</span>
                         <p>개발 스터디 하실 분</p>
                         <p>내용입니다.</p>
                     </div>
+                </a>
+                <a href="#" onclick="notLogin(this)">
                     <div class="main-div-studyitem">
                         <span class="main-span-icon">[보안]</span>
                         <p>보안 스터디 ㅋㅋ</p>
                         <p>여긴 보안 내용이네.</p>
                     </div>
+                </a>
                 </div>
             </div>
-
             <div class="main-div-studycard main-div-studyhurry">
                 <header class="main-div-studycardheader">
                     <span class="main-span-label">Hurry </span>
                     <span class="main-span-title"> 마감 임박 스터디</span>
                 </header>
                 <div class="main-div-studycontent">
-                    <div class="main-div-studyitem">
-                        <span class="main-span-icon">[보안]</span>
-                        <p>ㅋㅋ</p>
-                        <p>내용입니다.</p>
-                    </div>
-                    <div class="main-div-studyitem">
-                        <span class="main-span-icon">[개발]</span>
-                        <p>너만 오면 시작</p>
-                        <p>대충 구한다는 내용.</p>
-                    </div>
+                    <a href="#" onclick="notLogin(this)">
+                        <div class="main-div-studyitem">
+                            <span class="main-span-icon">[보안]</span>
+                            <p>ㅋㅋ</p>
+                            <p>내용입니다.</p>
+                        </div>
+                    </a>
+                    <a href="#" onclick="notLogin(this)">
+                        <div class="main-div-studyitem">
+                            <span class="main-span-icon">[개발]</span>
+                            <p>너만 오면 시작</p>
+                            <p>대충 구한다는 내용.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </main>
 
+        <!-- footer -->
         <footer class="main-footer-container">
             <div class="main-footer-content">
                 <div class="main-footer-links">
@@ -111,6 +126,7 @@
                 </div>
             </div>
         </footer>
+
 </body>
 
 </html>
