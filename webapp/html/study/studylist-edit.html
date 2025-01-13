@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>지식의 숲</title>
     <link rel="stylesheet" href="../../asset/css/study/studylist-edit.css" />
+    <link rel="stylesheet" href="./../../asset/css/main/header.css">
+    <link rel="stylesheet" href="./../../asset/css/main/footer.css">
   </head>
   
   <body>
-    <nav>
+    <nav class="main-nav-menuwrap">
       <img src="/webapp/asset/img/main/logo-1.png" class="main-img-logo" />
       <ul class="main-nav-ul">
-        <li>공지</li>
-        <li>자유게시판</li>
-        <li>스터디 모집</li>
-        <li>마이페이지</li>
-        <li>로그아웃</li>
+        <li><a href="./../notice/noticelist.html">공지</a></li>
+        <li><a href="./../board/boardlist.html">자유게시판</a></li>
+        <li><a href="./../study/studylist.html">스터디 모집</a></li>
+        <li><a href="./../login/join.html">회원가입</a></li>
+        <li><a href="./../login/login.html">로그인</a></li>
       </ul>
     </nav>
     <main>
@@ -43,16 +45,18 @@
           <div class="studylist-div-wrapperlayerDual">
             <div class="studylist-div-infowrapperDual">
               <div class="label">카테고리</div>
-              <div class="studylist-div-selectwrapper">
-                <div class="studylist-div-selector">개발</div>
-                <div class="studylist-div-selector selected">보안</div>
+              <div class="studylist-div-categoryselectwrapper">
+                <div class="studylist-div-categoryselector categoryselected">개발</div>
+                <div class="studylist-div-categoryselector">보안</div>
               </div>
             </div>
             <div class="studylist-div-infowrapperDual">
               <div class="label">전화번호</div>
-              <div class="studylist-div-selectwrapper">
-                <div class="studylist-div-selector">보이기</div>
-                <div class="studylist-div-selector selected">숨기기</div>
+              <div class="studylist-div-phoneselectwrapper">
+                <div class="studylist-div-shownumberselector phoneselected">
+                  보이기
+                </div>
+                <div class="studylist-div-shownumberselector">숨기기</div>
               </div>
             </div>
           </div>
