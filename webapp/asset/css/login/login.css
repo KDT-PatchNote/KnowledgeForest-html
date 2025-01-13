@@ -22,13 +22,13 @@ main{
   margin : 60px auto  ;
 } 
 
-.h1-title{
+.login-h1-title{
   display: flex;
   justify-content: center;
   margin : 30px 0;
 }
 
-.wrapper-input-box{
+.login-div-wrapper-input-box{
   display: flex;
   flex-direction: column;
 }
@@ -46,7 +46,7 @@ main{
   box-sizing: border-box;
 }
 
-.wrapper-join-box{
+.login-div-wrapper-join-box{
   display: flex;
   justify-content: center;
   font-size: 10px;
@@ -54,20 +54,20 @@ main{
  
 }
 
-.a-join,.a-pwd{
+.login-a-join,.login-a-pwd{
   text-decoration: none;
   color: #808080;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.wrapper-btn-box{
+.login-div-wrapper-btn-box{
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
   
 }
-.btn-join{
+.login-btn-join{
   width: 100px;
   background-color: #003161;
   color: white;
@@ -75,7 +75,7 @@ main{
  border: none;
  height: 40px;
 }
-.wrapper-pwd-box{
+.login-div-wrapper-pwd-box{
   display: flex;
   justify-content: center;
   font-size: 10px;

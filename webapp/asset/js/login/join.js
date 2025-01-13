@@ -18,22 +18,38 @@ terms.forEach((term)=>{
 
   })
 });
-const pwd = document.getElementById('password');
-const repwd = document.getElementById('repassword');
-const p_repwd = document.getElementById('join-p-repwd');
 
-function pwdCheck() {
-  let password = document.getElementById("password").value;
-  let confirmPassword = document.getElementById("repassword").value;
+
+
+//비밀번호 글자수 제한
+function pwdLength(){
+  let password = document.getElementById("INPUT-PASSWORD").value;
+  // const passwordPattern = /^(?=.*[a-z])(?=.)/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{0,15}$/;
  
-  if (password !== confirmPassword) {
-    document.getElementById("JOIN-DIV-PWALARM").innerText =
-      "비밀번호가 일치하지 않습니다. 다시 입력해주십시오.";
-      document.getElementById("JOIN-DIV-PWALARM").style.color = "red";
 
-  } else {
-    document.getElementById("JOIN-DIV-PWALARM").innerText =
-      "비밀번호가 일치합니다.";
-      document.getElementById("JOIN-DIV-PWALARM").style.color = "green";
-  }
+}
+
+
+
+
+// 비밀번호 일치여부 검사 
+function validatePassword() {
+	let password = document.getElementById("INPUT-PASSWORD").value;
+  let confirmPassword = document.getElementById("JOIN-REPASSWORD").value;
+	let resultDiv = document.getElementById('JOIN-DIV-PWALARM');
+
+	var passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_]).{8,15}$/;
+
+	if (passwordRegex.test(password)) {
+		if (password=== confirmPassword) {
+			resultDiv.innerHTML = '비밀번호가 일치합니다.';
+			resultDiv.style.color = 'green';
+		}else{
+			resultDiv.innerHTML = '비밀번호가 일치하지 않습니다.';
+			resultDiv.style.color = 'red';
+		}
+	}else{
+		resultDiv.innerHTML = '비밀번호는 최소 8자에서 15자까지, 영문자, 숫자 및 특수 문자를 포함해야 합니다.';
+		resultDiv.style.color = 'red';
+	}
 }

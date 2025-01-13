@@ -1,5 +1,5 @@
 
-const btn_join = document.querySelector(".btn-join");
+const btn_join = document.querySelector(".login-btn-join");
 
 
 
