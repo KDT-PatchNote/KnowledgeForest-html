@@ -27,84 +27,81 @@
       </nav>
 
   </header>
+
+
   <main>
-    <div class="section-up">
-      <div class="wrapper-h1-box">
-        <h1 class="h1-title">회원가입</h1>
+    <div class="join-div-section-up">
+      <div class="join-div-wrapper-h1-box">
+        <h1 class="join-h1-title">회원가입</h1>
       </div>
-      <div class="wrapper-p-box">
-        <p class="p-required1">*
-        <p class="p-required2"> 필수 입력사항</p>
+      <div class="join-div-wrapper-p-box">
+        <p class="join-p-required1">*
+        <p class="join-p-required2"> 필수 입력사항</p>
         </p>
       </div>
     </div>
     <form action="">
-      <div class="section-middle">
+      <div class="join-div-section-middle">
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
             <p class="join-p-label">아이디
             </p>
           </div>
-          <input type="text" class="join-input">
+          <input type="text" class="join-input" name="id">
           <button class="join-btn-checkid">ID중복검사</button>
         </div>
-        <div class="wrapper-text-alarm">아이디가 일치하지 않습니다</div>
+        <div class="join-div-wrapper-text-alarm"  >아이디가 일치하지 않습니다</div>
 
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
             <p class="join-p-label" >닉네임
             </p>
           </div>
-          <input type="text" class="join-input" >
+          <input type="text" class="join-input" name="nickName" >
           <button class="join-btn-checkid">닉네임중복검사</button>
         </div>
-        <div class="wrapper-text-alarm">중복된 닉네임입니다</div>
+        <div class="join-div-wrapper-text-alarm">중복된 닉네임입니다</div>
 
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
-            <p class="join-p-label" id="join-p-pwd">비밀번호</p>
+            <p class="join-p-label" >비밀번호</p>
           </div>
-          <input type="text" class="join-input" id="password"  >
+          <input type="password" class="join-input" id="INPUT-PASSWORD" name="pwd"  maxlength="15">
         </div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
-            <p class="join-p-label" id="p-repassword">비밀번호 재확인</p>
+            <p class="join-p-label">비밀번호 재확인</p>
           </div>
-          <input 
-          type="text" 
-          class="join-input" 
-          id="repassword"
-          onblur="pwdCheck()"
-          >
+          <input type="password" class="join-input" id="JOIN-REPASSWORD" name="repwd" maxlength="15" onblur="validatePassword()">
         </div>
-        <div class="wrapper-text-alarm" id="JOIN-DIV-PWALARM"></div>
+        <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-PWALARM"></div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
             <p class="join-p-label">이름</p>
           </div>
-          <input type="text" class="join-input">
+          <input type="text" class="join-input" name="userName">
         </div>
-        <div class="wrapper-text-alarm">이름을 입력하세요</div>
+        <div class="join-div-wrapper-text-alarm">이름을 입력하세요</div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
             <p class="join-p-label">생년월일</p>
           </div>
-        <input type="text" class="join-input">
+        <input type="text" class="join-input" name="birth">
         </div>
-        <div class="wrapper-text-alarm">생년월일을 입력하세요</div>
+        <div class="join-div-wrapper-text-alarm">생년월일을 입력하세요</div>
        <div class="join-div-inputlayer">
         <div class="join-div-labelwrapper">
           <p class="join-p-label">핸드폰번호</p>
         </div>
-          <input type="text" class="join-input">
+          <input type="text" class="join-input" name="phoneNumber">
           <button class="join-btn-checkid">인증번호 받기</button>
         </div>
-        <div class="wrapper-text-alarm">핸드폰번호를 입력하세요</div>
+        <div class="join-div-wrapper-text-alarm">핸드폰번호를 입력하세요</div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
           </div>
-          <input type="text" class="join-input">
-          <button class="join-btn-checkid" onclick="함수()">인증번호 확인</button>
+          <input type="text" class="join-input" name="authenticationNumber">
+          <button class="join-btn-checkid" >인증번호 확인</button>
   
         </div>
       </div>
@@ -116,7 +113,7 @@
   <hr>
 
   <main>
-    <div class="section-middle">
+    <div class="join-div-section-middle">
       <p class="join-p-labeltitle">개인정보 수집 및 처리 방침에 관한 동의사항</p>
       <div class="join-div-labelwrapper">
 
@@ -335,11 +332,14 @@
         </textarea>
       </div>
 
-      <button class="btn-check">가입하기</button>
+      <button class="join-btn-check">가입하기</button>
 
     </div>     <!-- section-middle /div -->
   </form>
   </main>
+
+
+
 
   <footer class="main-footer-container">
     <div class="main-footer-content">
