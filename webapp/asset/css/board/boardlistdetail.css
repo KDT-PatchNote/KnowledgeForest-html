@@ -66,7 +66,7 @@
   height: 100%;
 }
 
-#BOARDLISTDETAIL-DIV-HEADER {
+.boardlistdetail-div-header {
   border: 1px;
 
 }
@@ -87,6 +87,7 @@ main {
   border-radius: 15px;
   background-color: white;
   box-sizing: border-box;
+  margin-top: 50px;
 }
 .boardlistdetail-div-userNickname{
   font-size: 18px;
@@ -95,6 +96,7 @@ main {
 .boardlistdetail-div-commentwrapper{
   width: 100%;
   margin-top: 20px;
+  flex-direction: row-reverse;
 }
 #BOARDLISTDETAIL--TEXTAREA-COMMENT {
   width: 100%;
@@ -106,32 +108,17 @@ main {
 #BOARDLISTDETAIL-TEXTAREA-COMMENT::placeholder{
   color: #808080;
 }
-.boardlistdetail-btn-commentsubmit,
-.studylist-btn-editcommentsubmit,
-.studylist-btn-couragewrite {
-  margin-left: auto;
+.boardlistdetail-btn-commentsubmit{
   width: 100px;
   height: 50px;
-  margin-top: 30px;
+  margin-top: 30px; 
+  margin-bottom: 20px;
   background-color: #003161;
   color: #fff;
   border: none;
   border-radius: 100px;
- 
-  margin: auto;
-  display: flex;
   
 }
-/* .boardlistdetail-btn-submit{
-margin: 30px auto;
-width: 150px;
-height: 50px;
-padding: 0 15px;
-background-color: #003161;
-color: #fff;
-border: none;
-border-radius: 10px;
-} */
 /* 자유게시판 상세 등록버튼 */
 .boardlistdetail-btn-commentsubmit:hover{
   cursor: pointer;
