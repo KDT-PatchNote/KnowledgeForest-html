@@ -13,7 +13,6 @@ body {
     justify-content: space-between;
 }
 
-
 /* 위시리스트 */
 .main-div-wrapper {
     display: flex;
@@ -21,7 +20,6 @@ body {
     align-items: flex-start;
     width: 100%;
     height: 52vh;
-    
 }
 
 .main-div-wishlist {
@@ -34,7 +32,6 @@ body {
     box-sizing: border-box;
 }
 
-
 .main-div-wishlistcontainer {
     flex-grow: 1;
     display: flex;
@@ -44,12 +41,8 @@ body {
     justify-content: space-between;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    padding: 20px;
-
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
 }
 
 .main-div-wishlistcontent {
@@ -74,7 +67,6 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
 .main-div-studysection {
@@ -160,27 +152,19 @@ body {
 .main-div-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
     padding: 20px;
-    overflow: hidden;
-    max-width: 100%;
-    box-sizing: border-box;
-    /* position: fixed; */
 }
 
 .main-div-studycard {
-    width: 45px
+    width: 49%;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     -webkit-box-orient: vertical;
-    
 }
-
 
 .main-div-studycardheader {
     display: flex;
@@ -216,7 +200,6 @@ body {
     padding: 5px 10px;
     border-radius: 20px;
     background-color: inherit;
-
 }
 
 .main-div-studynew .main-span-label {
@@ -227,7 +210,6 @@ body {
     background-color: #003161;
 }
 
-
 .main-div-studytitle {
     font-size: 18px;
     font-weight: bold;
@@ -235,34 +217,31 @@ body {
 }
 
 .main-div-studycontent {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px; */
     display: flex;
-   justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-div-studyitem {
+    width: 49%;
+    height: 120px;
     border: 1px solid #eee;
     border-radius: 5px;
     padding: 10px;
     background-color: #f9f9f9;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 350px;
-
 }
 
-.main-div-studyname{
+.main-div-studyname {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
-.main-div-studytext{
-    height: 3.7vh;
+.main-div-studytext {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
@@ -285,10 +264,7 @@ body {
     margin-bottom: 6px;
 }
 
-.main-div-studyitem p {
-    font-size: 14px;
-    color: #333;
-}
+
 
 /* 배너 */
 .main-div-banner {
@@ -301,7 +277,6 @@ body {
 
     padding: 20px;
     margin: 0 auto;
-
 }
 
 .main-div-banner img {
@@ -309,7 +284,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .main-div-banner img.main-div-banneractive {
