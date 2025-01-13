@@ -93,7 +93,8 @@ main {
   align-items: center;
 }
 
-.studylist-div-selectwrapper {
+.studylist-div-categoryselectwrapper,
+.studylist-div-phoneselectwrapper {
   flex: 1;
   display: flex;
   align-items: center;
@@ -178,7 +179,9 @@ main {
   margin-left: auto;
 }
 
-.studylist-div-selector {
+/* 탭 선택 */
+.studylist-div-categoryselector,
+.studylist-div-shownumberselector {
   flex: 1;
   height: 50px;
   line-height: 50px;
@@ -187,7 +190,8 @@ main {
   text-align: center;
 }
 
-.selected {
+.categoryselected,
+.phoneselected {
   background-color: #003161;
   color: white;
 }

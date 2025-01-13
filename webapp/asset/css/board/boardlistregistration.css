@@ -12,7 +12,6 @@ body {
   background-color: #f6f6f6;
   font-size: 18px;
   font-weight: 500;
-  height :100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,11 +69,17 @@ main {
   align-items: center;
 }
 
+.board-div-categoryselectwrapper,
+.board-div-phoneselectwrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
 
 /* textarea를 감싸는 div */
 .board-div-textareawrapper {
   width: 100%;
-  height: 300px;
+  height: 150px;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -102,6 +107,16 @@ main {
   font-weight: bolder;
   border-right: 1px solid #ccc;
 }
+
+/*textarea 라벨*/
+.board-div-textareawrapper > .label {
+  width: 200px;
+  line-height: 150px;
+  text-align: center;
+  color: #808080;
+  box-sizing: border-box;
+}
+
 /*인풋*/
 .board-input-groupinfo {
   flex: 1;
@@ -143,10 +158,16 @@ main {
   margin-left: auto;
 }
 
+.categoryselected,
+.phoneselected {
+  background-color: #003161;
+  color: white;
+}
+
 /*본문 칸*/
 .board-div-studycontents {
   flex: 1;
-  height: 300px;
+  height: 150px;
   font-size: 18px;
   color: #808080;
   border: none;
