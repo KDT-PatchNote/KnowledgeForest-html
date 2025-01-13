@@ -1,21 +1,30 @@
-// 각 배너의 ... 클릭 시
+// 각 배너의 ... 클릭 시 메뉴 펼쳐지기
 const menuBtn = document.querySelectorAll('.adminBanner-img-menubtn');
 const menubtnWrap = document.querySelectorAll('.adminBanner-div-buttonswrap');
-menuBtn.forEach((btn, idx) => {
 
-  btn.addEventListener("click", () => {
+menuBtn.forEach((btn, idx) => {
+  btn.addEventListener("click", (e) => {
     // 열린 배너의 메뉴를 제외한 다른 메뉴는 전부 숨기기
     menubtnWrap.forEach((item) => {
       item.style.display = 'none';
     });
     // 클릭한 배너의 메뉴만 보이기
     btn.nextElementSibling.style.display = 'flex';
+    console.log(btn.nextElementSibling.style.display);
   });
 });
 
-menubtnWrap.forEach((item) => {
-  item.style.display = 'none';
+// 메뉴나 수정 삭제 외 버튼 클릭시 메뉴 닫기
+document.addEventListener("click", (e) => {
+  // 클릭한 요소의 클래스명이 아닐 경우
+  if (!e.target.classList.contains('adminBanner-img-menubtn') && !e.target.classList.contains('adminBanner-a-button')) {
+    // 메뉴 닫기
+    menubtnWrap.forEach((item) => {
+      item.style.display = 'none';
+    });
+  }
 });
+
 
 // 삭제 버튼 클릭시
 function clickDeleteBtn(event) {
