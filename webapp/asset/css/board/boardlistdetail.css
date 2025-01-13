@@ -1,0 +1,120 @@
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+/* 최상단 제목  */
+.boardlistdetail-div-title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+/* 수정|삭제 버튼 */
+.boardlistdetail-div-btnwrapper {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  
+}
+
+.boardlistdetail-btn-editdelete {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+/* 자유게시판 상세피이지 글 닉네임 */
+.boardlistdetail-div-nickname {
+  display: flex;
+  border: 1px solid;
+  height: 50px;
+
+}
+
+.boardlistdetail-div-nickname>div:nth-child(1) {
+  height: 40px;
+  width: 150px;
+  border-right: 1px solid;
+  height: 100%;
+}
+/* 자유게시판 상세페이지 글 작성일 */
+.boardlistdetail-div-date {
+  display: flex;
+  border: 1px solid;
+  height: 50px;
+}
+
+.boardlistdetail-div-date>div:nth-child(1) {
+  height: 40px;
+  width: 150px;
+  border-right: 1px solid;
+  height: 100%;
+}
+/* 자유게시판 상세페이지 글 내용 */
+.boardlistdetail-div-main {
+  display: flex;
+  border: 1px solid;
+  height: 150px;
+}
+
+.boardlistdetail-div-main>div:nth-child(1) {
+  height: 40px;
+  width: 150px;
+  border-right: 1px solid;
+  height: 100%;
+}
+
+#BOARDLISTDETAIL-DIV-HEADER {
+  border: 1px;
+
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+/* 자유게시판 상세 댓글작성란 */
+.boardlistdetail-div-commentwrite {
+  border: 1px solid;
+  height: 80px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+/* 자유게시판 상세 등록버튼 */
+.boardlistdetail-div-registrationwrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.boardlistdetail-btn-registration {
+  background-color: #003161;
+  color: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+/* 자유게시판 상세 댓글확인  */
+.boardlistdetail-div-commenttitle {
+  background-color: #003161;
+  color: #fff;
+}
+
+.boardlistdetail-div-checkcomment {
+  border: 1px solid;
+  height: 80px;
+  padding : 0 20px;
+}
+.boardlistdtail-div-commentlayer{
+  display: flex;
+  justify-content: space-between;
+}
+.boardlistdetail-div-editdelete{
+  display: flex;
+  justify-content: flex-end;
+}
