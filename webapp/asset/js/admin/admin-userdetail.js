@@ -15,7 +15,6 @@ function quitBtn(event) {
     // 해당 글 삭제 먼저 진행되어야 함
     // 삭제 후 알람
     alert('탈퇴가 완료되었습니다.');
+    location.href = "./admin-userlist.html";
   }
-
-  // 부모 요소의 페이지 이동 이벤트 막아야함
 }

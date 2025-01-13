@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>지식의 숲 - 관리자</title>
   <link rel="stylesheet" href="./../../asset/css/admin/adminMenuLayOut.css">
-  <link rel="stylesheet" href="./../../asset/css/admin/admin-studycommentlist.css">
+  <link rel="stylesheet" href="./../../asset/css/admin/admin-bannerlist.css">
   <script defer src="./../../asset/js/admin/admin-basic.js"></script>
-  <script defer src="./../../asset/js/admin/admin-studycommentlist.js"></script>
+  <script defer src="./../../asset/js/admin/admin-bannerlist.js"></script>
 </head>
 <body>
   <div id="ADMIN-DIV-LAYOUTCONTAINER">
@@ -19,8 +19,8 @@
           <li><a href="./admin-userlist.html">유저 목록</a></li>
           <li><a href="./admin-studylist.html">스터디 목록</a></li>
           <li><a href="./admin-studyapplylist.html">스터디 신청 관리</a></li>
-          <li class="admin-li-menuactive"><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
-          <li><a href="./admin-boardlist.html">자유게시판 관리</a></li>
+          <li><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
+          <li class="admin-li-menuactive"><a href="./admin-boardlist.html">자유게시판 관리</a></li>
           <li><a href="./admin-boardcommentlist.html">자유게시판 댓글 관리</a></li>
           <li><a href="./admin-noticelist.html">공지 목록</a></li>
           <li><a href="./admin-bannerlist.html">배너 목록</a></li>
@@ -45,7 +45,7 @@
         <div class="admin-div-contentcontainer adminMain-div-mainwrap">
 
           <!-- 현재 페이지 제목 -->
-          <h1 class="admin-h1-maintitle">스터디 댓글 관리</h1>
+          <h1 class="admin-h1-maintitle">자유게시판 관리</h1>
 
           <!-- 검색창 -->
           <form action="" method="">
@@ -57,39 +57,32 @@
             </div>
           </form>
 
-          <!-- 스터디 글 테이블 -->
+          <!-- 자유게시판 글 테이블 -->
           <div class="admin-div-listwrap">
             <!-- 테이블 컬럼명 -->
             <ul class="admin-ul-titlewrap">
-              <li class="adminStudyComment-li-studycommentid">댓글 번호</li>
-              <li class="adminStudyComment-li-studyid">스터디 글 번호</li>
-              <li class="adminStudyComment-li-studycommentcontent">내용</li>
-              <li class="adminStudyComment-li-userid">아이디</li>
-              <li class="adminStudyComment-li-usernickname">닉네임</li>
-              <li class="adminStudyComment-li-studycommentwritedate">댓글 작성일</li>
-              <li class="adminStudyComment-li-commentdelete"></li>
+              <li class="adminBanner-li-bannerid">글번호</li>
+              <li class="adminBanner-li-bannertitle">배너명</li>
+              <li class="adminBanner-li-bannerwritedate">작성일</li>
+              <li class="adminBanner-li-bannerbtncontainer"></li>
             </ul>
 
             <!-- 데이터 넣는 부분 - 임시데이터 (1) -->
             <ul class="admin-ul-datawrap">
-              <li class="adminStudyComment-li-studycommentid lightdata">319</li>
-              <li class="adminStudyComment-li-studyid lightdata">
-                <!-- 사용자 화면의 스터디 상세페이지로 이동 -->
-                <a href="./../study/studylist-detail.html">
-                  342
-                </a>
-              </li>
-              <li class="adminStudyComment-li-studycommentcontent commentcontent">안녕하세요 저는 지금 JSP 프로젝트를 하고 있습니다 반갑습니다</li>
-              <li class="adminStudyComment-li-userid lightdata">sdklfnewirfni97231</li>
-              <li class="adminStudyComment-li-usernickname lightdata">풀잎나무</li>
-              <li class="adminStudyComment-li-studycommentwritedate lightdata">2025.01.12</li>
-              <li class="adminStudyComment-li-commentdelete">
-                <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제">
+              <li class="adminBanner-li-bannerid lightdata">319</li>
+              <li class="adminBanner-li-bannertitle">배너 1</li>
+              <li class="adminBanner-li-bannerwritedate lightdata">1999.01.01</li>
+              <li class="adminBanner-li-bannerbtncontainer">
+                <img src="./../../asset/img/admin/menu-btn.png" alt="메뉴 버튼">
+                <div class="adminBanner-div-buttonwrap">
+                  
+                </div>
+                <!-- <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제"> -->
               </li>
             </ul>
 
           </div>
-          <!-- 스터디 글 테이블 끝 -->
+          <!-- 자유게시판 글 테이블 끝 -->
           
           <!-- 페이지네이션 -->
           <div class="admin-div-paginationwrapper">

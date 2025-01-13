@@ -1,0 +1,11 @@
+.adminBanner-li-bannerid { width: 20%; }
+.adminBanner-li-bannertitle { width: 50%; }
+.adminBanner-li-bannerwritedate { width: 20%; }
+.adminBanner-li-bannerbtncontainer { width: 10%; }
+
+.adminBanner-li-bannerbtncontainer > img {
+  height: 40px;
+  margin-top: 5px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
