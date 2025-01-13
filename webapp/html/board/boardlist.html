@@ -6,23 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>지식의 숲</title>
   <link rel="stylesheet" href="../../asset/css/board/boardlist.css">
+  <link rel="stylesheet" href="./../../asset/css/main/header.css">
+  <link rel="stylesheet" href="../../asset/css/main/footer.css">
+  <script defer src="./../../asset/js/board/boardlist.js"></script>
 </head>
 
 <body>
+  <!-- 상단 메뉴바 -->
+  <nav class="main-nav-menuwrap">
+    <img src="./../../asset/img/main/logo-1.png" class="main-img-logo" onclick="location.href='./main_login.html'">
+    
+    <ul class="main-nav-ul">
+        <li><a href="./../notice/noticelist.html">공지</a></li>
+        <li><a href="./../board/boardlist.html">자유게시판</a></li>
+        <li><a href="./../study/studylist.html">스터디 모집</a></li>
+        <li><a href="./../myPage/mypageAccountEdit.html">마이페이지</a></li>
+        <li><a href="">로그아웃</a></li>
+    </ul>
+</nav>
+<hr>
   <h1 class="board-title ">자유게시판</h1>
   <!-- 검색창 -->
   <form class="boardlist-form-wrapper" action="">
-    <input
-      type="text"
-      class="boardlist-input-search"
-      placeholder="검색어를 입력하세요."
-    />
+    <input type="text" class="boardlist-input-search" placeholder="검색어를 입력하세요." />
     <button type="submit" class="boardlist-btn-search">
-      <img
-        src="./../../asset/img/study/search-btn.png"
-        alt="search"
-        class="boardlist-img-search"
-      />
+      <img src="./../../asset/img/study/search-btn.png" alt="search" class="boardlist-img-search" />
     </button>
   </form>
 
@@ -114,11 +122,23 @@
       <li class="boardlist-li-paginationlist next">&#62;</li>
     </ul>
   </div>
-  </main>
-</body>
-</div>
-</main>
-<script defer src="./../../asset/js/board/boardlist.js"></script>
+  <!-- footer -->
+  <footer class="main-footer-container">
+    <div class="main-footer-content">
+      <div class="main-footer-links">
+        <div class="main-footer-policies">
+          <a href="#" class="main-link-policy">개인정보처리방침</a>
+          <span class="main-span-divider">|</span>
+          <a href="#" class="main-link-terms">이용약관</a>
+        </div>
+        <p class="main-paragraph-contact">Contact: team.patchnote.official@gmail.com</p>
+        <p class="main-paragraph-copyright">Copyright Forest Info. All rights reserved</p>
+      </div>
+      <div class="main-footer-logo">
+        <img src="./../../asset/img/main/logo-1.png" alt="Forest of Knowledge Logo" class="main-img-footerlogo">
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
