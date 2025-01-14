@@ -42,9 +42,30 @@ categoryList.forEach((item) => {
   }
 
   //찜 버튼을 누르면 채워진 하트로 이미지를 바꾸는 함수
+  
+  function likeStudy(imgElement) {
+    // 이미지의 현재 src를 확인해서 조건에 맞게 변경
+    if (imgElement.src.includes('no-like.png')) {
+      // 비운 하트를 눌렀을 때, 채운 하트로 변경
+      imgElement.src = "../../asset/img/study/like.png";
+    } else {
+      // 채운 하트를 눌렀을 때, 다시 비운 하트로 변경
+      imgElement.src = "../../asset/img/study/no-like.png";
+    }
 
-  function likeStudy(src){
-    console.log(src);
+    //찜 카운트를 갱신
+    // const likeCountElement = imgElement.nextElementSibling;
+     // .studylist-div-likecount
+    // let likeCount = parseInt(likeCountElement.textContent);
+    
+    // 찜 상태에 따라 카운트를 증가/감소시킵니다.
+    // if (imgElement.src.includes('like-like.png')) {
+    //   likeCount++;
+    // } else {
+    //   likeCount--;
+    // }
+    // likeCountElement.textContent = likeCount;
     
   }
+  
 

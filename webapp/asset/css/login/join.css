@@ -24,8 +24,8 @@ main{
   border: 1px solid lightgray;
   border-radius: 30px;
   padding : 0 50px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .join-div-wrapper-h1-box {
@@ -84,7 +84,7 @@ main{
 
   border-radius: 10px;
   border: 1px solid lightgray;
-
+  padding: 0 10px;
   outline: none;
 }
 
@@ -182,7 +182,18 @@ input[class='join-input-checkbox-small']:checked {
 
 
 
-footer {
-  width: 100%;
-  height: 20%;
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+  -moz-appearance: textfield;
 }
