@@ -1,0 +1,39 @@
+
+/* 공통 적인 부분 */
+/* 상세페이지 제목 */
+.admin-h1-detailtitle { margin-top: 15px; }
+
+/* 데이터 출력 부분 */
+.adminWrite-div-formWrapper {
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  border-top: 1.5px solid #333;
+}
+
+
+
+/* 등록, 취소 버튼 */
+#ADMINWRITE-DIV-BTNWRAP {
+  width: 95%;
+  margin: auto;
+  padding: 30px 0;
+  text-align: right;
+}
+
+.admin-btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-save { background-color: #003161; }
+
+.btn-cancel {
+  background-color: #fff;
+  color: #003161;
+  border: none;
+}
