@@ -27,7 +27,7 @@ function nameCheck(){
 	const result = document.getElementById('JOIN-DIV-NAME');
 	//정규식 글자제한
 	const exr = /^[a-zA-Z가-힣][a-zA-Z가-힣0-9]{0,14}$/; // 첫 글자는 문자만 허용, 최대 15자
-	
+
 	// console.log("test"); 정상출력
 
 	
@@ -55,11 +55,12 @@ function birthCheck(){
 	console.log(birth)
 	
 	//생년월일 숫자만 입력
-	const exr = /^[0-9]*$/;
+	const exr = /^[9-9]*$/;
 	
 	// console.log("test"); 정상출력
 
-		if(!exr.test(birth)){
+		if(exr.test(birth)){
+			
 			result.innerHTML = '생년월일을 입력하세요.';
 			result.style.color = 'red';
 	
@@ -96,7 +97,6 @@ function validatePassword() {
 
 
 
-// 여기는 해야할 부분
 
 
 
@@ -108,10 +108,36 @@ idCheckButton.addEventListener('click', (event) => {
 
 // 아이디 중복검사
 function idCheck(){
-	const idCheck = document.getElementById("JOIN-INPUT-ID");
+	const idCheck = document.getElementById("JOIN-INPUT-ID").value;
 	const result = document.getElementById("JOIN-DIV-IDCHECK");
   const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
 
+	
+		if (!exr.test(idCheck)) {
+			result.innerHTML = '중복된 아이디가 없습니다.';
+			result.style.color = 'green';
+		}else{
+			result.innerHTML = '중복된 아이디가 있습니다.';
+			result.style.color = 'red';
+		}
+	}
+
+
+
+//닉네임 버튼 클릭함수
+const nickNameCheckButton = document.getElementById("JOIN-BTN-NICKNAMECHECK");
+nickNameCheckButton.addEventListener('click', (event) => {
+  nickNameCheck()
+});
+
+
+
+// 닉네임 유효성 검사 함수
+function nickNameCheck(){
+	const idCheck = document.getElementById("JOIN-INPUT-NICKNAMECHECK").value;
+	const result = document.getElementById("JOIN-DIV-NICKNAMECHECK");
+  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
+	
 	
 		if (!exr.test(idCheck)) {
 			result.innerHTML = '중복된 아이디가 없습니다.';
@@ -124,29 +150,16 @@ function idCheck(){
 
 
 //핸드폰 번호 변수
-const phoneNumInput = document.getElementById('phoneNum');
-const phoneNumchkInput = document.getElementById('phoneNumchk');
-const sendButton = document.querySelector('.mypage-btn-phoneNum-send');
+const phoneNumInput = document.getElementById('JOIN-INPUT-PHONNUMBER');
+const sendButtonPhone = document.getElementById('JOIN-BTN-PHONNUMBER');
+const resultPhone = document.getElementById('JOIN-DIV-PHONENUMBER');
 
 
-//진행중
-// 닉네임 유효성 검사 함수
-function nickNameCheck(){
-	const idCheck = document.getElementById("JOIN-INPUT-ID");
-	const result = document.getElementById("JOIN-DIV-IDCHECK");
-  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
 
-	
-		if (!exr.test(idCheck)) {
-			result.innerHTML = '중복된 아이디가 없습니다.';
-			result.style.color = 'green';
-		}else{
-			result.innerHTML = '중복된 아이디가 있습니다.';
-			result.style.color = 'red';
-		}
-	}
-
-
+sendButtonPhone.addEventListener('click', (event) => {
+  event.preventDefault(); 
+  validatePhoneNumber();
+});
 
 // 핸드폰 번호 시작
 // 핸드폰 번호 자동 포맷팅 및 길이 제한
@@ -168,7 +181,7 @@ function formatPhoneNumber(event) {
 }
 
 // 입력 이벤트: 사용자가 타자를 칠 때마다 호출
-// phoneNumInput.addEventListener('input', formatPhoneNumber);
+ phoneNumInput.addEventListener('input', formatPhoneNumber);
 
 
 // 전송 버튼 클릭 이벤트
@@ -176,11 +189,85 @@ function validatePhoneNumber() {
   const phoneNum = phoneNumInput.value.replace(/[^\d]/g, ''); // 숫자만 남기기
 
   if (phoneNum.length !== 11) {
-    alert('전화번호 양식이 아닙니다. 11자리를 입력해주세요.');
-    return false;
+   
+
+		resultPhone.innerHTML = '전화번호 양식이 아닙니다. 11자리를 입력해주세요.';
+		resultPhone.style.color = 'red';
+			return false;
   }
 
-  alert('인증번호를 보냈습니다.');
+	resultPhone.innerHTML = '인증번호를 보냈습니다.';
+	resultPhone.style.color = 'green';
   return true;
 }
 
+
+
+
+
+
+
+
+
+
+// 전송 버튼 클릭 이벤트 리스너
+const authenButton = document.getElementById("JOIN-BTN-AUTHENTICATIONNUMBER");
+authenButton.addEventListener('click', (event) => {
+  authenCheck();
+});
+
+
+const phoneNumchkInput = document.getElementById('JOIN-INPUT-AUTHENTICATIONNUMBER');
+const sendButtonAuthentication = document.getElementById('JOIN-BTN-AUTHENTICATIONNUMBER');
+
+// 인증번호 확인 클릭 함수
+	function authenCheck() {
+		const authenNumber = document.getElementById("JOIN-INPUT-AUTHENTICATIONNUMBER").value;
+		const exr = /^[0-9]*$/; 
+		if (exr.test(authenNumber)) {
+    	alert('정상적으로 인증되었습니다.');
+
+  	}else{
+			alert('인증번호가 일치하지 않습니다.');
+		}
+
+ }
+
+
+
+
+//글자수 제한 로직 - 생년월일
+const inpSec = document.querySelector('#JOIN-INPUT-BIRTH');
+
+// input 입력 글자수 제한하기 (number) - 생년월일
+function inputLenFunc() {
+    if (inpSec.value.length > 6) {
+        inpSec.value = inpSec.value.slice(0, 6);
+    };
+    console.log(inpSec.value)
+}
+inpSec.addEventListener('input', inputLenFunc);
+
+
+
+
+//글자수 제한 로직 - 인증번호 
+const inpSec1 = document.querySelector('#JOIN-INPUT-AUTHENTICATIONNUMBER');
+
+//글자수 제한 로직 - 인증번호 
+function inputLenFunc1() {
+	if (inpSec1.value.length > 6) {
+			inpSec1.value = inpSec1.value.slice(0, 6);
+	};
+	console.log(inpSec1.value)
+}
+inpSec.addEventListener('input', inputLenFunc1);
+
+
+
+//가입하기 눌렀을 때 main page 이동
+function moveSite(){
+	console.log("sdfsdfasdfasdfsdf")
+	window.location.href = "./../main/main_logout.html";
+
+}
