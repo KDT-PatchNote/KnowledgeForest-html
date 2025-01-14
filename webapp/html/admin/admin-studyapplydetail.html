@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지식의 숲 - 관리자</title>
+    <link rel="stylesheet" href="./../../asset/css/admin/adminMenuLayOut.css" />
+    <link
+      rel="stylesheet"
+      href="./../../asset/css/admin/admin-studyapplydetail.css"
+    />
+    <script defer src="./../../asset/js/admin/admin-basic.js"></script>
+    <script defer src="./../../asset/js/admin/admin-studyapplydetail.js"></script>
+  </head>
+  <body>
+    <div id="ADMIN-DIV-LAYOUTCONTAINER">
+      <!-- 사이드 메뉴 -->
+      <aside id="ADMIN-MENUCONTAINER">
+        <nav class="admin-div-menuwrap">
+          <h1 id="ADMIN-H2-TITLE">
+            <a href="./admin-main.html">관리자 페이지</a>
+          </h1>
+          <ul class="admin-ul-menuwrap">
+            <li><a href="./admin-userlist.html">유저 목록</a></li>
+            <li><a href="./admin-studyapplydetail.html">스터디 목록</a></li>
+            <li class="admin-li-menuactive">
+              <a href="./admin-studyapplylist.html">스터디 신청 관리</a>
+            </li>
+            <li>
+              <a href="./admin-studycommentlist.html">스터디 댓글 목록</a>
+            </li>
+            <li><a href="./admin-boardlist.html">자유게시판 관리</a></li>
+            <li>
+              <a href="./admin-boardcommentlist.html">자유게시판 댓글 관리</a>
+            </li>
+            <li><a href="./admin-noticelist.html">공지 목록</a></li>
+            <li><a href="./admin-bannerlist.html">배너 목록</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- 사이드 메뉴 끝 -->
+
+      <!-- 상단 헤더 + 헤더 아래 컨텐츠 요소들 -->
+      <div id="ADMIN-DIV-CONTENTWRAP">
+        <!-- 상단 헤더 -->
+        <div id="ADMIN-DIV-HEADERCONTAINER">
+          <img
+            src="./../../asset/img/main/logo.png"
+            class="admin-img-logo"
+            alt="Logo"
+          />
+          <ul id="ADMIN-UL-HEADERWRAP">
+            <li><a href="./../main/main.html">홈</a></li>
+            <li><a href="">로그아웃</a></li>
+          </ul>
+        </div>
+
+        <!-- 메인 컨텐츠가 들어갈 컨테이너 -->
+        <main class="admin-div-container">
+          <div class="admin-div-contentcontainer adminMain-div-mainwrap">
+            <!-- 현재 페이지 제목 -->
+            <h1 class="admin-h1-maintitle">스터디 신청 정보</h1>
+
+            <!-- 전체 내용을 감싸는 래퍼-->
+            <div class="studyapplydetail-div-contentsWrapper">
+              <!-- 입력 폼을 감싸는 래퍼 -->
+              <form id="STUDYAPPLYDETAIL-FORM-WRITE">
+                <!-- 한 행 -->
+                <div class="studyapplydetail-div-wrapperlayer">
+                  <!-- label과 input을 묶은 div -->
+                  <div class="studyapplydetail-div-infowrapper">
+                    <div class="label">제목</div>
+                    <input
+                      type="text"
+                      class="studyapplydetail-input-groupinfo"
+                      name="groupName"
+                      placeholder="스터디 그룹명을 입력해주세요."
+                    />
+                  </div>
+                </div>
+                <!-- 2개씩 나눠진 div layer -->
+                <div class="studyapplydetail-div-wrapperlayerDual">
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">카테고리</div>
+                    <div class="studyapplydetail-div-categoryselectwrapper">
+                      <div
+                        class="studyapplydetail-div-categoryselector categoryselected"
+                      >
+                        개발
+                      </div>
+                      <div class="studyapplydetail-div-categoryselector">보안</div>
+                    </div>
+                  </div>
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">전화번호</div>
+                    <div class="studyapplydetail-div-phoneselectwrapper">
+                      <div
+                        class="studyapplydetail-div-shownumberselector phoneselected"
+                      >
+                        보이기
+                      </div>
+                      <div class="studyapplydetail-div-shownumberselector">숨기기</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 2개씩 나눠진 div layer -->
+                <div class="studyapplydetail-div-wrapperlayerDual">
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">정원 수</div>
+                    <input
+                      type="text"
+                      class="studyapplydetail-input-groupinfo"
+                      name="groupLimit"
+                      placeholder="정원 수를 입력해주세요."
+                    />
+                  </div>
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">신청 마감일</div>
+                    <input
+                      class="studyapplydetail-input-groupinfo"
+                      placeholder="신청 마감일을 입력해주세요 ex) 20250110"
+                    />
+                  </div>
+                </div>
+
+                <!-- 2개씩 나눠진 div layer -->
+
+                <div class="studyapplydetail-div-wrapperlayerDual">
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">시작날짜</div>
+                    <input
+                      class="studyapplydetail-input-groupinfo"
+                      placeholder="시작날짜를 입력해주세요 ex) 20250110"
+                    />
+                  </div>
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">종료날짜</div>
+                    <input
+                      class="studyapplydetail-input-groupinfo"
+                      placeholder="시작날짜를 입력해주세요 ex) 20250110"
+                    />
+                  </div>
+                </div>
+
+                <div class="studyapplydetail-div-wrapperlayerDual">
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">시작시간</div>
+                    <input
+                      class="studyapplydetail-input-groupinfo"
+                      type="datetime-local"
+                      placeholder="시작시간을 입력해주세요 ex) 20250110"
+                    />
+                  </div>
+                  <div class="studyapplydetail-div-infowrapperDual">
+                    <div class="label">종료시간</div>
+                    <input
+                      class="studyapplydetail-input-groupinfo"
+                      type="datetime-local"
+                      placeholder="종료시간를 입력해주세요 ex) 20250110"
+                    />
+                  </div>
+                </div>
+
+                <div class="studyapplydetail-div-wrapperlayer">
+                  <div class="studyapplydetail-div-infowrapper">
+                    <div class="label">모임장소</div>
+                    <input
+                      type="text"
+                      class="studyapplydetail-input-groupinfo"
+                      name="groupLocation"
+                      placeholder="장소를 입력해주세요."
+                    />
+                  </div>
+                </div>
+
+                <div class="studyapplydetail-div-longwrapperlayer">
+                  <div class="studyapplydetail-div-textareawrapper">
+                    <div class="label">설명</div>
+                    <textarea
+                      placeholder="설명을 작성해주세요."
+                      class="studyapplydetail-div-studycontents"
+                    ></textarea>
+                  </div>
+                  <div class="studyapplydetail-div-filewrap">
+                    <div class="label">첨부파일</div>
+                    <label
+                      id="STUDYAPPLYDETAIL-INPUT-FILELABEL"
+                      for="STUDYAPPLYDETAIL-INPUT-FILE"
+                    >
+                      <input
+                        type="file"
+                        name="file"
+                        id="STUDYAPPLYDETAIL-INPUT-FILE"
+                      />
+                      <div class="studyapplydetail-div-filebtn">첨부</div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+
+              <div class="studyapplydetail-div-btnwrapper">
+                <button
+                  class="studyapplydetail-btn-submit"
+                  form="STUDYAPPLYDETAIL-FORM-WRITE"
+                  onclick="updateStudy()"
+                >
+                  등록
+                </button>
+                <button
+                  class="studyapplydetail-btn-cancel"
+                  form="STUDYAPPLYDETAIL-FORM-WRITE"
+                  onclick="goBack()"
+                >
+                  취소
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- 메인 컨텐츠 끝 -->
+      </div>
+      <!-- 헤더 + 메인 컨텐츠 끝 -->
+    </div>
+  </body>
+</html>
