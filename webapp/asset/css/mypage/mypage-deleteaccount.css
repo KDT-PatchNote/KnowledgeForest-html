@@ -108,32 +108,51 @@ a{
 /*삭제 확인 문구*/
 .mypage-div-configure{
   width: 900px;
-  height: 100px;
+  height: 500px;
   border: 1px solid #afafaf;
   border-radius: 15px;
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
+  flex-direction: column;
+  justify-content: center;
   align-items: center; /* 세로 중앙 정렬 */
   background-color: #FFFFFF;
-  text-align: center;
-  margin: auto;
+  /* text-align: center; */
+  margin: 50px auto;
 }
 
 .mypage-btn-deleteandcancel{
   display: flex;
   justify-content: center; /* 가로 중앙 정렬 */
   align-items: center; /* 세로 중앙 정렬 */ 
-  margin: 20px; 
+  margin: 10px; 
+}
+
+.mypage-div-delAccountTitle{
+  margin: 40px auto;
+}
+
+.mypage-text-delComment{
+  width: 550px;
+  height: 30px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  margin: 20px auto;
 }
 
 .delete{
   margin: 5px;
-  width: 50px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
   border: 1px solid #afafaf;
   border-radius: 3px;
-  background-color: #c71010;
+  background-color: #afafaf;
   color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+.delete:enabled {
+  background-color: #c71010; /* 활성화 빨간색 */
+  cursor: pointer;
 }
 
 .cancel{

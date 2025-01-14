@@ -1,21 +1,19 @@
-// 찜 아이콘 변수
-const likeIcon = document.querySelector('.mypage-img-like');
-const noLikeIcon = document.querySelector('.mypage-img-nolike');
+// 찜 아이콘 클릭 이벤트
+function toggleLike(element, isLike) {
+  const likeWrapper = element.parentElement;
+  const likeIcon = likeWrapper.querySelector('.mypage-img-like');
+  const noLikeIcon = likeWrapper.querySelector('.mypage-img-nolike');
 
-// 초기 상태 설정 (like 활성화, no-like 비활성화)
-likeIcon.style.display = 'inline-block';
-noLikeIcon.style.display = 'none';
-
-// 클릭 이벤트 추가
-likeIcon.addEventListener('click', () => {
-  likeIcon.style.display = 'none'; // like 비활성화
-  noLikeIcon.style.display = 'inline-block'; // no-like 활성화
-});
-
-noLikeIcon.addEventListener('click', () => {
-  noLikeIcon.style.display = 'none'; // no-like 비활성화
-  likeIcon.style.display = 'inline-block'; // like 활성화
-});
+  if (isLike) {
+    // 'like' 클릭 시
+    likeIcon.style.display = 'none';
+    noLikeIcon.style.display = 'inline-block';
+  } else {
+    // 'no-like' 클릭 시
+    noLikeIcon.style.display = 'none';
+    likeIcon.style.display = 'inline-block';
+  }
+}
 
 
 
@@ -59,12 +57,18 @@ function closeApplicantModal() {
 }
 
 // 드롭다운 토글
-function toggleDropdown(button) {
-  const body = button.parentElement.nextElementSibling;
+function toggleDropdown(img) {
+  const body = img.parentElement.nextElementSibling;
   body.classList.toggle("hidden");
 
-  // 버튼 텍스트 변경
-  button.textContent = body.classList.contains("hidden") ? "⬇" : "⬆";
+  console.log(img);
+
+  if(img.src.includes("down.png")){
+    img.src="./../../asset/img/mypage/up.png"
+
+  } else{
+    img.src="./../../asset/img/mypage/down.png"
+  }
 }
 
 // 수락 버튼 동작

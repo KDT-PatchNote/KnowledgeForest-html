@@ -270,6 +270,7 @@ a{
   border-radius: 3px;
   background-color: #FFFFFF;
   color: #003161;
+  cursor: pointer;
 }
 .mypage-li-paginationlist:hover:not(.pre,.next){
 

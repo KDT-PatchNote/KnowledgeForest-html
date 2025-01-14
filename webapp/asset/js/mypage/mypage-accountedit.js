@@ -88,26 +88,27 @@ function validatePasswordLive() {
   }
 }
 
+// 비밀번호 확인 입력칸
+document.addEventListener('DOMContentLoaded', function () {
+  const passwordField = document.getElementById('password');
+  const passwordChkField = document.getElementById('passwordchk');
+  const passwordChkError = document.getElementById('passwordchk-error');
 
-//비밀번호 일치(진행중)
-function equalPassword() {
-  const password = passwordInput.value;
-  const passwordchk = passwordchkInput.value;
-
-  if(passwordch === kpassword) {
-    passwordchkError.textContent = '비밀번호가 일치하지 않습니다.';
-    passwordInput.style.borderColor = 'red';
-  } else {
-    passwordchkError.textContent = '비밀번호가 일치합니다.';
-    passwordchkError.style.color = 'green'; // 메시지 색상을 초록색으로 변경
-    passwordchkInput.style.borderColor = 'green'; // 입력 필드에 초록색 테두리 추가
-
-  }
-}
+  passwordChkField.addEventListener('input', function () {
+    if (passwordChkField.value === '') {
+      passwordChkError.textContent = ''; // 입력이 비어 있을 때 메시지 없음
+    } else if (passwordChkField.value === passwordField.value) {
+      passwordChkError.textContent = '동일한 비밀번호 입니다'; // 비밀번호가 동일
+      passwordChkError.style.color = 'green';
+    } else {
+      passwordChkError.textContent = '비밀번호가 다릅니다'; // 비밀번호가 다름
+      passwordChkError.style.color = 'red';
+    }
+  });
+});
 
 // 비밀번호 입력 이벤트
 passwordInput.addEventListener('input', validatePasswordLive);
-passwordchkInput.addEventListener('input', equalPassword);
 //비밀번호 끝
 
 
@@ -132,6 +133,41 @@ function formatPhoneNumber(event) {
 
 // 입력 이벤트: 사용자가 타자를 칠 때마다 호출
 phoneNumInput.addEventListener('input', formatPhoneNumber);
+
+//인증번호 확인
+document.addEventListener('DOMContentLoaded', function () {
+  const phoneNumChkField = document.getElementById('phoneNumchk');
+  const phoneNumChkError = document.getElementById('phoneNumchk-error');
+  const phoneNumChkButton = document.querySelector('.mypage-btn-phoneNum-check');
+
+  phoneNumChkField.addEventListener('input', function () {
+    // 현재 입력값에서 숫자가 아닌 문자를 제거
+    phoneNumChkField.value = phoneNumChkField.value.replace(/[^0-9]/g, '');
+
+    // 길이를 6자로 제한
+    if (phoneNumChkField.value.length > 6) {
+      phoneNumChkField.value = phoneNumChkField.value.slice(0, 6);
+    }
+
+    // 유효성 검사 메시지
+    if (phoneNumChkField.value.length < 6) {
+      phoneNumChkError.textContent = '6자리 숫자를 입력해주세요.';
+      phoneNumChkError.style.color = 'red';
+    } else {
+      phoneNumChkError.textContent = '';
+    }
+  });
+
+  phoneNumChkButton.addEventListener('click', function () {
+    if (phoneNumChkField.value.length === 6) {
+      alert('확인되었습니다');
+    } else {
+      alert('다시 입력하세요');
+    }
+  });
+});
+
+
 
 
 // 전송 버튼 클릭 이벤트
