@@ -1,0 +1,214 @@
+/* 각 화면 최상단 제목 */
+.studyapplydetail-h1-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* 하단 컨텐츠를 감싸는 래퍼 */
+.studyapplydetail-div-contentsWrapper {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* 한 행*/
+.studyapplydetail-div-wrapperlayer {
+  display: flex;
+  height: 50px;
+  border: 1px solid #555555;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.studyapplydetail-div-longwrapperlayer {
+  border: 1px solid #555555;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.studyapplydetail-div-wrapperlayerDual {
+  display: flex;
+  height: 50px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.studyapplydetail-div-infowrapper {
+  flex: 1;
+  display: flex;
+}
+
+.studyapplydetail-div-infowrapperDual {
+  width: 49%;
+  border: 1px solid #555555;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* 본문를 포함하는 행*/
+
+.studyapplydetail-div-wrapperlayer:last-child {
+  height: 300px;
+}
+
+/* info와 label을 감싸는 div */
+.studyapplydetail-div-infowrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.studyapplydetail-div-categoryselectwrapper,
+.studyapplydetail-div-phoneselectwrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* textarea를 감싸는 div */
+.studyapplydetail-div-textareawrapper {
+  width: 100%;
+  height: 150px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+/* 첨부파일을 감싸는 div */
+.studyapplydetail-div-filewrap {
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+/*라벨 */
+.label {
+  width: 200px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #808080;
+  font-weight: bolder;
+  border-right: 1px solid #ccc;
+}
+
+/*textarea 라벨*/
+.studyapplydetail-div-textareawrapper > .label {
+  width: 200px;
+  line-height: 150px;
+  text-align: center;
+  color: #808080;
+  box-sizing: border-box;
+}
+
+/*인풋*/
+.studyapplydetail-input-groupinfo {
+  flex: 1;
+  height: 50px;
+  line-height: 50px;
+  color: #808080;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+/* 원래 파일 첨부 인풋 */
+#STUDYAPPLYDETAIL-INPUT-FILE {
+  display: none;
+}
+/* 파일 첨부처럼 보이는 요소 */
+#STUDYAPPLYDETAIL-INPUT-FILELABEL {
+  flex: 1;
+  height: 50px;
+  line-height: 50px;
+  color: #808080;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding-left:20px;
+  box-sizing: border-box;
+
+}
+/* 파일 첨부 버튼 */
+.studyapplydetail-div-filebtn {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  padding: 0 15px;
+  background-color: #003161;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-left: auto;
+}
+/* 탭 선택 */
+.studyapplydetail-div-categoryselector,
+.studyapplydetail-div-shownumberselector {
+  flex: 1;
+  height: 50px;
+  line-height: 50px;
+  color: #808080;
+  font-size: 18px;
+  text-align: center;
+}
+
+.categoryselected,
+.phoneselected {
+  background-color: #003161;
+  color: white;
+}
+
+/*본문 칸*/
+.studyapplydetail-div-studycontents {
+  flex: 1;
+  height: 150px;
+  font-size: 18px;
+  color: #808080;
+  border: none;
+  resize: none;
+  padding: 20px;
+  box-sizing: border-box;
+  border-collapse: separate;
+}
+
+textarea:focus {
+  outline: none;
+}
+.studyapplydetail-div-btnwrapper{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+.studyapplydetail-btn-submit{
+  width: 100px;
+  height: 50px;
+  background-color: #003161;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+/* 취소 버튼 스타일 */
+.studyapplydetail-btn-cancel{
+  width: 100px;
+  height: 50px;
+  border: 1px solid #808080;
+  background-color: white;
+  color: #003161;
+  border-radius: 10px;
+  margin-left: 10px;
+}
