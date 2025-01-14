@@ -17,6 +17,7 @@ body {
 
 .main-container {
   display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -30,6 +31,7 @@ aside {
 }
 
 .mypage-div-menuwrap {
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,10 +39,58 @@ aside {
   height: 70%;
 }
 
+
+
 /*사이드 테이블 제목*/
 #MYPAGE-H2-TITLE {
   margin-bottom: 40px;
 }
+
+
+/* 상단 헤더 - 로고, 홈, 로그아웃 */
+#ADMIN-DIV-HEADERCONTAINER {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  /* margin-left: 210px; */
+}
+
+.admin-img-logo{
+  margin-left: 210px;
+  width: 245px;
+  height: 49px;
+}
+
+#ADMIN-UL-HEADERWRAP {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+#ADMIN-UL-HEADERWRAP a {
+  text-decoration: none;
+  color: #003161;
+}
+
+#ADMIN-UL-HEADERWRAP li {
+  width: 100px;
+
+  color: #003161;
+  text-align: center;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+#ADMIN-UL-HEADERWRAP li:nth-child(1) { border-right: 1px solid #003161; }
+
+
+
+
 
 /*리스트 부분*/
 .mypage-ul-menuwrap {
