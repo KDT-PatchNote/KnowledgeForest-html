@@ -10,7 +10,7 @@
 body {
   font-family: 'NanumGothic', sans-serif;
   background-color: #F6F6F6;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 
 }
@@ -48,10 +48,12 @@ button {
   border: none;
   background-color: transparent;
 }
-.studylist-div-btnwrapper{
+
+.studylist-div-btnwrapper {
   display: flex;
   justify-content: flex-end;
 }
+
 .studylist-btn-write {
   width: 150px;
   height: 50px;
@@ -137,25 +139,28 @@ button {
 
 /* 스터디 */
 .studylist-div-group {
-  width: 450px;
-  height: 360px;
-  margin: 10px;
+  width: 320px;
+  height: 250px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   cursor: pointer;
-  border: 1px solid #555;
+  border: 1px solid #afafaf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .studylist-div-groupinner {
   width: 85%;
-  margin: auto;
+  height: 85%;
 }
 
 /* 스터디의 마감일과 모집상태를 감싸는 래퍼 */
 .studylist-div-groupinfowrapper {
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -168,16 +173,23 @@ button {
 
 /* 스터디명 */
 .studylist-div-grouptitle {
-  width: 50%;
-  height: 100px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  width: 80%;
+  height: 63px;
+  font-size: 18px;
+  /* 기본 폰트 사이즈 16px*/
   text-align: left;
+  font-weight: bold;
+  margin: 20px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 /* 스터디 카테고리*/
 .studylist-div-groupcategory {
-  width: 100px;
+  width: 60px;
   height: 30px;
   line-height: 30px;
   background-color: #003161;
@@ -196,9 +208,9 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px auto;
+  margin-top: 30px;
+  margin-bottom: 0;
   border-top: 1px solid #888;
-  padding-top: 10px;
 }
 
 /*스터디 개설자*/
@@ -232,8 +244,6 @@ button {
   margin: 50px 0;
 }
 
-
-
 #STUDYLIST-UL-PAGINATION {
   display: flex;
   flex-direction: row;
@@ -266,47 +276,6 @@ button {
 
 }
 
-
-
-/* footer */
-
-.main-footer-container {
-  width: 100%;
-  background-color: #f9f9f9;
-  color: #666;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  padding: 10px 20px;
-  border-top: 1px solid #ddd;
-}
-
-.main-footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.main-footer-links a {
-  text-decoration: none;
-  color: #666;
-  font-weight: bold;
-}
-
-.main-span-divider {
-  color: #aaa;
-  margin: 0 5px;
-}
-
-.main-paragraph-contact,
-.main-paragraph-copyright {
-  margin: 0;
-}
 
 
 
