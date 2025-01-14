@@ -1,4 +1,3 @@
-
 //파일 첨부시 파일명 표시
 const fileInput = document.querySelector("input[name='file']");
 const fileLabel = document.querySelector("#BOARD-INPUT-FILELABEL");
@@ -22,7 +21,6 @@ function updateBoard() {
     }
   }
 }
-
 
 const titleInput = document.querySelector("input[name='boardlistName']");
 const descriptionInput = document.querySelector(
