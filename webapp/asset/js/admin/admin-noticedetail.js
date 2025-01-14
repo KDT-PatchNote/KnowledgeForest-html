@@ -1,8 +1,7 @@
-// 배너 관리 목록으로 되돌아가기 버튼
-const backBannerList = document.querySelector('.adminDetail-span-backbtn');
+// 유저 관리 목록으로 되돌아가기 버튼
+const backNoticeList = document.querySelector('.adminDetail-span-backbtn');
 
-backBannerList.addEventListener("click", () => {
-  console.log("dd");
+backNoticeList.addEventListener("click", () => {
   history.back();
 });
 
@@ -26,7 +25,7 @@ function clickUpdateBtn(event) {
 
   // 확인 버튼 클릭시
   if (isdelete) {
-    location.href = "./admin-bannerupdateform.html";
+    location.href = "./admin-noticeupdateform.html";
   }
 }
 

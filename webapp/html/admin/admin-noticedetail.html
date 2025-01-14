@@ -6,7 +6,7 @@
   <title>지식의 숲 - 관리자</title>
   <link rel="stylesheet" href="./../../asset/css/admin/adminMenuLayOut.css">
   <link rel="stylesheet" href="./../../asset/css/admin/admin-detail.css">
-  <script defer src="./../../asset/js/admin/admin-bannerdetail.js"></script>
+  <script defer src="./../../asset/js/admin/admin-noticedetail.js"></script>
 </head>
 <body>
   <div id="ADMIN-DIV-LAYOUTCONTAINER">
@@ -21,8 +21,8 @@
           <li><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
           <li><a href="./admin-boardlist.html">자유게시판 관리</a></li>
           <li><a href="./admin-boardcommentlist.html">자유게시판 댓글 관리</a></li>
-          <li><a href="./admin-noticelist.html">공지 목록</a></li>
-          <li class="admin-li-menuactive"><a href="./admin-bannerlist.html">배너 목록</a></li>
+          <li class="admin-li-menuactive"><a href="./admin-noticelist.html">공지 목록</a></li>
+          <li><a href="./admin-bannerlist.html">배너 목록</a></li>
         </ul>
       </nav>
     </aside>
@@ -45,7 +45,7 @@
 
           <!-- 현재 페이지 제목 -->
           <h1 class="admin-h1-detail">
-            <span class="adminDetail-span-backbtn">&lt;</span>배너 상세
+            <span class="adminDetail-span-backbtn">&lt;</span>공지 상세
           </h1>
 
           <!-- 배너 데이터 출력하는 부분 -->
@@ -55,7 +55,7 @@
                 <!-- label과 input을 묶은 div -->
                 <div class="adminDetail-div-infowrapper">
                   <div class="label">제 목</div>
-                  <div class="adminDetail-div-groupinfo">배너 1</div>
+                  <div class="adminDetail-div-groupinfo">공지 1</div>
                 </div>
     
                 <div class="adminDetail-div-infowrapper">
@@ -66,14 +66,15 @@
                   <div class="label">등록일</div>
                   <div class="adminDetail-div-groupinfo">2025.01.14 01:41</div>
                 </div>
-                <div class="adminBannerDetail-div-bannerimgwrap">
-                  <div class="label">파일</div>
-                  <div class="adminDetail-div-bannerimg">
-                    <img src="./../../asset/img/main/banner01.png" alt="배너1">
+                <div class="adminNoticeDetail-div-noticecontentwrap">
+                  <div class="label">본문</div>
+                  <div class="adminDetail-div-noticecontent">
+                    6개월 동안 JAVA 코딩테스트 문제 풀이하고 코드해석 해보는 스터디
+                    모임입니다. 화, 목 13시부터 16시까지 총 3시간동안 진행
+                    예정입니다 다른 분들과 코드 공유해보며 여러 풀이 방법도 경험하고
+                    또 색다른 코드들을 경험하며 배울 수 있습니다. 원하시는 분들은
+                    코디신청서 작성시 전화번호 또는 카톡 아이디 같이 작성해주세요.
                   </div>
-                </div>
-                <div class="banner-div-imgname">
-                  이미지1.jpg
                 </div>
             </div>
           </div>

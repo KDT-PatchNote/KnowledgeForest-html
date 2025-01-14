@@ -39,11 +39,11 @@ li { list-style-type: none; }
   flex-direction: column;
   align-items: center;
   height: 100%;
-  margin-top: 70%;
+  margin-top: 35%;
 }
 
 /* 사이드 메뉴에 관리자 페이지  */
-#ADMIN-H2-TITLE { margin-bottom: 40px; }
+#ADMIN-H2-TITLE { margin-bottom: 30px; }
 
 .admin-ul-menuwrap { width: 100%; }
 
@@ -214,8 +214,6 @@ li { list-style-type: none; }
   text-overflow: ellipsis;
 }
 
-
-
 /* 모든 데이터 중 회색 글씨 */
 .lightdata {
   color: #808080;
@@ -225,6 +223,26 @@ li { list-style-type: none; }
 /* 모든 탈퇴, 삭제 공용 스타일 */
 .admin-btn-delete {
   width: 60%;
+  height: 40px;
+  background-color: #003161;
+  border: none;
+  border-radius: 100px;
+
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 공지, 배너 작성 버튼 */
+#ADMIN-DIV-BTNWRAP {
+  width: 90%;
+  margin: auto;
+  padding-top: 50px;
+  text-align: right;
+}
+
+.admin-btn-write {
+  width: 100px;
   height: 40px;
   background-color: #003161;
   border: none;
