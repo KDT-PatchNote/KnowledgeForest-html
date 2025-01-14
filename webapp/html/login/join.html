@@ -47,10 +47,10 @@
             <p class="join-p-label">아이디
             </p>
           </div>
-          <input type="text" class="join-input" name="id">
-          <button class="join-btn-checkid">ID중복검사</button>
+          <input type="text" class="join-input" name="id" id="JOIN-INPUT-ID">
+          <button class="join-btn-checkid" id="JOIN-BTN-IDCHECK">ID중복검사</button>
         </div>
-        <div class="join-div-wrapper-text-alarm"  >아이디가 일치하지 않습니다</div>
+        <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-IDCHECK">아이디가 일치하지 않습니다</div>
 
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
@@ -79,16 +79,16 @@
           <div class="join-div-labelwrapper">
             <p class="join-p-label">이름</p>
           </div>
-          <input type="text" class="join-input" name="userName">
+          <input type="text" class="join-input" id="JOIN-INPUt-ID" name="userName" onblur="nameCheck()">
         </div>
-        <div class="join-div-wrapper-text-alarm">이름을 입력하세요</div>
+        <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-NAME"></div>
         <div class="join-div-inputlayer">
           <div class="join-div-labelwrapper">
             <p class="join-p-label">생년월일</p>
           </div>
-        <input type="text" class="join-input" name="birth">
+        <input type="text" class="join-input" name="birth" id="JOIN-INPUT-BIRTH" maxlength="6" onblur="birthCheck()">
         </div>
-        <div class="join-div-wrapper-text-alarm">생년월일을 입력하세요</div>
+        <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-BIRTH" ></div>
        <div class="join-div-inputlayer">
         <div class="join-div-labelwrapper">
           <p class="join-p-label">핸드폰번호</p>
