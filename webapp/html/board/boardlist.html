@@ -29,7 +29,7 @@
   <!-- 검색창 -->
   <form class="boardlist-form-wrapper" action="">
     <input type="text" class="boardlist-input-search" placeholder="검색어를 입력하세요." />
-    <button type="submit" class="boardlist-btn-search">
+    <button class="boardlist-btn-search">
       <img src="./../../asset/img/study/search-btn.png" alt="search" class="boardlist-img-search" />
     </button>
   </form>
@@ -44,7 +44,7 @@
         <span class="board-date">작성일</span>
       </li>
       <!-- 메인내용용 내용들 -->
-      <li class="boardlist-li-item">
+      <li class="boardlist-li-item" onclick="movetodetailedpage()">
         <span class="board-number">카테고리</span>
         <span class="board-title">게시판 제목1 [숫자]</span>
         <span class="board-author">작성자1</span>

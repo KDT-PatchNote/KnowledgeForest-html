@@ -1,6 +1,10 @@
 const searchInput = document.querySelector(".boardlist-input-search");
 const wrapper = document.querySelector(".boardlist-div-wrapper");
 
+function movetodetailedpage(){
+  window.location.href="./boardlistdetail.html";
+}
+
 // input이 포커스 될 때 wrapper에 클래스 추가
 searchInput.addEventListener("focus", () => {
   wrapper.classList.add("focused");
