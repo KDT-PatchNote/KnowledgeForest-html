@@ -12,6 +12,22 @@
 </head>
 
 <body>
+   <!-- 상단 메뉴바 -->
+   <nav class="main-nav-menuwrap">
+    <img
+      src="./../../asset/img/main/logo.png"
+      class="main-img-logo"
+      onclick="location.href='./main_login.html'"
+    />
+
+    <ul class="main-nav-ul">
+      <li><a href="./../notice/noticelist.html">공지</a></li>
+      <li><a href="./../board/boardlist.html">자유게시판</a></li>
+      <li><a href="./../study/studylist.html">스터디 모집</a></li>
+      <li><a href="./../myPage/mypageAccountEdit.html">마이페이지</a></li>
+      <li><a href="">로그아웃</a></li>
+    </ul>
+  </nav>
   <div class="boardlistdetail-div-title">
     <h2>자유게시판</h2>
   </div>
@@ -46,8 +62,7 @@
         <div class="boardlistdetail-div-commentwrapper">
           <form action="">
             <textarea name="studyContents" id="BOARDLISTDETAIL-TEXTAREA-COMMENT" placeholder="댓글을 남겨 보세요"
-              data-counter="WRITE-COMMENT-COUNTER" oninput="updateCharacterCount(this, 200)">
-        </textarea>
+              data-counter="WRITE-COMMENT-COUNTER" oninput="updateCharacterCount(this, 200)"></textarea>
           </form>
         </div>
 

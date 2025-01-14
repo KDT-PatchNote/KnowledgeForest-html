@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="./../../asset/css/notice/noticedetail.css">
   <link rel="stylesheet" href="./../../asset/css/main/header.css">
   <link rel="stylesheet" href="../../asset/css/main/footer.css">
+  <script defer src="./../../asset/js/notice/noticedetail.js"></script>
 </head>
 
 <body>
   <!-- 상단 메뉴바 -->
   <nav class="main-nav-menuwrap">
-    <img src="./../../asset/img/main/logo-1.png" class="main-img-logo" onclick="location.href='./main_login.html'">
+    <img src="./../../asset/img/main/logo.png" class="main-img-logo" onclick="location.href='./main_login.html'">
 
     <ul class="main-nav-ul">
       <li><a href="./../notice/noticelist.html">공지</a></li>
@@ -26,7 +27,7 @@
   <hr>
 
   <div class="noticedetail-div-h2">
-    <h2>공지사항</h2>
+    <h1>공지사항</h1>
   </div>
   <!-- 본문내용 닉네임 작성일 내용 -->
   <main>
@@ -49,22 +50,31 @@
         </div>
         <div class="noticedetail-div-contents">2025.01.01</div>
       </div>
-      <div class="noticedetail-div-layer">
-        <div class="title-rightline">
-          본문
+      <div class="noticedetail-div-layers">
+        <div class="noticedetail-div-infowrapper">
+
+          <div class="title-rightlines">
+            본문
+          </div>
+          <div class="noticedetail-div-contentslong">
+            안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕안녕ㅍ
+            <div class="notice-div-imgwrapper">
+              <img class="notice-img" src="./../../asset/img/main/banner01.png" alt="이미지" />
+            </div>
+          </div>
         </div>
-        <div class="noticedetail-div-contents long">
-          sdfhas;kdfha;sdkfhas;kdfjah;edfjahjlfjkasdf;kawfhlawkejfahsldjkfkasjdf;asjkdmn.smcbz.xvjnsalkhfliwuergflwqejrhgwe.kjr.bkjdfasbdmnfbs.dkfjhfihaslfiagwelfjksbdf.jskdbcfsgkfuweiufgrwpeif;hfb.kjsdb.smbalgwueq
-        </div>
-      </div>
-      <div class="noticedetail-btn-change">
-        <button>이전글</button>
-        <button class="noticedetail-btn-inventory">목록</button>
-        <button>다음글</button>
 
       </div>
     </div>
   </main>
+  <div class="noticedetail-btn-change">
+    <button class="noticedetail-btn-inventory" onclick="previouspost()">이전글</button>
+    <button class="noticedetail-btn-inventory" onclick="inventory()">목록</button>
+    <button class="noticedetail-btn-inventory" onclick="nextpost()">다음글</button>
+
+  </div>
+  </div>
+
   <!-- footer -->
   <footer class="main-footer-container">
     <div class="main-footer-content">
@@ -78,7 +88,7 @@
         <p class="main-paragraph-copyright">Copyright Forest Info. All rights reserved</p>
       </div>
       <div class="main-footer-logo">
-        <img src="./../../asset/img/main/logo-1.png" alt="Forest of Knowledge Logo" class="main-img-footerlogo">
+        <img src="./../../asset/img/main/logo.png" alt="Forest of Knowledge Logo" class="main-img-footerlogo">
       </div>
     </div>
   </footer>
