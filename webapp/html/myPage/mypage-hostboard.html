@@ -26,6 +26,15 @@
     </aside>
     <!-- 사이드 메뉴 끝 -->
 
+    <!-- 상단 헤더 -->
+    <div id="ADMIN-DIV-HEADERCONTAINER">
+      <img src="./../../asset/img/main/logo.png" class="admin-img-logo" alt="Logo">
+      <ul id="ADMIN-UL-HEADERWRAP">
+        <li><a href="./../main/main.html">홈</a></li>
+        <li><a href="">로그아웃</a></li>
+      </ul>
+    </div>
+
     <!-- 메인 컨텐츠가 들어갈 컨테이너 -->
     <div id="MYPAGE-DIV-LAYOUTCONTAINER">
       <main class="mypage-div-container">
@@ -306,109 +315,109 @@
       <!-- 메인 컨텐츠 끝 -->
     </div>
     
-  <!-- </div> -->
-  <!-- 모달 HTML 추가 -->
-  <div id="REQUEST-LIST-MODAL" class="overlay hidden">
-    <div class="modal-content">
-      <h2>신청자 목록</h2>
-      <div class="applicant-list">
-        <!-- 신청자 항목 -->
-        <div class="applicant-item">
-          <div class="applicant-header">
-            <span class="applicant-name">김철수</span>
-            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
-            <div class="applicant-actions">
-              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
-              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+      <!-- </div> -->
+      <!-- 모달 HTML 추가 -->
+      <div id="REQUEST-LIST-MODAL" class="overlay hidden">
+        <div class="modal-content">
+          <h2>신청자 목록</h2>
+          <div class="applicant-list">
+            <!-- 신청자 항목 -->
+            <div class="applicant-item">
+              <div class="applicant-header">
+                <span class="applicant-name">김철수</span>
+                <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+                <div class="applicant-actions">
+                  <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+                  <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+                </div>
+                <img
+                  src="./../../asset/img/mypage/down.png"
+                  alt="찜"
+                  class="mypage-img-nolike"
+                  style="width: 30px; height: 30px;"
+                  onclick="toggleDropdown(this)"
+                />
+                <!-- <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button> -->
+              </div>
+              <div class="applicant-body hidden">
+                <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+              </div>
+              <div class="applicant-header">
+                <span class="applicant-name">김철수</span>
+                <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+                <div class="applicant-actions">
+                  <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+                  <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+                </div>
+                <img
+                  src="./../../asset/img/mypage/down.png"
+                  alt="찜"
+                  class="mypage-img-nolike"
+                  style="width: 30px; height: 30px;"
+                  onclick="toggleDropdown(this)"
+                />
+              </div>
+              <div class="applicant-body hidden">
+                <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+              </div>
+              <div class="applicant-header">
+                <span class="applicant-name">김철수</span>
+                <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+                <div class="applicant-actions">
+                  <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+                  <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+                </div>
+                <img
+                  src="./../../asset/img/mypage/down.png"
+                  alt="찜"
+                  class="mypage-img-nolike"
+                  style="width: 30px; height: 30px;"
+                  onclick="toggleDropdown(this)"
+                />
+              </div>
+              <div class="applicant-body hidden">
+                <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+              </div>
+              <div class="applicant-header">
+                <span class="applicant-name">김철수</span>
+                <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+                <div class="applicant-actions">
+                  <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+                  <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+                </div>
+                <img
+                  src="./../../asset/img/mypage/down.png"
+                  alt="찜"
+                  class="mypage-img-nolike"
+                  style="width: 30px; height: 30px;"
+                  onclick="toggleDropdown(this)"
+                />
+              </div>
+              <div class="applicant-body hidden">
+                <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+              </div>
+              <div class="applicant-header">
+                <span class="applicant-name">김철수</span>
+                <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
+                <div class="applicant-actions">
+                  <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
+                  <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
+                </div>
+                <img
+                  src="./../../asset/img/mypage/down.png"
+                  alt="찜"
+                  class="mypage-img-nolike"
+                  style="width: 30px; height: 30px;"
+                  onclick="toggleDropdown(this)"
+                />
+              </div>
+              <div class="applicant-body hidden">
+                <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
+              </div>
             </div>
-            <img
-              src="./../../asset/img/mypage/down.png"
-              alt="찜"
-              class="mypage-img-nolike"
-              style="width: 30px; height: 30px;"
-              onclick="toggleDropdown(this)"
-            />
-            <!-- <button class="dropdown-btn" onclick="toggleDropdown(this)">⬇</button> -->
           </div>
-          <div class="applicant-body hidden">
-            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
-          </div>
-          <div class="applicant-header">
-            <span class="applicant-name">김철수</span>
-            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
-            <div class="applicant-actions">
-              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
-              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
-            </div>
-            <img
-              src="./../../asset/img/mypage/down.png"
-              alt="찜"
-              class="mypage-img-nolike"
-              style="width: 30px; height: 30px;"
-              onclick="toggleDropdown(this)"
-            />
-          </div>
-          <div class="applicant-body hidden">
-            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
-          </div>
-          <div class="applicant-header">
-            <span class="applicant-name">김철수</span>
-            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
-            <div class="applicant-actions">
-              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
-              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
-            </div>
-            <img
-              src="./../../asset/img/mypage/down.png"
-              alt="찜"
-              class="mypage-img-nolike"
-              style="width: 30px; height: 30px;"
-              onclick="toggleDropdown(this)"
-            />
-          </div>
-          <div class="applicant-body hidden">
-            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
-          </div>
-          <div class="applicant-header">
-            <span class="applicant-name">김철수</span>
-            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
-            <div class="applicant-actions">
-              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
-              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
-            </div>
-            <img
-              src="./../../asset/img/mypage/down.png"
-              alt="찜"
-              class="mypage-img-nolike"
-              style="width: 30px; height: 30px;"
-              onclick="toggleDropdown(this)"
-            />
-          </div>
-          <div class="applicant-body hidden">
-            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
-          </div>
-          <div class="applicant-header">
-            <span class="applicant-name">김철수</span>
-            <p class="applicant-content">안녕하세요 참여하고 싶습니다.</p>
-            <div class="applicant-actions">
-              <button class="accept-btn" onclick="acceptApplicant('김철수')">수락</button>
-              <button class="reject-btn" onclick="rejectApplicant('김철수')">거절</button>
-            </div>
-            <img
-              src="./../../asset/img/mypage/down.png"
-              alt="찜"
-              class="mypage-img-nolike"
-              style="width: 30px; height: 30px;"
-              onclick="toggleDropdown(this)"
-            />
-          </div>
-          <div class="applicant-body hidden">
-            <p class="applicant-message">안녕하세요! 참여하고 싶습니다.</p>
-          </div>
+          <button class="close-btn" onclick="closeApplicantModal()">닫기</button>
         </div>
       </div>
-      <button class="close-btn" onclick="closeApplicantModal()">닫기</button>
-    </div>
-  </div>
 </body>
 </html>
