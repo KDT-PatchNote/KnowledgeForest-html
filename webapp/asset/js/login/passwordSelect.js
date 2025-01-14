@@ -16,8 +16,6 @@ btn_check.addEventListener("click", (e)=>{
 const phoneNumInput = document.getElementById('PASSWORDSELECT-INPUT-PHONENUMBER');
 const sendButtonPhone = document.getElementById('PASSWORDSELECT-BTN-SEND');
 
-
-
 sendButtonPhone.addEventListener('click', (event) => {
   event.preventDefault(); 
   validatePhoneNumber();
@@ -50,15 +48,12 @@ function validatePhoneNumber() {
   const phoneNum = phoneNumInput.value.replace(/[^\d]/g, ''); // 숫자만 남기기
 
   if (phoneNum.length !== 11) {
-   
-
+  
 		alert('전화번호 양식이 아닙니다. 11자리를 입력해주세요.');
 		
 			return false;
   }
-
 	  alert ('인증번호를 보냈습니다.');
-
   return true;
 }
 
