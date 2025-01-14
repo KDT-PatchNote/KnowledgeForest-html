@@ -129,9 +129,9 @@ const phoneNumchkInput = document.getElementById('phoneNumchk');
 const sendButton = document.querySelector('.mypage-btn-phoneNum-send');
 
 
-
+//진행중
 // 닉네임 유효성 검사 함수
-function nickNmaeCheck(){
+function nickNameCheck(){
 	const idCheck = document.getElementById("JOIN-INPUT-ID");
 	const result = document.getElementById("JOIN-DIV-IDCHECK");
   const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
