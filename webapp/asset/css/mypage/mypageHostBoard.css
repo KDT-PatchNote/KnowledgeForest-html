@@ -331,10 +331,11 @@ a{
   border-radius: 8px;
   padding: 20px;
   width: 1000px;
-  height: 400px;
+  max-height: 600px;
   max-width: 90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  overflow: scroll;
 }
 
 .hidden {
