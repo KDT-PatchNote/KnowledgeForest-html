@@ -13,6 +13,13 @@ body {
     justify-content: space-between;
 }
 
+.main-img-logo{
+    
+    width: 407px;
+    height: 82px;
+}
+
+
 /* 위시리스트 */
 .main-div-wrapper {
     display: flex;
