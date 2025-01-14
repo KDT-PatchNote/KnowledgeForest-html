@@ -5,7 +5,8 @@
 h1{
   background-color: #fff;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
+  margin-top: 50px;
 }
 /* 타이틀틀 */
 .noticelist-div-list{
@@ -79,4 +80,15 @@ h1{
 
   border: 3px solid #003161;
 }
-
+.noticelist-li-item:hover{
+  cursor: pointer;
+}
+body {
+  font-family: "NanumGothic", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
