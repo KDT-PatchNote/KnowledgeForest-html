@@ -8,55 +8,44 @@ body { background-color: #f6f6f6; }
 .noticedetail-div-h2{
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
-/* 최상단 제목  */
-.noticedetail-div-title {
+.noticedetail-div-layer {
   display: flex;
-  height: 50px;
   align-items: center;
+  justify-content: flex-start;
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
-/* 자유게시판 상세피이지 글 닉네임 */
-.noticedetail-div-nickName {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
-/* 자유게시판 상세페이지 글 작성일 */
-.noticedetail-div-date {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-}
 
 .title-rightline {
   width: 150px;
-  height: 100%;
+  height: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   border-right: 1px solid #ccc;
 }
-.title-rightline div { width: 100%; }
 .noticedetail-div-contents{
   flex: 1;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 /* 자유게시판 상세페이지 글 내용 */
-.noticedetail-div-main {
+.noticedetail-div-contentslong{
+  flex: 1;
+  height: 500px;
   display: flex;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  height: 150px;
-  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding : 20px;
 }
+
 
 .noticedetail-div-header {
   border: 1px;
@@ -66,9 +55,7 @@ body { background-color: #f6f6f6; }
  main, .noticedetail-detail-div-btnwrapper {
   width: 80%;
   margin: auto;
-} 
-
-
+}
 .noticedetail-btn-change{
   display: flex;
   justify-content: center;
@@ -87,9 +74,43 @@ body { background-color: #f6f6f6; }
 .noticedetail-btn-change>button:hover{
   background-color: #003161;
 }
+.noticedetail-btn-change{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.noticedetail-div-layers{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #ccc;
 
+}
 
-
-
-
+.noticedetail-div-layers:last-child{
+  height: 500px;
+}
+.title-rightlines {
+  width: 150px;
+  height: 100%;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noticedetail-div-infowrapper{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.notice-div-imgwrapper{
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.notice-img{
+  width: 100%; 
+  height: 100%;
+}
 
