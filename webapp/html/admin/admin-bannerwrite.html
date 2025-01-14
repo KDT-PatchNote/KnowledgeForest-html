@@ -43,19 +43,47 @@
       <main class="admin-div-container">
         <div class="admin-div-contentcontainer adminMain-div-mainwrap">
           
+          <!-- 현재 페이지 제목 -->
+          <h1 class="admin-h1-detailtitle">배너 등록</h1>
+          
+          <!--  폼 시작 -->
           <form action="" method="">
-            <!-- 현재 페이지 제목 -->
-            <h1 class="admin-h1-detail">배너 등록</h1>
-
             <!-- 배너 데이터 입력하는 부분 -->
-            <div class="adminWrite-div-formWrapper">
+            <div class="adminWrite-div-formwrapper">
 
+              <!-- 배너 제목 -->
+              <div class="adminWrite-div-datawrapp">
+                <div class="adminWrite-div-title">
+                  <div class="titlewrap">제목</div>
+                </div>
+                <div class="adminWrite-div-content">
+                  <div class="inputwrap">
+                    <input type="text" name="bannerName" id="bannerName" placeholder="배너 제목을 입력하세요.">
+                  </div>
+                </div>
+              </div>
+              <!-- 배너 이미지 -->
+              <div class="adminWrite-div-datawrapp">
+                <div class="adminWrite-div-title">
+                  <div class="titlewrap">배너 사진</div>
+                </div>
+                <div class="adminWrite-div-content">
+                  <div class="inputwrap bannerimgwrap">
+                    <div class="bannerimgnone">배너 이미지를 등록해주세요.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="inputwrap bannerimgbtnwrap">
+                <label for="bannerImg" class="admin-btn">파일 첨부</label>
+                <input type="file" name="bannerImage" id="bannerImg" onchange="setThumbnail(event);">
+              </div>
+              
             </div>
 
             <!-- 저장, 취소 버튼 부분 -->
             <div id="ADMINWRITE-DIV-BTNWRAP">
-              <button class="admin-btn btn-save">저장</button>
-              <button type="button" class="admin-btn btn-cancel" onclick="">취소</button>
+              <button type="button" class="admin-btn btn-save" onclick="clickSavelBtn(this)">저장</button>
+              <button type="button" class="admin-btn btn-cancel" onclick="clickCancelBtn()">취소</button>
             </div>
 
           </form>
