@@ -19,6 +19,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #888;
 }
 
 .main-nav-menuwrap img { cursor: pointer; }
