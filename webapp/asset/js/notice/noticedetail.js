@@ -1,0 +1,1 @@
+const backBannerList = document.querySelector('.noticedetail-btn-inventory');
