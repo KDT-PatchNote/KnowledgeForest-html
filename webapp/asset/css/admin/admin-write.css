@@ -1,17 +1,53 @@
 
 /* 공통 적인 부분 */
 /* 상세페이지 제목 */
-.admin-h1-detailtitle { margin-top: 15px; }
+.admin-h1-detailtitle { margin-bottom: 40px; }
 
 /* 데이터 출력 부분 */
-.adminWrite-div-formWrapper {
+.adminWrite-div-formwrapper {
   width: 100%;
-  margin-top: 10px;
-  background-color: white;
-  border-top: 1.5px solid #333;
+  /* background-color: white; */
+  /* border-top: 1.5px solid #333; */
 }
 
+/* .adminWrite-div-formwrapper .adminWrite-div-datawrapp:nth-child(1) {
+  border-bottom: 1px solid #ccc;
+} */
 
+.adminWrite-div-datawrapp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.adminWrite-div-title {
+  width: 15%;
+  height: 50px;
+}
+
+.adminWrite-div-content {
+  width: 90%;
+  height: 100%;
+}
+
+.titlewrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  justify-content: center;
+}
+
+.inputwrap {
+  height: 100%;
+  padding: 5px 10px;
+}
 
 /* 등록, 취소 버튼 */
 #ADMINWRITE-DIV-BTNWRAP {
@@ -37,3 +73,44 @@
   color: #003161;
   border: none;
 }
+
+/* 배너에 별도로 주는 스타일*/
+#bannerName {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+}
+#bannerName:focus { outline: none; }
+
+.bannerimgwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  border-left: 1px solid #ccc;
+}
+
+/* 배너에 이미지 미첨부시 뜨는 문구 */
+.bannerimgnone { color: #ccc; }
+
+/* 이미지 설정 */
+.bannerimgwrap > img {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/* 이미지 첨부 버튼 스타일 */
+.bannerimgbtnwrap {
+  text-align: right;
+  margin-top: 10px;
+}
+
+label.admin-btn { background-color: #003161;
+  padding: 12px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+#bannerImg { display: none; }
