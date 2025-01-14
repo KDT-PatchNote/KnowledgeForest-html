@@ -29,15 +29,22 @@ categoryList.forEach((item) => {
 //
 //스터디 리스트에서 스터디를 선택하면
 //해당 스터디 상세로 이동시키는 함수
-  const studyList = document.querySelectorAll(".studylist-div-group");
+  const studyList = document.querySelectorAll(".studylist-div-grouptitle");
   studyList.forEach((item) => {
     item.addEventListener("click", () => {
       window.location.href = "studylist-detail.html"; // 이동
     });
   });
 
-  //메인으로 가기 버튼을 눌렀을때 메인으로 이동시키는 함수
+  //등록 버튼을 누르면 스터디 등록으로 이동
   function registerStudy(){
     window.location.href="./studylist-write.html";
+  }
+
+  //찜 버튼을 누르면 채워진 하트로 이미지를 바꾸는 함수
+
+  function likeStudy(src){
+    console.log(src);
+    
   }
 
