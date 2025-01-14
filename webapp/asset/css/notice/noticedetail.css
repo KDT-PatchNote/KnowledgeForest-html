@@ -1,0 +1,95 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body { background-color: #f6f6f6; }
+.noticedetail-div-h2{
+  display: flex;
+  justify-content: center;
+}
+/* 최상단 제목  */
+.noticedetail-div-title {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+/* 자유게시판 상세피이지 글 닉네임 */
+.noticedetail-div-nickName {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 자유게시판 상세페이지 글 작성일 */
+.noticedetail-div-date {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.title-rightline {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #ccc;
+}
+.title-rightline div { width: 100%; }
+.noticedetail-div-contents{
+  flex: 1;
+  padding: 0 20px;
+}
+
+/* 자유게시판 상세페이지 글 내용 */
+.noticedetail-div-main {
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 150px;
+  align-items: center;
+}
+
+.noticedetail-div-header {
+  border: 1px;
+  background-color: #fff;
+}
+
+ main, .noticedetail-detail-div-btnwrapper {
+  width: 80%;
+  margin: auto;
+} 
+
+
+.noticedetail-btn-change{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.noticedetail-btn-change>button{
+  background-color: #003161;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 50px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.noticedetail-btn-change>button:hover{
+  background-color: #003161;
+}
+
+
+
+
+
+
