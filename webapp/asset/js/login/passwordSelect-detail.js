@@ -1,6 +1,6 @@
-const btn_complete = document.querySelector(".btn-complete");
+const btnComplete = document.querySelector(".passwordSelect-detail-btn-complete");
 
-btn_complete.addEventListener("click", (e)=>{
+btnComplete.addEventListener("click", (e)=>{
   if(true){
     alert("정상적으로 비밀번호가 변경되었습니다.");
 

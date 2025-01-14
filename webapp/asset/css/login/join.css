@@ -28,13 +28,13 @@ main{
   margin-bottom: 100px;
 }
 
-.wrapper-h1-box {
+.join-div-wrapper-h1-box {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.wrapper-p-box {
+.join-div-wrapper-p-box {
   display: flex;
   text-align: right;
   float: right;
@@ -45,17 +45,17 @@ main{
   color: red;
 }
 
-.p-required1 {
+.join-p-required1 {
   color: red;
   font-size: 10px;
   font-weight: bold;
 }
-.p-required2 {
+.join-p-required2 {
   font-size: 10px;
   font-weight: bold;
 }
 
-.section-middle {
+.join-div-section-middle {
   /* border: 1px solid black; */
   margin :20px auto;
 
@@ -97,7 +97,7 @@ main{
   color: white;
 }
 
-.wrapper-text-alarm{
+.join-div-wrapper-text-alarm{
   display: flex;
   margin-left: 170px;
   margin-bottom: 25px;
@@ -140,7 +140,7 @@ hr {
   max-width: 680px;
 }
 
-.btn-check{
+.join-btn-check{
  
 
   width: 300px;
