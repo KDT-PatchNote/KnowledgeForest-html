@@ -19,14 +19,27 @@ function setThumbnail(event) {
   reader.readAsDataURL(event.target.files[0]);
 }
 
-// 제목이나 사진 없이 저장 버튼 클릭시 알람창 띄우기
-function clickSavelBtn(e) {
+// 배너 최초 등록시 - 제목이나 사진 없이 저장 버튼 클릭시 알람창 띄우기
+function clickSaveBtn(e) {
   let bannerTitle = document.querySelector('#bannerName').value;
   let bannerImg = document.querySelector('#bannerImg').value;
   if (!bannerTitle ) {  // 제목 미입력시
     alert('제목을 입력해주세요.');
   } else if (!bannerImg) {  // 배너 사진 미첨부시
     alert('배너를 등록해주세요.');
+  } else {  // 제목, 배너 사진 값이 전부 입력됐을 때
+      e.setAttribute("type", "submit");
+  }
+}
+
+// 배너 수정시 - 제목이나 사진 없이 저장 버튼 클릭시 알람창 띄우기
+function clickUpdateBtn(e) {
+  let bannerTitle = document.querySelector('#bannerName').value;
+  let bannerImg = document.querySelector('#bannerImg').value;
+  if (!bannerTitle ) {  // 제목 미입력시
+    alert('제목을 입력해주세요.');
+  } else if (!bannerImg) {  // 배너 사진 미첨부시
+    alert('배너를 다시 등록해주세요.');
   } else {  // 제목, 배너 사진 값이 전부 입력됐을 때
       e.setAttribute("type", "submit");
   }
