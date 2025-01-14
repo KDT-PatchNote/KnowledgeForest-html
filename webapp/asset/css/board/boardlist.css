@@ -181,4 +181,7 @@ button {
   
     border: 3px solid #003161;
   }
+  .boardlist-li-item:hover{
+    cursor: pointer;
+  }
   
