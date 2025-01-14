@@ -1,7 +1,6 @@
 
 // 첨부파일 등록 시 파일명 표시
 const imgNameArea = document.querySelector('#NOTICEIMAGE-NAME');
-
 function changeImgName(e) {
   imgNameArea.textContent = e.files[0].name;
 }

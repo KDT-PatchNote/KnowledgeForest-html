@@ -81,6 +81,11 @@
   font-weight: 500;
 }
 
+.fileBtn {
+  height: 25px;
+  text-align: right;
+}
+
 /* 공지 본문 + 첨부파일 감싸는 div */
 .adminNoticeWrite-div-wrap {
   margin-top: 10px;
@@ -136,7 +141,7 @@ label.admin-btn { background-color: #003161;
   border-radius: 5px;
 }
 
-#NOTICEIMAGE-NAME { margin-left: 10px; }
+#NOTICEIMAGE-NAME { margin: 0 5px; }
 
 input[type="file"] { display: none; }
 

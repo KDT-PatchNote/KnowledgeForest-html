@@ -1,13 +1,14 @@
 
 // 배너 이미지 등록시 미리보기 사진 띄우기
-function setThumbnail(event) {
+const imgNameArea = document.querySelector('#BANNERIMAGE-NAME');
+function setThumbnail(e) {
   var reader = new FileReader();
 
-  reader.onload = function(event) {
+  reader.onload = function(e) {
     // img 태그 생성
     var img = document.createElement("img");
     // img 태그 src 속성에 해당 이미지 담기
-    img.setAttribute("src", event.target.result);
+    img.setAttribute("src", e.target.result);
     
     // 이미지를 넣을 공간
     let bannerimgwrap = document.querySelector("div.bannerimgwrap");
@@ -15,8 +16,9 @@ function setThumbnail(event) {
     bannerimgwrap.children[0].remove();
     bannerimgwrap.appendChild(img);
   };
-
-  reader.readAsDataURL(event.target.files[0]);
+  // 이미지명 화면에 뿌리기
+  imgNameArea.textContent = e.target.files[0].name;
+  reader.readAsDataURL(e.target.files[0]);
 }
 
 // 배너 최초 등록시 - 제목이나 사진 없이 저장 버튼 클릭시 알람창 띄우기
