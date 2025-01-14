@@ -25,7 +25,7 @@ function clickUpdateBtn(event) {
 
   // 확인 버튼 클릭시
   if (isdelete) {
-    location.href = "./admin-noticeupdateform.html";
+    location.href = "./admin-noticeupdate.html";
   }
 }
 

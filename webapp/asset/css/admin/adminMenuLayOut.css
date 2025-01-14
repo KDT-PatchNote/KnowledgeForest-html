@@ -95,7 +95,11 @@ li { list-style-type: none; }
   border-bottom: 1px solid #000;
 }
 
-.admin-img-logo { height: 50px; }
+/* 로고 설정 */
+.admin-img-logo {
+  height: 50px;
+  margin-left: 10px;
+}
 
 #ADMIN-UL-HEADERWRAP {
   display: flex;
