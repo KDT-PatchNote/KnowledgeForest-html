@@ -6,6 +6,7 @@
 .adminStudyComment-li-studycommentcontent {
   width: 30%;
   padding: 0 5px;
+  cursor: pointer;
 }
 .commentcontent { text-align: left; }
 
@@ -20,6 +21,20 @@
   cursor: default;
 }
 
-.admin-ul-datawrap {
+/* 댓글 내용 전체 보기 div 스타일 줌 */
+.commentWrap {
+  display: none;
+  height: 0;
+  background-color: #ddd;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: left;
   cursor: pointer;
+  /* transition: all .3s; */
+}
+
+.active {
+  display: block;
+  padding: 20px 30px;
+  height: inherit;
 }
