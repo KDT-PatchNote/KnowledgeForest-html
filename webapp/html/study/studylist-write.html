@@ -141,7 +141,7 @@
             <div class="studylist-div-filewrap">
               <div class="label">첨부파일</div>
               <label id="STUDYLIST-INPUT-FILELABEL" for="STUDYLIST-INPUT-FILE">
-                <input type="file" name="file" id="STUDYLIST-INPUT-FILE" />
+                <input type="file" name="file" id="STUDYLIST-INPUT-FILE" accept="image/*"/>
                 <div class="studylist-div-filebtn">첨부</div>
               </label>
             </div>
@@ -152,6 +152,7 @@
           <button
             class="studylist-btn-submit"
             form="STUDYLIST-FORM-WRITE"
+            type="button"
             onclick="updateStudy()"
           >
             등록
@@ -159,6 +160,7 @@
           <button
             class="studylist-btn-cancel"
             form="STUDYLIST-FORM-WRITE"
+            type="button"
             onclick="goBack()"
           >
             취소
