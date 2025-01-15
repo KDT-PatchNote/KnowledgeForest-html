@@ -4,42 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>개인정보 수정</title>
-  <link rel="stylesheet" href="./../../asset/css/mypage/mypageAccountEdit.css">
-  <script defer src="./../../asset/js/mypage/mypageAccountEdit.js"></script>
+  <link rel="stylesheet" href="./../../asset/css/mypage/mypage-accountedit.css">
+  <script defer src="./../../asset/js/mypage/mypage-accountedit.js"></script>
 </head>
 <body>
   <!-- <header></header> -->
   <div class="main-container">
-
-    <!-- <aside>
-      <div class="mypage-div-asidetitle">
-        <h1>마이페이지</h1>
-      </div>
-      <div class="mypage-div-asidemenu">
-        <ul>
-          <li>개인정보 수정</li>
-          <li>내가 찜한 목록</li>
-          <li>개최한 스터디 목록</li>
-          <li>신청한 스터디 목록</li>
-          <li>작성한 자유게시판 목록</li>
-        </ul>
-      </div>
-    </aside> -->
     
     <!-- 사이드 메뉴 -->
     <aside id="MYPAGE-MENUCONTAINER">
       <nav class="mypage-div-menuwrap">
         <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
         <ul class="mypage-ul-menuwrap">
-          <li class="mypage-li-menuactive"><a href="./mypageAccountEdit.html">개인정보 수정</a></li>
-          <li><a href="./mypageJimList.html">찜한 목록</a></li>
-          <li><a href="./mypageHostBoard.html">만든 스터디</a></li>
-          <li><a href="./mypageApplyList.html">신청한 스터디</a></li>
-          <li><a href="./mypageWrittenBoard.html">작성한 자유게시글</a></li>
-          <li><a href="./mypageDeleteAccount.html">회원 탈퇴</a></li>
+          <li class="mypage-li-menuactive"><a href="./mypage-accountedit.html">개인정보 수정</a></li>
+          <li><a href="./mypage-jimlist.html">찜한 목록</a></li>
+          <li><a href="./mypage-hostboard.html">만든 스터디</a></li>
+          <li><a href="./mypage-applylist.html">신청한 스터디</a></li>
+          <li><a href="./mypage-writtenboard.html">작성한 자유게시글</a></li>
+          <li><a href="./mypage-deleteaccount.html">회원 탈퇴</a></li>
         </ul>
       </nav>
     </aside>
+
+    <!-- 상단 헤더 -->
+    <div id="ADMIN-DIV-HEADERCONTAINER">
+      <img src="./../../asset/img/main/logo.png" class="admin-img-logo" alt="Logo">
+      <ul id="ADMIN-UL-HEADERWRAP">
+        <li><a href="./../main/main.html">홈</a></li>
+        <li><a href="">로그아웃</a></li>
+      </ul>
+    </div>
 
     <main>
       <div class="mypage-div-main">
@@ -96,7 +90,6 @@
               <input type="text" id="phoneNumchk" placeholder="인증번호를 입력해주세요">
             </div>
             <button class="mypage-btn-phoneNum-check">확인</button>
-            <div id="phoneNumchk-error" style="color: red;"></div>
           </div>
         </section>
         <div class="mypage-div-edit">

@@ -21,7 +21,7 @@ terms.forEach((term)=>{
 
 
 
-//이름을 입력여부 진행중
+//이름을 입력여부
 function nameCheck(){
 	const name = document.getElementById("JOIN-INPUt-ID").value; //value 넣었을 때 오류 
 	const result = document.getElementById('JOIN-DIV-NAME');
@@ -51,9 +51,7 @@ function nameCheck(){
 function birthCheck(){
 	const birth = document.getElementById("JOIN-INPUT-BIRTH").value;
 	const result = document.getElementById('JOIN-DIV-BIRTH');
-	//정규식 숫자랑 숫자 제한
-	console.log(birth)
-	
+
 	//생년월일 숫자만 입력
 	const exr = /^[9-9]*$/;
 	
@@ -95,11 +93,6 @@ function validatePassword() {
 }
 
 
-
-
-
-
-
 // 전송 버튼 클릭 이벤트 리스너
 const idCheckButton = document.getElementById("JOIN-BTN-IDCHECK");
 idCheckButton.addEventListener('click', (event) => {
@@ -123,6 +116,17 @@ function idCheck(){
 	}
 
 
+//글자수 제한 로직 - 아이디 
+const inpSec2 = document.querySelector('#JOIN-INPUT-ID');
+
+//글자수 제한 로직 - 아이디
+function inputLenFunc2() {
+	if (inpSec2.value.length > 10) {
+			inpSec2.value = inpSec1.value.slice(0, 10);
+	};
+	console.log(inpSec2.value)
+}
+inpSec.addEventListener('input', inputLenFunc2);
 
 //닉네임 버튼 클릭함수
 const nickNameCheckButton = document.getElementById("JOIN-BTN-NICKNAMECHECK");
@@ -147,6 +151,7 @@ function nickNameCheck(){
 			result.style.color = 'red';
 		}
 	}
+
 
 
 //핸드폰 번호 변수
@@ -205,12 +210,7 @@ function validatePhoneNumber() {
 
 
 
-
-
-
-
-
-// 전송 버튼 클릭 이벤트 리스너
+// 인증번호 확인 버튼 클릭 이벤트 리스너
 const authenButton = document.getElementById("JOIN-BTN-AUTHENTICATIONNUMBER");
 authenButton.addEventListener('click', (event) => {
   authenCheck();
@@ -232,8 +232,6 @@ const sendButtonAuthentication = document.getElementById('JOIN-BTN-AUTHENTICATIO
 		}
 
  }
-
-
 
 
 //글자수 제한 로직 - 생년월일
@@ -267,7 +265,9 @@ inpSec.addEventListener('input', inputLenFunc1);
 
 //가입하기 눌렀을 때 main page 이동
 function moveSite(){
-	console.log("sdfsdfasdfasdfsdf")
+	
 	window.location.href = "./../main/main_logout.html";
 
 }
+
+

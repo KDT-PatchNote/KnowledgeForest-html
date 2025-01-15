@@ -6,42 +6,37 @@
     <title>신청한 스터디</title>
     <link
       rel="stylesheet"
-      href="./../../asset/css/mypage/mypageApplyList.css"
+      href="./../../asset/css/mypage/mypage-applylist.css"
     />
+    <script defer src="./../../asset/js/mypage/mypage-applylist.js"></script>
   </head>
   <body>
     <!-- <header></header> -->
-    <!-- <div class="main-container"> -->
-    <!-- <aside>
-        <div class="mypage-div-asidetitle">
-          <h1>마이페이지</h1>
-        </div>
-        <div class="mypage-div-asidemenu">
-          <ul>
-            <li>개인정보 수정</li>
-            <li>내가 찜한 목록</li>
-            <li>개최한 스터디 목록</li>
-            <li>신청한 스터디 목록</li>
-            <li>작성한 자유게시판 목록</li>
-          </ul>
-        </div>
-      </aside> -->
 
     <!-- 사이드 메뉴 -->
     <aside id="MYPAGE-MENUCONTAINER">
       <nav class="mypage-div-menuwrap">
         <h1 id="MYPAGE-H2-TITLE">마이 페이지</h1>
         <ul class="mypage-ul-menuwrap">
-          <li><a href="./mypageAccountEdit.html">개인정보 수정</a></li>
-          <li><a href="./mypageJimList.html">찜한 목록</a></li>
-          <li><a href="./mypageHostBoard.html">만든 스터디</a></li>
-          <li class="mypage-li-menuactive"><a href="./mypageApplyList.html">신청한 스터디</a></li>
-          <li><a href="./mypageWrittenBoard.html">작성한 자유게시글</a></li>
-          <li><a href="./mypageDeleteAccount.html">회원 탈퇴</a></li>
+          <li><a href="./mypage-accountedit.html">개인정보 수정</a></li>
+          <li><a href="./mypage-jimlist.html">찜한 목록</a></li>
+          <li><a href="./mypage-hostboard.html">만든 스터디</a></li>
+          <li class="mypage-li-menuactive"><a href="./mypage-applylist.html">신청한 스터디</a></li>
+          <li><a href="./mypage-writtenboard.html">작성한 자유게시글</a></li>
+          <li><a href="./mypage-deleteaccount.html">회원 탈퇴</a></li>
         </ul>
       </nav>
     </aside>
     <!-- 사이드 메뉴 끝 -->
+
+    <!-- 상단 헤더 -->
+    <div id="ADMIN-DIV-HEADERCONTAINER">
+      <img src="./../../asset/img/main/logo.png" class="admin-img-logo" alt="Logo">
+      <ul id="ADMIN-UL-HEADERWRAP">
+        <li><a href="./../main/main.html">홈</a></li>
+        <li><a href="">로그아웃</a></li>
+      </ul>
+    </div>
 
     <!-- 메인 컨텐츠가 들어갈 컨테이너 -->
     <div id="MYPAGE-DIV-LAYOUTCONTAINER">
@@ -69,7 +64,7 @@
                 </a></div>
                 <div class="mypage-div-groupinfowrapper">
                   <div class="mypage-div-groupcategory">보안</div>
-                  <button class="mypage-btn-cancel">취소</button>
+                  <button class="mypage-btn-cancel" onclick="cancelAction()">취소</button>
                 </div>
                 <div class="mypage-div-groupmakerwrapper">
                   <div class="mypage-div-groupmaker">김철수</div>
@@ -93,7 +88,7 @@
                 </a></div>
                 <div class="mypage-div-groupinfowrapper">
                   <div class="mypage-div-groupcategory">개발</div>
-                  <button class="mypage-btn-cancel">취소</button>
+                  <button class="mypage-btn-cancel" onclick="cancelAction()">취소</button>
                 </div>
                 <div class="mypage-div-groupmakerwrapper">
                   <div class="mypage-div-groupmaker">김철수</div>
@@ -117,10 +112,34 @@
                 </a></div>
                 <div class="mypage-div-groupinfowrapper">
                   <div class="mypage-div-groupcategory">보안</div>
-                  <button class="mypage-btn-cancel">취소</button>
+                  <button class="mypage-btn-cancel" onclick="cancelAction()">취소</button>
                 </div>
                 <div class="mypage-div-groupmakerwrapper">
                   <div class="mypage-div-groupmaker">김철수</div>
+                  <div class="mypage-div-likewrapper">
+                    <div class="mypage-div-progress">삭제됨</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 모임 항목 컨텐츠 2 -->
+            <div class="mypage-div-group">
+              <div class="mypage-div-groupinner">
+                <div class="mypage-div-groupinfowrapper datecontent-wrap">
+                  <div class="mypage-div-enddate">
+                    신청일 &nbsp;| &nbsp; 2025.01.05
+                  </div>
+                  <div class="mypage-div-groupstatus">모집 중</div>
+                </div>
+                <div class="mypage-div-grouptitle"><a href="/webapp/html/study/studylist-detail.html">
+                  웹 보안의 기초부터 간단한 토이 프로젝트까지
+                </a></div>
+                <div class="mypage-div-groupinfowrapper">
+                  <div class="mypage-div-groupcategory">개발</div>
+                  <button class="mypage-btn-cancel" onclick="cancelAction()">취소</button>
+                </div>
+                <div class="mypage-div-groupmakerwrapper">
+                  <div class="mypage-div-groupmaker">신지원</div>
                   <div class="mypage-div-likewrapper">
                     <div class="mypage-div-progress">거절</div>
                   </div>
@@ -140,32 +159,8 @@
                   웹 보안의 기초부터 간단한 토이 프로젝트까지
                 </a></div>
                 <div class="mypage-div-groupinfowrapper">
-                  <div class="mypage-div-groupcategory">개발</div>
-                  <button class="mypage-btn-cancel">취소</button>
-                </div>
-                <div class="mypage-div-groupmakerwrapper">
-                  <div class="mypage-div-groupmaker">신지원</div>
-                  <div class="mypage-div-likewrapper">
-                    <div class="mypage-div-progress">승인</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 모임 항목 컨텐츠 2 -->
-            <div class="mypage-div-group">
-              <div class="mypage-div-groupinner">
-                <div class="mypage-div-groupinfowrapper datecontent-wrap">
-                  <div class="mypage-div-enddate">
-                    신청일 &nbsp;| &nbsp; 2025.01.05
-                  </div>
-                  <div class="mypage-div-groupstatus">모집 중</div>
-                </div>
-                <div class="mypage-div-grouptitle"><a href="/webapp/html/study/studylist-detail.html">
-                  웹 보안의 기초부터 간단한 토이 프로젝트까지
-                </a></div>
-                <div class="mypage-div-groupinfowrapper">
                   <div class="mypage-div-groupcategory">보안</div>
-                  <button class="mypage-btn-cancel">취소</button>
+                  <button class="mypage-btn-cancel" onclick="cancelAction()">취소</button>
                 </div>
                 <div class="mypage-div-groupmakerwrapper">
                   <div class="mypage-div-groupmaker">이하니</div>
@@ -189,7 +184,7 @@
                 </a></div>
                 <div class="mypage-div-groupinfowrapper">
                   <div class="mypage-div-groupcategory">개발</div>
-                  <button class="mypage-btn-cancel">취소</button>
+                  <button class="mypage-btn-cancel" onclick="cancelAction()">취소</button>
                 </div>
                 <div class="mypage-div-groupmakerwrapper">
                   <div class="mypage-div-groupmaker">나혜리</div>

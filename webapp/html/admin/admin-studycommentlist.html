@@ -19,7 +19,7 @@
           <li><a href="./admin-userlist.html">유저 목록</a></li>
           <li><a href="./admin-studylist.html">스터디 목록</a></li>
           <li><a href="./admin-studyapplylist.html">스터디 신청 관리</a></li>
-          <li class="admin-li-menuactive"><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
+          <li class="admin-li-menuactive"><a href="./admin-studycommentlist.html">스터디 후기댓글 목록</a></li>
           <li><a href="./admin-boardlist.html">자유게시판 관리</a></li>
           <li><a href="./admin-boardcommentlist.html">자유게시판 댓글 관리</a></li>
           <li><a href="./admin-noticelist.html">공지 목록</a></li>
@@ -63,7 +63,7 @@
             <ul class="admin-ul-titlewrap">
               <li class="adminStudyComment-li-studycommentid">댓글 번호</li>
               <li class="adminStudyComment-li-studyid">스터디 글 번호</li>
-              <li class="adminStudyComment-li-studycommentcontent">내용</li>
+              <li class="adminStudyComment-li-studycommentcontentwrap">내용</li>
               <li class="adminStudyComment-li-userid">아이디</li>
               <li class="adminStudyComment-li-usernickname">닉네임</li>
               <li class="adminStudyComment-li-studycommentwritedate">댓글 작성일</li>
@@ -79,7 +79,12 @@
                   342
                 </a>
               </li>
-              <li class="adminStudyComment-li-studycommentcontent commentcontent">안녕하세요 저는 지금 JSP 프로젝트를 하고 있습니다 반갑습니다</li>
+              <li class="adminStudyComment-li-studycommentcontent commentcontent">
+                <div class="commentContent">
+                  안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글
+                </div>
+                <div class="toggleBtn"><img src="./../../asset/img/admin/all-btn.png" alt="토글버튼"></div>
+              </li>
               <li class="adminStudyComment-li-userid lightdata">sdklfnewirfni97231</li>
               <li class="adminStudyComment-li-usernickname lightdata">풀잎나무</li>
               <li class="adminStudyComment-li-studycommentwritedate lightdata">2025.01.12</li>
@@ -87,6 +92,35 @@
                 <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제">
               </li>
             </ul>
+            <div class="commentWrap">
+              안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글
+            </div>
+
+            <!-- 데이터 넣는 부분 - 임시데이터 (2) -->
+            <ul class="admin-ul-datawrap">
+              <li class="adminStudyComment-li-studycommentid lightdata">319</li>
+              <li class="adminStudyComment-li-studyid lightdata">
+                <!-- 사용자 화면의 스터디 상세페이지로 이동 -->
+                <a href="./../study/studylist-detail.html">
+                  342
+                </a>
+              </li>
+              <li class="adminStudyComment-li-studycommentcontent commentcontent">
+                <div class="commentContent">
+                  대충 댓글이다
+                </div>
+                <div class="toggleBtn"><img src="./../../asset/img/admin/all-btn.png" alt="토글버튼"></div>
+              </li>
+              <li class="adminStudyComment-li-userid lightdata">sdklfnewirfni97231</li>
+              <li class="adminStudyComment-li-usernickname lightdata">풀잎나무</li>
+              <li class="adminStudyComment-li-studycommentwritedate lightdata">2025.01.12</li>
+              <li class="adminStudyComment-li-commentdelete">
+                <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제">
+              </li>
+            </ul>
+            <div class="commentWrap">
+              대충 댓글이다
+            </div>
 
           </div>
           <!-- 스터디 글 테이블 끝 -->
