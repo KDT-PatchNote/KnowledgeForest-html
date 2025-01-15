@@ -16,7 +16,6 @@ li.adminBanner-li-bannerbtncontainer {
 .adminBanner-li-bannerbtncontainer > img {
   height: 30px;
   margin-top: 10px;
-  transform: rotate(90deg);
   cursor: pointer;
 }
 

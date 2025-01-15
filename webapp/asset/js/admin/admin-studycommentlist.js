@@ -16,14 +16,17 @@ const commentContent = document.querySelectorAll('.commentcontent');
 commentContent.forEach((comment) => {
   // 해당 코멘트의 전체를 보여주는 div 선택
   let commentAll = comment.parentNode.nextElementSibling;
+  let allBtn = comment.childNodes[3];
   comment.addEventListener("click", () => {
     // 해당 클래스가 없다면 부여 / 있으면 제거
     commentAll.classList.toggle('active');
+    allBtn.classList.toggle('rotateBtn');
   });
   
   // 코멘트 글 눌러도 제거
   commentAll.addEventListener("click", () => {
     // 해당 클래스가 없다면 부여 / 있으면 제거
     commentAll.classList.toggle('active');
+    allBtn.classList.toggle('rotateBtn');
   });
 });
