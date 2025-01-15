@@ -17,7 +17,6 @@ li.adminNotice-li-noticebtncontainer {
 .adminNotice-li-noticebtncontainer > img {
   height: 30px;
   margin-top: 10px;
-  transform: rotate(90deg);
   cursor: pointer;
 }
 

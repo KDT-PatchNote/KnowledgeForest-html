@@ -19,7 +19,7 @@
           <li><a href="./admin-userlist.html">유저 목록</a></li>
           <li><a href="./admin-studylist.html">스터디 목록</a></li>
           <li><a href="./admin-studyapplylist.html">스터디 신청 관리</a></li>
-          <li><a href="./admin-studycommentlist.html">스터디 댓글 목록</a></li>
+          <li><a href="./admin-studycommentlist.html">스터디 후기댓글 목록</a></li>
           <li><a href="./admin-boardlist.html">자유게시판 관리</a></li>
           <li class="admin-li-menuactive"><a href="./admin-boardcommentlist.html">자유게시판 댓글 관리</a></li>
           <li><a href="./admin-noticelist.html">공지 목록</a></li>
@@ -79,7 +79,13 @@
                   319
                 </a>
               </li>
-              <li class="adminBoardComment-li-boardcommentcontent boardcommentcontent">스터디 !!!!!!!!!!!!!!!!!!!</li>
+              <li class="adminBoardComment-li-boardcommentcontent commentcontent">
+                <div class="commentContent">
+                  안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글
+                </div>
+                <div class="toggleBtn"><img src="./../../asset/img/admin/all-btn.png" alt="토글버튼"></div>
+              </li>
+              
               <li class="adminBoardComment-li-userid lightdata">asdfasd323</li>
               <li class="adminBoardComment-li-usernickname lightdata">풀잎나무</li>
               <li class="adminBoardComment-li-boardcommentwritedate lightdata">1999.01.01</li>
@@ -87,6 +93,36 @@
                 <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제">
               </li>
             </ul>
+            <div class="commentWrap">
+              안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글안녕하세요 분위기는 대충 어땠고 공부는 이런걸 했다는~~ 이런 댓글
+            </div>
+
+            <!-- 데이터 넣는 부분 - 임시데이터 (2) -->
+            <ul class="admin-ul-datawrap">
+              <li class="adminBoardComment-li-boardcommentid lightdata">319</li>
+              <li class="adminBoardComment-li-boardid lightdata">
+                <!-- 사용자 화면의 각 자유게시판 상세 페이지로 이동 -->
+                <a href="./../board/">
+                  319
+                </a>
+              </li>
+              <li class="adminBoardComment-li-boardcommentcontent commentcontent">
+                <div class="commentContent">
+                  대충 댓글
+                </div>
+                <div class="toggleBtn"><img src="./../../asset/img/admin/all-btn.png" alt="토글버튼"></div>
+              </li>
+              
+              <li class="adminBoardComment-li-userid lightdata">asdfasd323</li>
+              <li class="adminBoardComment-li-usernickname lightdata">풀잎나무</li>
+              <li class="adminBoardComment-li-boardcommentwritedate lightdata">1999.01.01</li>
+              <li class="adminBoardComment-li-boardcommentdelete">
+                <input type="button" class="admin-btn-delete" onclick="clickDeleteBtn(event)" value="삭제">
+              </li>
+            </ul>
+            <div class="commentWrap">
+              대충 댓글
+            </div>
                 
           </div>
           <!-- 자유게시판 글 테이블 끝 -->

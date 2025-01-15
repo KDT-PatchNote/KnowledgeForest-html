@@ -226,7 +226,7 @@ li { list-style-type: none; }
 
 /* 모든 탈퇴, 삭제 공용 스타일 */
 .admin-btn-delete {
-  width: 60%;
+  width: 70%;
   height: 40px;
   background-color: #003161;
   border: none;
