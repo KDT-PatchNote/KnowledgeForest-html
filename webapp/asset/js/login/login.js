@@ -16,7 +16,7 @@ btn_join.addEventListener("click", (e)=>{
 //페이지 이동함수
 function moveSite(){
 
-	window.location.href = "./../main/main_logout.html";
+	window.location.href = "./../main/main-logout.html";
 
 }
 

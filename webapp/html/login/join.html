@@ -47,7 +47,7 @@
             <p class="join-p-label">아이디
             </p>
           </div>
-          <input type="text" class="join-input" name="id" id="JOIN-INPUT-ID" onkeydown="inputLenFunc2()">
+          <input type="text" class="join-input" name="id" id="JOIN-INPUT-ID" onkeyup="inputLenFunc3()">
           <button class="join-btn-checkid" type="button" id="JOIN-BTN-IDCHECK">ID중복검사</button>
         </div>
         <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-IDCHECK"></div>
@@ -57,7 +57,8 @@
             <p class="join-p-label" >닉네임
             </p>
           </div>
-          <input type="text" class="join-input" name="nickName" id="JOIN-INPUT-NICKNAMECHECK" >
+          <input type="text" class="join-input" name="nickName" id="JOIN-INPUT-NICKNAMECHECK" onkeyup="inputLenFunc2()">
+
           <button class="join-btn-checkid" type="button" id="JOIN-BTN-NICKNAMECHECK">닉네임중복검사</button>
         </div>
         <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-NICKNAMECHECK"></div>
@@ -79,7 +80,7 @@
           <div class="join-div-labelwrapper">
             <p class="join-p-label">이름</p>
           </div>
-          <input type="text" class="join-input" id="JOIN-INPUt-ID" name="userName" onblur="nameCheck()">
+          <input type="text" class="join-input" id="JOIN-INPUt-ID" name="userName" onblur="nameCheck()" maxlength="6">
         </div>
         <div class="join-div-wrapper-text-alarm" id="JOIN-DIV-NAME"></div>
         <div class="join-div-inputlayer">
