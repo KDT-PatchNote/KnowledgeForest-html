@@ -69,4 +69,33 @@ function inputLenFunc1() {
 	};
 	console.log(inpSec1.value)
 }
-inpSec.addEventListener('input', inputLenFunc1);
+inpSec1.addEventListener('input', inputLenFunc1);
+
+
+
+// 아이디 입력조건
+function idCheck(){
+	const idCheck = document.getElementById("PASSWORDSELECT-INPUT-ID").value;
+	
+  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,10}$/; // 첫 글자는 문자만 허용, 최대 15자
+    
+	
+		if (!exr.test(idCheck)) { //거짓일 때
+      //console.log("TEST"); //입력값 확인
+		}else{
+		  //console.log("abc"); //입력값 확인
+		}
+	}
+
+
+//글자수 제한 로직 - 아이디 
+const inpSec2 = document.querySelector('#PASSWORDSELECT-INPUT-ID');
+
+//글자수 제한 로직 - 아이디
+function inputLenFunc2() {
+	if (inpSec2.value.length > 10) {
+			inpSec2.value = inpSec1.value.slice(0, 10);
+	};
+	console.log(inpSec2.value)
+}
+inpSec2.addEventListener('input', inputLenFunc2);
