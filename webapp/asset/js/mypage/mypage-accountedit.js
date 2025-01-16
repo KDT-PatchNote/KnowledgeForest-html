@@ -193,18 +193,36 @@ sendButton.addEventListener('click', (event) => {
 // 핸드폰 번호 끝
 
 
+// 저장 버튼 클릭 이벤트
+saveButton.addEventListener("click", (e) => {
+  e.preventDefault();
 
+  // 모든 입력 필드 값 확인
+  const name = document.getElementById("name").value.trim();
+  const birthdate = document.getElementById("birthdate").value.trim();
+  const ID = document.getElementById("ID").value.trim();
+  const nickname = nicknameInput.value.trim();
+  const password = passwordInput.value.trim();
+  const passwordchk = passwordchkInput.value.trim();
+  const phoneNum = phoneNumInput.value.replace(/[^\d]/g, ''); 
+  const phoneNumchk = phoneNumchkInput.value.trim();
 
-
-//수정버튼 클릭 시작
-// 수정한 내용 저장 버튼 클릭시
-saveButton.addEventListener("click", (e)=> {
-  if(true){
-    alert("회원정보가 수정되었습니다.");
-    window.location.href="/webapp/html/main/main_logout.html";
-  }else{
-    alert("오류가 발생했습니다.");
+  // 입력값 유효성 검사
+  if (
+    !name ||
+    !birthdate ||
+    !ID ||
+    !nickname ||
+    !password ||
+    !passwordchk ||
+    !phoneNum ||
+    !phoneNumchk
+  ) {
+    alert("정보를 입력하세요");
+    return; 
   }
-  console.log("test");
+
+  // 모든 유효성 검사 통과
+  alert("회원정보가 수정되었습니다.");
+  // window.location.href = "./..//html/main/main-logout.html";
 });
-//수정버튼 클릭 끝
