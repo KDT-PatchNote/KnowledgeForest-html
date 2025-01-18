@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+body {
+  /* font-family: 'NanumGothic', sans-serif; */
+  background-color: #F6F6F6;
+  /* font-size: 18px; */
+  /* font-weight: 500; */
+}
+
 .board-div-list{
   margin: 10px;
 }
