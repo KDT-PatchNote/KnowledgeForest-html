@@ -30,8 +30,8 @@
     <div id="ADMIN-DIV-HEADERCONTAINER">
       <img src="./../../asset/img/main/logo.png" class="admin-img-logo" alt="Logo">
       <ul id="ADMIN-UL-HEADERWRAP">
-        <li><a href="./../main/main.html">홈</a></li>
-        <li><a href="">로그아웃</a></li>
+        <li><a href="./../main/main-login.html">홈</a></li>
+        <li><a href="./../main/main-logout.html">로그아웃</a></li>
       </ul>
     </div>
 
@@ -41,7 +41,6 @@
           <h1>개인정보 수정</h1><br />
           <p>개인 정보 설정을 관리하여 나에게 맞는 방식으로 지식의 숲을 사용할 수 있습니다. <a href="">자세히 알아보기</a></p>
         </div>
-        <!-- <hr /><br /> -->
         <section class="mypage-section">
           <div class="mypage-div-wrapper">
             <label for="name">이름</label>
@@ -55,23 +54,28 @@
             <label for="ID">ID</label>
             <input type="text" id="ID" value="dokev333" readonly>
           </div>
+
           <div class="mypage-div-wrapper2">
             <div class="editpage-input-nickname">
               <label for="nickname">닉네임</label>
               <input type="text" id="nickname">
             </div>
-            <button class="mypage-btn-nickname">중복검사</button>
+            <button 
+            class="mypage-btn-nickname" id="nickdupChkButton"
+            onclick="validateNickname()"
+            >중복검사</button>
           </div>
           <div id="nickname-error"></div>
+
           <div class="mypage-div-wrapper">
             <label for="password">비밀번호</label>
-            <input type="password" id="password">
+            <input type="password" id="password" onkeydown="validatePasswordLive()">
           </div>
           <div id="password-error" ></div>
 
           <div class="mypage-div-wrapper">
             <label for="passwordchk">비밀번호 확인</label>
-            <input type="password" id="passwordchk" placeholder="비밀번호를 한번 더 입력해주세요">            
+            <input type="password" id="passwordchk" placeholder="비밀번호를 한번 더 입력해주세요" onkeydown="initializePasswordCheck()">            
           </div>
           <div id="passwordchk-error" ></div>
 
