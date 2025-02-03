@@ -30,10 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 스터디 글 클릭시 로그인 여부 확인 후 링크 이동
 function notLogin() {
-  // 비로그인일 때 스터디 글 클릭시
   alert("로그인 후 이용바랍니다.");
-
-  // 비로그인 상태일때 로그인 페이지로 이동
   location.href = "./../login/login.html";
 }
 
@@ -42,39 +39,55 @@ function notLogin() {
  * @see   notLogin();
  * @author 강후현
  * @since 20250114
- * @param {
- *
- * } param
- *
- * 매개 변수로 상세 페이지 id를 받습니다.
- *
+ * @param {string} param - 상세 페이지 id
  */
 
 function goPage(param) {
-  //  로그인 상태일때 스터디 상세페이지로 이동
-
-  location.href = "./../study/studylist-detail.html"; //<----이 링크는 추후 변경 될 수 있습니다.
+  location.href = "./../study/studylist-detail.html"; //<----이 링크는 추후 변경될 수 있습니다.
 }
 
+// 📌 jQuery 실행
 $(document).ready(function () {
   console.log("turn.js 실행됨!"); // 실행 확인용
+
+  let totalPages = $("#DIV-FLIPBOOK").children(".div-page").length; // 실제 콘텐츠 페이지 개수 계산
 
   // turn.js 초기화
   $("#DIV-FLIPBOOK").turn({
     autoCenter: true,
+    pages: totalPages, // 정확한 페이지 수 설정
+    when: {
+      turned: function (event, page, view) {
+        console.log("현재 페이지:", page);
+        if (page === 1 || page === totalPages) {
+          // 📌 책이 덮였을 때 -> 메뉴 이름 숨김 (포스트잇만 유지)
+          $(".main-nav-menuwrap").removeClass("open");
+        } else {
+          // 📌 책이 펼쳐졌을 때 -> 메뉴 이름 표시
+          $(".main-nav-menuwrap").addClass("open");
+        }
+      },
+    },
   });
 
   // 📌 클릭한 위치에 따라 페이지 이동 (왼쪽=이전, 오른쪽=다음)
   $("#DIV-FLIPBOOK").on("click", function (event) {
     let bookWidth = $(this).width(); // 책의 너비 가져오기
     let clickX = event.pageX - $(this).offset().left; // 클릭한 X 좌표
+    let currentPage = $(this).turn("page"); // 현재 페이지
 
     if (clickX < bookWidth / 2) {
       // 📌 왼쪽 클릭 → 이전 페이지
       $(this).turn("previous");
     } else {
-      // 📌 오른쪽 클릭 → 다음 페이지
-      $(this).turn("next");
+      // 📌 오른쪽 클릭 → 다음 페이지 (마지막 페이지에서는 막기)
+      if (currentPage < totalPages) {
+        $(this).turn("next");
+      } else {
+        console.log("마지막 페이지라서 더 이상 넘어가지 않음.");
+        return false;
+      }
     }
   });
 });
+
