@@ -1,32 +1,83 @@
-const all = document.querySelector('input.join-input-checkbox-big');
-const terms = document.querySelectorAll('input.join-input-checkbox-small');
-
-NodeList.prototype.map = Array.prototype.map;
-
-//전체동의 체크박스를 클릭할 때마다 실행되는 이벤트 리스너
-all.addEventListener('click', () => {
-  terms.forEach((term) => {
-    console.log(term);
-    term.checked = all.checked;
-  });
+// 전송 버튼 클릭 이벤트 리스너
+const idCheckButton = document.getElementById("JOIN-BTN-IDCHECK");
+idCheckButton.addEventListener('click', (event) => {
+  idCheck();
 });
 
-//약관동의 체크박스를 클릭할 때마다 실행되는 이벤트 리스너
-terms.forEach((term)=>{
-  term.addEventListener(`click`, () =>{
-    all.checked = terms.map((term) => term.checked).filter((checked)=>checked).length === 2;
+// 아이디 중복검사
+function idCheck(){
+	const idCheck = document.getElementById("JOIN-INPUT-ID").value;
+	const result = document.getElementById("JOIN-DIV-IDCHECK");
+  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
 
-  })
+	
+		if (!exr.test(idCheck)) {
+			result.innerHTML = '중복된 아이디가 없습니다.';
+			result.style.color = 'green';
+		}else{
+			result.innerHTML = '중복된 아이디가 있습니다.';
+			result.style.color = 'red';
+		}
+	}
+
+
+//글자수 제한 로직 - 아이디 
+const inpSec3 = document.querySelector('#JOIN-INPUT-ID');
+
+//글자수 제한 로직 - 아이디
+function inputLenFunc3() {
+	if (inpSec3.value.length > 10) {
+			inpSec3.value = inpSec3.value.slice(0, 10);
+	};
+	console.log(inpSec3.value)
+}
+inpSec3.addEventListener('input', inputLenFunc3);
+
+
+
+//닉네임 버튼 클릭함수
+const nickNameCheckButton = document.getElementById("JOIN-BTN-NICKNAMECHECK");
+nickNameCheckButton.addEventListener('click', (event) => {
+  nickNameCheck();
 });
 
+
+
+// 닉네임 유효성 검사 함수
+function nickNameCheck(){
+	const nickNameCheck = document.getElementById("JOIN-INPUT-NICKNAMECHECK").value;
+	const result = document.getElementById("JOIN-DIV-NICKNAMECHECK");
+  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
+	
+	
+		if (!exr.test(nickNameCheck)) {
+			result.innerHTML = '중복된 아이디가 없습니다.';
+			result.style.color = 'green';
+		}else{
+			result.innerHTML = '중복된 아이디가 있습니다.';
+			result.style.color = 'red';
+		}
+	}
+
+//글자수 제한 로직 - 닉네임
+const inpSec2 = document.querySelector('#JOIN-INPUT-NICKNAMECHECK');
+
+//글자수 제한 로직 - 닉네임
+function inputLenFunc2() {
+	if (inpSec2.value.length > 10) {
+			inpSec2.value = inpSec2.value.slice(0, 10);
+	};
+	console.log(inpSec2.value)
+}
+inpSec2.addEventListener('input', inputLenFunc2);
 
 
 //이름을 입력여부
 function nameCheck(){
-	const name = document.getElementById("JOIN-INPUt-ID").value; //value 넣었을 때 오류 
+	const name = document.getElementById("JOIN-INPUt-ID").value; 
 	const result = document.getElementById('JOIN-DIV-NAME');
 	//정규식 글자제한
-	const exr = /^[a-zA-Z가-힣][a-zA-Z가-힣0-9]{0,14}$/; // 첫 글자는 문자만 허용, 최대 15자
+	const exr = /^[a-zA-Z가-힣][a-zA-Z가-힣0-9]{0,6}$/; // 첫 글자는 문자만 허용, 최대 15자
 
 	// console.log("test"); 정상출력
 
@@ -93,64 +144,9 @@ function validatePassword() {
 }
 
 
-// 전송 버튼 클릭 이벤트 리스너
-const idCheckButton = document.getElementById("JOIN-BTN-IDCHECK");
-idCheckButton.addEventListener('click', (event) => {
-  idCheck();
-});
-
-// 아이디 중복검사
-function idCheck(){
-	const idCheck = document.getElementById("JOIN-INPUT-ID").value;
-	const result = document.getElementById("JOIN-DIV-IDCHECK");
-  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
-
-	
-		if (!exr.test(idCheck)) {
-			result.innerHTML = '중복된 아이디가 없습니다.';
-			result.style.color = 'green';
-		}else{
-			result.innerHTML = '중복된 아이디가 있습니다.';
-			result.style.color = 'red';
-		}
-	}
-
-
-//글자수 제한 로직 - 아이디 
-const inpSec2 = document.querySelector('#JOIN-INPUT-ID');
-
-//글자수 제한 로직 - 아이디
-function inputLenFunc2() {
-	if (inpSec2.value.length > 10) {
-			inpSec2.value = inpSec1.value.slice(0, 10);
-	};
-	console.log(inpSec2.value)
-}
-inpSec.addEventListener('input', inputLenFunc2);
-
-//닉네임 버튼 클릭함수
-const nickNameCheckButton = document.getElementById("JOIN-BTN-NICKNAMECHECK");
-nickNameCheckButton.addEventListener('click', (event) => {
-  nickNameCheck()
-});
 
 
 
-// 닉네임 유효성 검사 함수
-function nickNameCheck(){
-	const idCheck = document.getElementById("JOIN-INPUT-NICKNAMECHECK").value;
-	const result = document.getElementById("JOIN-DIV-NICKNAMECHECK");
-  const exr = /^(?=.*[a-zA-Z])(?=.*[0-9]).{4,15}$/; // 첫 글자는 문자만 허용, 최대 15자
-	
-	
-		if (!exr.test(idCheck)) {
-			result.innerHTML = '중복된 아이디가 없습니다.';
-			result.style.color = 'green';
-		}else{
-			result.innerHTML = '중복된 아이디가 있습니다.';
-			result.style.color = 'red';
-		}
-	}
 
 
 
@@ -259,14 +255,35 @@ function inputLenFunc1() {
 	};
 	console.log(inpSec1.value)
 }
-inpSec.addEventListener('input', inputLenFunc1);
+inpSec1.addEventListener('input', inputLenFunc1);
 
+//체크박스 아이디 변수 저장
+const all = document.querySelector('input.join-input-checkbox-big');
+const terms = document.querySelectorAll('input.join-input-checkbox-small');
+
+NodeList.prototype.map = Array.prototype.map;
+
+//전체동의 체크박스를 클릭할 때마다 실행되는 이벤트 리스너
+all.addEventListener('click', () => {
+  terms.forEach((term) => {
+    console.log(term);
+    term.checked = all.checked;
+  });
+});
+
+//약관동의 체크박스를 클릭할 때마다 실행되는 이벤트 리스너
+terms.forEach((term)=>{
+  term.addEventListener(`click`, () =>{
+    all.checked = terms.map((term) => term.checked).filter((checked)=>checked).length === 2;
+
+  })
+});
 
 
 //가입하기 눌렀을 때 main page 이동
 function moveSite(){
 	
-	window.location.href = "./../main/main_logout.html";
+	window.location.href = "./../main/main-logout.html";
 
 }
 

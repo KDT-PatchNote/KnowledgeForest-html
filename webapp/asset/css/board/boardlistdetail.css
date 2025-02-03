@@ -56,12 +56,18 @@ body { background-color: #f6f6f6; }
   display: flex;
   align-items: center;
   text-align: center;
-  border-right: 1px solid #ccc;
 }
 .title-rightline div { width: 100%; }
 .boardlist-div-contents{
   flex: 1;
-  padding: 0 20px;
+  padding: 15px 20px;
+  border-left: 1px solid #ccc;
+}
+
+/* 이미지 스타일 */
+.boardlist-div-contents img {
+  max-width: 100%;
+  margin-top: 30px;
 }
 
 /* 자유게시판 상세페이지 글 내용 */
@@ -69,7 +75,6 @@ body { background-color: #f6f6f6; }
   display: flex;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  height: 150px;
   align-items: center;
 }
 

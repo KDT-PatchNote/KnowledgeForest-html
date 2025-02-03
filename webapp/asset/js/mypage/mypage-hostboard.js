@@ -1,22 +1,3 @@
-// 찜 아이콘 클릭 이벤트
-function toggleLike(element, isLike) {
-  const likeWrapper = element.parentElement;
-  const likeIcon = likeWrapper.querySelector('.mypage-img-like');
-  const noLikeIcon = likeWrapper.querySelector('.mypage-img-nolike');
-
-  if (isLike) {
-    // 'like' 클릭 시
-    likeIcon.style.display = 'none';
-    noLikeIcon.style.display = 'inline-block';
-  } else {
-    // 'no-like' 클릭 시
-    noLikeIcon.style.display = 'none';
-    likeIcon.style.display = 'inline-block';
-  }
-}
-
-
-
 document.addEventListener("click", function (event) {
   // 모달 리스트를 닫기
   const modal = document.getElementById("modal-list");
@@ -28,7 +9,10 @@ document.addEventListener("click", function (event) {
 function openModal(element) {
   const modal = document.getElementById("modal-list");
   const rect = element.getBoundingClientRect();
-
+  console.log(element)
+  console.log("23452345");
+  console.log(`${rect.left}px`);
+  console.log(`${rect.bottom + window.scrollY}px`);
   // 모달 위치를 클릭된 img 버튼 근처로 설정
   modal.style.left = `${rect.left}px`;
   modal.style.top = `${rect.bottom + window.scrollY}px`;
