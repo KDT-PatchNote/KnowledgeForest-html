@@ -1,9 +1,5 @@
 // 배너
 
-
-
-
-
 // document.addEventListener("DOMContentLoaded", () => {
 //   const slides = document.querySelectorAll(".main-div-banner img");
 //   let currentIndex = 0;
@@ -24,9 +20,6 @@
 //     showSlide(currentIndex);
 //   }, 3500);
 // });
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,11 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
   }, 3500);
 });
-
-
-
-
-
 
 
 
