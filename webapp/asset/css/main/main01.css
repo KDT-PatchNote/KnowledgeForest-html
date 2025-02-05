@@ -1,20 +1,35 @@
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Great+Vibes&family=Space+Grotesk:wght@300..700&display=swap'); */
-
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
-  /* background: url(../../asset/img/main/캡처.PNG) no-repeat center; */
-  /* background-size: cover; */
-  background-color: black;
+  width: 100vw;
+  height: 100vh;
 }
-
-.main-div-wrapper {
+main{
+  width: 100%;
+  height: 100%;
+  background: url(../../img/main/forest.gif) no-repeat center;
+  background-size: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
+.div-contents-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 #DIV-FLIPBOOK {
-  width: 80vw;
-  height: 85vh;
+  width: 1200px;
+  height: 800px;
   z-index: 9;
+
 }
 
 /* 
@@ -29,9 +44,8 @@ body {
 .cover {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: none;
-  padding: 10px;
+  align-items: flex-start;
+  background: #D9D9D9;
   overflow: hidden; /* ✅ 혹시 넘치는 부분이 있으면 숨김 */
 }
 
@@ -39,14 +53,15 @@ body {
 .main-book-cover {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ✅ 이미지가 짤리지 않고, 표지 안에 들어가도록 설정 */
+  object-fit: cover;
 }
 
 
 
 /* 하드 커버 스타일 */
 .div-hard {
-  background: linear-gradient(to right, #8b5e3c, #a77b50);
+  /* background: linear-gradient(to right, #8b5e3c, #a77b50); */
+  background-color: #002D24;
   color: white;
   font-size: 24px;
   border: 2px solid #654321;
@@ -67,6 +82,13 @@ body {
   font-family: "Georgia", serif;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
+  /* 배너 페이지 */
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+
 }
 
 /* 📌 빈 페이지 스타일 (보이지 않도록 설정) */
@@ -86,7 +108,9 @@ body {
 }
 
 /* ✅ 북마크 메뉴 스타일 */
-.main-nav-menuwrap {}
+.menu-wrapper {
+  align-self: baseline;
+}
 
 .main-nav-ul {
   list-style: none;
@@ -104,7 +128,7 @@ body {
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, transform 0.3s;
   text-align: right;
-  transform: translateX(-100px);
+  transform: translateX(-190px);
   z-index: 0;
   display: flex;
   align-items: center;
@@ -121,9 +145,38 @@ body {
 .div-postit {
   width: 40px;
   height: 100%;
-  background-color: #ffcc66;
+  background-color: #D9A87E;
   margin-left: 20px;
 }
+
+/* div-postit의 첫번째 요소 */
+
+.li-menu:nth-child(1) .div-postit{
+  background-color: #D9C7B8;;
+}
+/* div-postit의 두번째 요소 */
+
+.li-menu:nth-child(2) .div-postit{
+  background-color: #BFA084;
+  
+}
+/* div-postit의 첫번째 요소 */
+
+.li-menu:nth-child(3) .div-postit{
+  background-color: #A6775B;
+}
+/* div-postit의 첫번째 요소 */
+
+.li-menu:nth-child(4) .div-postit{
+  background-color: #733F2D;
+}
+/* div-postit의 첫번째 요소 */
+
+.li-menu:nth-child(5) .div-postit{
+  background-color: #401818;
+}
+
+
 
 
 /* 마우스 오버 시 살짝 튀어나오게 */
@@ -136,3 +189,26 @@ body {
   opacity: 1;
   /* 메뉴 이름 표시 */
 }
+
+
+/* 배너 */
+
+.main-div-banner{
+  width: 90%;
+  display: flex;
+  margin-top: 5%;
+  object-fit: contain;
+}
+
+.main-div-banner img{
+  width: 100%;
+}
+
+.main-div-banner img {
+  display: none;
+}
+
+.main-div-banner .main-div-banneractive {
+  display: block;
+}
+

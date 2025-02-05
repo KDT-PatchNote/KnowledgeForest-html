@@ -1,4 +1,34 @@
 // 배너
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const slides = document.querySelectorAll(".main-div-banner img");
+//   let currentIndex = 0;
+
+//   function showSlide(index) {
+//     slides.forEach((slide, i) => {
+//       slide.classList.remove("main-div-banneractive");
+//       if (i === index) {
+//         slide.classList.add("main-div-banneractive");
+//       }
+//     });
+//   }
+
+//   showSlide(currentIndex);
+
+//   setInterval(() => {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     showSlide(currentIndex);
+//   }, 3500);
+// });
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".main-div-banner img");
   let currentIndex = 0;
@@ -10,15 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
         slide.classList.add("main-div-banneractive");
       }
     });
+    console.log("현재 배너 인덱스:", index); // 현재 보여지는 배너 인덱스 확인
   }
 
   showSlide(currentIndex);
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
+    console.log("변경된 배너 인덱스:", currentIndex); // 배너가 변경되는지 확인
     showSlide(currentIndex);
   }, 3500);
 });
+
+
+
+
+
+
+
+
 
 /**
  * @feature 로그아웃 된 상태에서 스터디 항목을 클릭했을때, 로그인 페이지로 이동시킵니다.
