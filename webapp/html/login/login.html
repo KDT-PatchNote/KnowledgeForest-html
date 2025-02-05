@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지식의 숲</title>
+  <link rel="stylesheet" href="./../../asset/css/login/login.css"> <!-- css링크걸기 -->
+  <link rel="stylesheet" href="./../../asset/css/main/header.css">
+  <link rel="stylesheet" href="./../../asset/css/main/footer.css">
+  <script defer src="./../../asset/js/login/login.js"></script>
+</head>
+
+<body>
+   
+  <nav class="main-nav-menuwrap">
+    <img src="../../asset/img/main/logo.png" class="main-img-logo">
+    <ul class="main-nav-ul">
+        <li><a href="./../notice/noticelist.html">공지</a></li>
+        <li><a href="./../board/boardlist.html">자유게시판</a></li>
+        <li><a href="./../study/studylist.html">스터디 모집</a></li>
+        <li><a href="./../login/join.html">회원가입</a></li>
+        <li><a href="./../login/login.html">로그인</a></li>
+    </ul>
+</nav>
+
+
+
+  <main>
+    <form action="">
+    <div class="login-div-wrapper-input-loginbox">
+      <div class="login-div-h1-box">
+        <h1 class="login-h1-title">로그인</h1>
+      </div>
+      <div class="login-div-wrapper-input-box">
+        <input type="text" class="login-input" placeholder="아이디" name="id" id="LOGIN-INPUT-ID" maxlength="10" onblur="idCheck()" onkeyup="inputLenFunc2()" > 
+
+        <input type="password" class="login-input" placeholder="비밀번호" name="pwd" id="LOGIN-INPUT-PWD" maxlength="15" onblur="pwdCheck()" onkeyup="inputLenFunc1()" >
+      </div>
+
+      <div class="login-div-wrapper-join-box">
+        <a href="./join.html" target="_self" class="login-a-join">회원가입</a>
+      </div>
+
+      <div class="login-div-wrapper-btn-box">
+        <button type="button" class="login-btn-join" id="LOGIN-BTN-LOGIN" onclick="moveSite()">로그인</button>
+      </div>
+
+      <div class="login-div-wrapper-pwd-box">
+        <a href="./passwordSelect.html" target="_self" class="login-a-pwd">비밀번호를 까먹었나요?</a>
+      </div>
+    </div>
+    </form>
+  </main>
+
+
+  <footer class="main-footer-container">
+    <div class="main-footer-content">
+        <div class="main-footer-links">
+            <div class="main-footer-policies">
+                <a href="#" class="main-link-policy">개인정보처리방침</a>
+                <span class="main-span-divider">|</span>
+                <a href="#" class="main-link-terms">이용약관</a>
+            </div>
+            <p class="main-paragraph-contact">Contact: team.patchnote.official@gmail.com</p>
+            <p class="main-paragraph-copyright">Copyright Forest Info. All rights reserved</p>
+        </div>
+        <div class="main-footer-logo">
+            <img src="./../../asset/img/main/logo.png" alt="Forest of Knowledge Logo"
+                class="main-img-footerlogo">
+        </div>
+    </div>
+</footer>
+
+
+  <!-- 페이지이름 - 요소 - 기능 -->
+
+</body>
+
+</html>

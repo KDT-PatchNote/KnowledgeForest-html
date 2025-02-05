@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- jQuery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- turn.js 로드 -->
+    <script src="../../asset/js/main/turn.js"></script>
+    <script src="../../asset/js/main/main.js"></script>
+    <link rel="stylesheet" href="./../../asset/css/main/main01.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="div-contents-wrapper">
+        <!-- 📌 turn.js 책 추가 -->
+        <div id="DIV-FLIPBOOK">
+          <!-- 📌 책 앞표지 -->
+          <div class="div-hard cover">
+            <img
+              src="../../asset/img/main/초.png"
+              alt="책 표지"
+              class="main-book-cover"
+            />
+          </div>
+
+          <!-- 📌 책 내부 페이지 -->
+           
+          <div class="div-page">Page 1</div>
+
+          <div class="div-page">Page 2
+            <div class="main-div-banner">
+              <div class="main-div-slide1">
+                <img src="../../asset/img/main/banner01.png" alt="이미지1"
+                    class="main-img-banner01 main-div-banneractive">
+              </div>
+                <div class="main-div-slide2">
+                  <img src="../../asset/img/main/banner02.png" alt="이미지2" class="main-img-banner02">
+              </div>
+                <div class="main-div-slide3">
+                  <img src="../../asset/img/main/banner03.png" alt="이미지3" class="main-img-banner03">
+                </div>
+              <div>
+            </div>
+
+
+            <!-- 메인 페이지 끝 -->
+
+          <div class="div-page">Page 3</div>
+          <div class="div-page">Page 4</div>
+          <div class="div-page">Page 5</div>
+          <div class="div-page">Page 6</div>
+          <div class="div-page">Page 7</div>
+          <div class="div-page">Page 8</div>
+
+          <!-- 📌 빈 페이지 추가 (보이지 않도록 설정) -->
+          <div class="div-page empty-page"></div>
+
+          <!-- 📌 책 뒷표지 -->
+          <div class="div-hard"></div>
+        </div>
+        <!-- 📌 메뉴바 -->
+
+        <div class="menu-wrapper">
+          <nav class="main-nav-menuwrap">
+            <ul class="main-nav-ul">
+              <li class="li-menu">
+                <a href="./../login/login.html">로그인</a>
+                <div class="div-postit"></div>
+              </li>
+              <li class="li-menu">
+                <a href="./../login/join.html">회원가입</a>
+                <div class="div-postit"></div>
+              </li>
+              <li class="li-menu">
+                <a href="./../study/studylist.html">스터디 모집</a>
+                <div class="div-postit"></div>
+              </li>
+              <li class="li-menu">
+                <a href="./../board/boardlist.html">자유게시판</a>
+                <div class="div-postit"></div>
+              </li>
+              <li class="li-menu">
+                <a href="./../notice/noticelist.html">공지</a>
+                <div class="div-postit"></div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
