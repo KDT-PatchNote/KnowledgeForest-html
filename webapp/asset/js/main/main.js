@@ -88,6 +88,14 @@ $(document).ready(function () {
       turned: function (event, page, view) {
         console.log("현재 페이지:", page);
         if (page === 1 || page === totalPages) {
+
+
+
+
+
+
+
+
           // 📌 책이 덮였을 때 -> 메뉴 이름 숨김 (포스트잇만 유지)
           $(".main-nav-menuwrap").removeClass("open");
         } else {
@@ -97,6 +105,14 @@ $(document).ready(function () {
       },
     },
   });
+
+
+
+
+
+
+
+
 
   // 📌 클릭한 위치에 따라 페이지 이동 (왼쪽=이전, 오른쪽=다음)
   $("#DIV-FLIPBOOK").on("click", function (event) {
@@ -112,7 +128,7 @@ $(document).ready(function () {
       if (currentPage < totalPages) {
         $(this).turn("next");
       } else {
-        console.log("마지막 페이지라서 더 이상 넘어가지 않음.");
+        console.log("마지막 페이지는 넘어가지 않음.");
         return false;
       }
     }
