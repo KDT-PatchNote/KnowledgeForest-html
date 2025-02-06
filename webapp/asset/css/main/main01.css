@@ -113,32 +113,42 @@ main{
 /** 신규 스터디 **/
 
 .div-new-study {
-  width: 80%;
-  text-align: left;
+  width: 90%; 
+  text-align: right;
   font-family: 'Chosunilbo_myungjo', serif;
-  margin-top: 20px;
-  padding-left: 20px; 
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-top : -110px;
 }
+
+.new-study-title {
+  width: 100%;
+  text-align: left;
+}
+
 
 /* 세로 구분선 추가 */
 .div-new-study::before {
   content: "";
-  width: 2px; /* 세로선 두께 */
-  height: 100%;
-  background-color: #5a3d31; /* 세로선 색상 */
-  position: absolute;
-  left: 10px; /* 왼쪽 여백 조정 */
-  top: 0;
+  width: 2px;
+  height: 70px;
+  margin-left: 8px;
+  background-color: #9F7E66;
+
 }
 
 .div-new-study h4 {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
-  color: #5a3d31; 
+  color: #5a3d31;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  position: relative;
+
 }
 
 /* 말풍선 아이콘처럼 보이게 */
@@ -151,14 +161,13 @@ main{
 
 .div-new-study ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  font-size: 20px;
 }
 
 .div-new-study li {
-  font-size: 14px;
+  font-size: 20px;
   color: #a58d7f;
-  margin-left: 20px;
   margin-top: 5px;
 }
 
@@ -171,7 +180,7 @@ main{
       #f5e6d9);
   /* 부드러운 종이 느낌 */
   color: #333;
-  font-size: 18px;
+  font-size: 36px;
   font-family: "Georgia", serif;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -220,7 +229,7 @@ main{
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
   transition: background 0.3s, transform 0.3s;
   text-align: right;
-  transform: translateX(-285px);
+  transform: translateX(-100px);
   z-index: 0;
   display: flex;
   align-items: center;
@@ -228,8 +237,9 @@ main{
 
 .li-menu a {
   text-decoration: none;
-  color: #333;
+  color: #321500;
   font-weight: bold;
+  font-family: 'Chosunilbo_myungjo', serif;
   display: block;
   margin-left: auto;
 }
@@ -239,12 +249,13 @@ main{
   height: 100%;
   background-color: #D9A87E;
   margin-left: 20px;
+  
 }
 
 /* div-postit의 첫번째 요소 */
 
-.li-menu:nth-child(1) .div-postit{
-  background-color: #D9C7B8;;
+.li-menu:nth-child(1) .div-postit {
+  background-color: #D9C7B8;
 }
 /* div-postit의 두번째 요소 */
 
@@ -272,7 +283,7 @@ main{
 
 /* 마우스 오버 시 살짝 튀어나오게 */
 .li-menu:hover {
-  transform: translateX(-170px);
+  transform: translateX(0px);
 }
 
 /* 📌 책이 펼쳐졌을 때 메뉴 이름 표시 */
@@ -304,34 +315,30 @@ main{
 }
 
 
-/* 마감 임박 스터디 전체 정렬 */
+/* 마감 임박 스터디 */
 .div-end-study {
-  width: 40%; /* 블록 크기를 조정 (적절히 조절 가능) */
+  width: 90%; 
   text-align: left;
   font-family: 'Chosunilbo_myungjo', serif;
-  margin-top: 20px;
-  padding-left: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: auto; /* 오른쪽으로 이동 */
+  align-items: flex-end;
+  margin: 0 auto;
+  background: url(../../img/main/na.gif) center no-repeat;
 }
 
 /* 세로선 추가 */
-.div-end-study::before {
-  content: "";
+.div-divider {
   width: 2px;
-  height: 100%;
-  background-color: #5a3d31;
-  position: absolute;
-  left: -10px; /* 왼쪽 여백 조정 */
-  top: 0;
+  height: 70px;
+  margin-right: 8px;
+  background-color: #9F7E66;
+  
 }
 
-/* 제목 스타일 */
 .div-end-study h4 {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   color: #5a3d31;
   display: flex;
@@ -342,23 +349,23 @@ main{
 }
 
 /* 말풍선 아이콘 추가 */
-.div-end-study h4::before {
+.div-end-study h4::after {
   content: "❞";
   font-size: 36px;
   color: #d4a373;
-  margin-right: 5px;
+  margin-left: 10px;
+
 }
 
 /* 리스트 스타일 */
 .div-end-study ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  padding-left: 15px;
+  margin: 0 auto;
+  font-size: 23px;
 }
 
 .div-end-study li {
-  font-size: 14px;
+  font-size: 20px;
   color: #a58d7f;
   margin-top: 5px;
 }
