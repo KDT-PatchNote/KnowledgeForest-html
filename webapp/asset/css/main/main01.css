@@ -325,7 +325,7 @@ main{
   flex-direction: column;
   align-items: flex-end;
   margin: 0 auto;
-  background: url(../../img/main/na.gif) center no-repeat;
+  /* background: url(../../img/main/na.gif) center no-repeat; */
 }
 
 /* 세로선 추가 */
@@ -370,3 +370,52 @@ main{
   margin-top: 5px;
 }
 
+/* modal */
+
+/* 🔹 모달 전체 배경 스타일 */
+
+/* ✅ 모달이 최상위로 오도록 설정 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* 📌 책보다 더 높은 z-index 설정 */
+}
+
+#DIV-FLIPBOOK {
+  width: 1200px;
+  height: 800px;
+  z-index: 9;
+  /* 📌 책의 z-index를 낮춰 모달이 위로 올라오게 함 */
+}
+
+
+/* ✅ 모달 내부 스타일 */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  /* 📌 내부 컨텐츠도 최상위 유지 */
+}
+
+/* ✅ 닫기 버튼 스타일 */
+.close-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  background: darkblue;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+}
