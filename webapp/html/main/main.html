@@ -1,110 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- jQuery 로드 -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- turn.js 로드 -->
-    <script src="../../asset/js/main/turn.js"></script>
-    <script src="../../asset/js/main/main.js"></script>
-    <link rel="stylesheet" href="./../../asset/css/main/main01.css" />
-  </head>
 
-  <body>
-    <main>
-      <div class="div-contents-wrapper">
-        <!-- 📌 turn.js 책 추가 -->
-        <div id="DIV-FLIPBOOK">
-          <!-- 📌 책 앞표지 -->
-          <div class="div-hard cover">
-            <img
-              src="../../asset/img/main/book-cover.png"
-              alt="책 표지"
-              class="main-book-cover"
-            />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- jQuery 로드 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- turn.js 로드 -->
+  <script src="../../asset/js/main/turn.js"></script>
+  <script src="../../asset/js/main/main.js"></script>
+  <link rel="stylesheet" href="./../../asset/css/main/main01.css" />
+</head>
+
+<body>
+  <main>
+    <div class="div-contents-wrapper">
+      <!-- 📌 turn.js 책 추가 -->
+      <div id="DIV-FLIPBOOK">
+        <!-- 📌 책 앞표지 -->
+        <div class="div-hard cover">
+          <img src="../../asset/img/main/book-cover.png" alt="책 표지" class="main-book-cover" />
+        </div>
+
+        <!-- 📌 책 내부 페이지 -->
+
+        <!-- 메인 페이지 1 (page1) -->
+        <!-- 소개 / 신규 스터디  -->
+        <div class="div-page">
+          <div class="div-intro-wrapper">
+          <div class="h1-intro"><h1>Introduce</h1></div>
+          <p class="p-intro-text">
+            함께 성장하는 공간, 지식의 숲에 오신 걸 환영합니다. <br>
+            <br>
+            혼자 하는 공부가 막막할 때, 함께하면 더 즐겁고 의미 있어집니다. <br>
+            지식의 숲에서는 스터디 모집과 자유로운 정보 공유를 통해 <br>
+            서로 배우고 성장할 수 있습니다. <br>
+            <br>
+            배움의 길, 이제 혼자가 아닌 함께 걸어가요. <br>
+            지금 바로 지식의 숲에서 여러분의 목표를 향해 나아가 보세요!<br>
+            <br>
+          </p>
           </div>
 
-          <!-- 📌 책 내부 페이지 -->
-
-          <!-- 메인 페이지 1 -->
-          <!-- 신규 / 마감 스터디  -->
-          <div class="div-page"> 
-            <!-- Page 1 -->
-          </div>
-
-          <!-- 메인 페이지 2 -->
-           <!-- 배너 -->
-          <div class="div-page">
-            <div class="main-div-banner">
-              <div class="main-div-slide1">
-                <img
-                  src="../../asset/img/main/bn01.gif"
-                  alt="이미지1"
-                  class="main-img-banner01 main-div-banneractive"
-                />
-              </div>
-              <div class="main-div-slide2">
-                <img
-                  src="../../asset/img/main/bn02.gif"
-                  alt="이미지2"
-                  class="main-img-banner02"
-                />
-              </div>
-              <!-- <div class="main-div-slide3">
-                <img src="../../asset/img/main/banner03.png" alt="이미지3" class="main-img-banner03" />
-              </div> -->
-            </div>
-          </div>
-
-              <!-- 메인 페이지 끝 -->
-
-              <div class="div-page">Page 3</div>
-              <div class="div-page">Page 4</div>
-              <div class="div-page">Page 5</div>
-              <div class="div-page">Page 6</div>
-              <div class="div-page">Page 7</div>
-              <div class="div-page">Page 8</div>
-
-              <!-- 📌 빈 페이지 추가 (보이지 않도록 설정) -->
-              <div class="div-page empty-page"></div>
-
-              <!-- 📌 책 뒷표지 -->
-              <div class="div-hard"></div>
-            </div>
+          <!-- 신규 등록 스터디 -->
+           <div class="div-new-study">
+              <h4> 신규 등록 스터디 </h4>
+          <ul> 
+            <li> 신규 등록 스터디 목록 1 </li>
+            <li> 신규 등록 스터디 목록 2 </li>
+            <li> 신규 등록 스터디 목록 3 </li>
+          </ul>
           </div>
         </div>
-        
-        <!-- 📌 메뉴바 -->
 
-        <div class="menu-wrapper">
-          <nav class="main-nav-menuwrap">
-            <ul class="main-nav-ul">
-              <li class="li-menu">
-                <a href="./../login/login.html">로그인</a>
-                <div class="div-postit"></div>
-              </li>
-              <li class="li-menu">
-                <a href="./../login/join.html">회원가입</a>
-                <div class="div-postit"></div>
-              </li>
-              <li class="li-menu">
-                <a href="./../study/studylist.html">스터디 모집</a>
-                <div class="div-postit"></div>
-              </li>
-              <li class="li-menu">
-                <a href="./../board/boardlist.html">자유게시판</a>
-                <div class="div-postit"></div>
-              </li>
-              <li class="li-menu">
-                <a href="./../notice/noticelist.html">공지</a>
-                <div class="div-postit"></div>
-              </li>
-            </ul>
-          </nav>
+        <!-- 메인 페이지 2 -->
+        <!-- 배너 / 마감 스터디 -->
+
+        <!-- 배너 -->
+        <div class="div-page">
+          <div class="main-div-banner">
+            <div class="main-div-slide1">
+              <img src="../../asset/img/main/bn01.gif" alt="이미지1" class="main-img-banner01 main-div-banneractive" />
+            </div>
+            <div class="main-div-slide2">
+              <img src="../../asset/img/main/bn02.gif" alt="이미지2" class="main-img-banner02" />
+            </div>
+          </div>
+          
+            <!-- 마감 임박 스터디 -->
+           <div class="div-end-study">
+            <h4> 마감 임박 스터디 </h4>
+        <ul> 
+          <li> 마감 임박 스터디 목록 1 </li>
+          <li> 마감 임박 스터디 목록 2 </li>
+          <li> 마감 임박 스터디 목록 3 </li>
+        </ul>
         </div>
+        </div>
+
+
+
+        <!-- 메인 페이지 끝 -->
+
+        <div class="div-page">Page 3</div>
+        <div class="div-page">Page 4</div>
+        <div class="div-page">Page 5</div>
+        <div class="div-page">Page 6</div>
+        <div class="div-page">Page 7</div>
+        <div class="div-page">Page 8</div>
+
+        <!-- 📌 빈 페이지 추가 (보이지 않도록 설정) -->
+        <div class="div-page empty-page"></div>
+
+        <!-- 📌 책 뒷표지 -->
+        <div class="div-hard"></div>
       </div>
-    </main>
-  </body>
+    </div>
+    </div>
+
+    <!-- 📌 메뉴바 -->
+
+    <div class="menu-wrapper">
+      <nav class="main-nav-menuwrap">
+        <ul class="main-nav-ul">
+          <li class="li-menu">
+            <a href="./../login/login.html">로그인</a>
+            <div class="div-postit"></div>
+          </li>
+          <li class="li-menu">
+            <a href="./../login/join.html">회원가입</a>
+            <div class="div-postit"></div>
+          </li>
+          <li class="li-menu">
+            <a href="./../study/studylist.html">스터디 모집</a>
+            <div class="div-postit"></div>
+          </li>
+          <li class="li-menu">
+            <a href="./../board/boardlist.html">자유게시판</a>
+            <div class="div-postit"></div>
+          </li>
+          <li class="li-menu">
+            <a href="./../notice/noticelist.html">공지</a>
+            <div class="div-postit"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </main>
+</body>
+
 </html>
