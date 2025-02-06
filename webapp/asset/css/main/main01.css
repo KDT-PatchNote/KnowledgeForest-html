@@ -302,3 +302,64 @@ main{
 .main-div-banner .main-div-banneractive {
   display: block;
 }
+
+
+/* 마감 임박 스터디 전체 정렬 */
+.div-end-study {
+  width: 40%; /* 블록 크기를 조정 (적절히 조절 가능) */
+  text-align: left;
+  font-family: 'Chosunilbo_myungjo', serif;
+  margin-top: 20px;
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto; /* 오른쪽으로 이동 */
+}
+
+/* 세로선 추가 */
+.div-end-study::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #5a3d31;
+  position: absolute;
+  left: -10px; /* 왼쪽 여백 조정 */
+  top: 0;
+}
+
+/* 제목 스타일 */
+.div-end-study h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a3d31;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  position: relative;
+}
+
+/* 말풍선 아이콘 추가 */
+.div-end-study h4::before {
+  content: "❞";
+  font-size: 36px;
+  color: #d4a373;
+  margin-right: 5px;
+}
+
+/* 리스트 스타일 */
+.div-end-study ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+}
+
+.div-end-study li {
+  font-size: 14px;
+  color: #a58d7f;
+  margin-top: 5px;
+}
+
