@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % slides.length;
+    console.log("변경된 배너 인덱스:", currentIndex); // 배너가 변경되는지 확인
     showSlide(currentIndex);
   }, 3500);
 });
@@ -51,31 +52,41 @@ $(document).ready(function () {
 
   let totalPages = $("#DIV-FLIPBOOK").children(".div-page").length; // 실제 콘텐츠 페이지 개수 계산
 
+
+  $(document).ready(function () {
+    // turn.js 초기화 후 원하는 페이지 설정
+    // URL 쿼리스트링에 ?page=3 과 같이 전달하거나 기본값 3 사용
+    const params = new URLSearchParams(window.location.search);
+    const page = parseInt(params.get("page"), 10) || 3;
+    $("#DIV-FLIPBOOK").turn("page", page);
+  });
+
+
+
   // turn.js 초기화
   $("#DIV-FLIPBOOK").turn({
     autoCenter: true,
     pages: totalPages, // 정확한 페이지 수 설정
     when: {
       turning: function (event, page, view) {
+        console.log("책장이 넘어가는 중, 이동할 페이지:", event);
+        console.log("책장이 넘어가는 중, 이동할 페이지:", page);
+        console.log("책장이 넘어가는 중, 이동할 페이지:", view);
+
         if (page === 1 || page === totalPages) {
-          //책이 덮였을 때 -> 메뉴 이름 숨김 (포스트잇만 유지)
+          // 📌 책이 덮였을 때 -> 메뉴 이름 숨김 (포스트잇만 유지)
           $(".main-nav-menuwrap").removeClass("open");
           $(".li-menu").css("transform", `translateX(-100px)`);
         } else {
-          // 책이 펼쳐졌을 때 -> 메뉴 이름 표시
+          // 📌 책이 펼쳐졌을 때 -> 메뉴 이름 표시
           $(".main-nav-menuwrap").addClass("open");
           $(".li-menu").css("transform", `translateX(0px)`);
-        }
-        // 예시: 페이지 3에서 서브페이지로 비동기적으로 이동
-        if (page === 3 || page === 4) {
-          console.log("서브페이지로 비동기적으로 이동합니다.");
-          loadSubPage(); // 비동기 콘텐츠 로딩 함수 호출
         }
       },
     },
   });
 
-  //클릭한 위치에 따라 페이지 이동 (왼쪽=이전, 오른쪽=다음)
+  // 📌 클릭한 위치에 따라 페이지 이동 (왼쪽=이전, 오른쪽=다음)
   $("#DIV-FLIPBOOK").on("click", function (event) {
     let bookWidth = $(this).width(); // 책의 너비 가져오기
     let clickX = event.pageX - $(this).offset().left; // 클릭한 X 좌표
@@ -89,6 +100,7 @@ $(document).ready(function () {
       if (currentPage < totalPages) {
         $(this).turn("next");
       } else {
+        console.log("마지막 페이지는 넘어가지 않음.");
         return false;
       }
     }
@@ -118,31 +130,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-// 비동기적으로 서브페이지에서 특정 부분만 로드하는 함수
-function loadSubPage() {
-  // fetch를 사용하여 tempo.html을 불러오기
-  fetch("./tempo.html") // tempo.html의 경로
-    .then((response) => response.text()) // 서버 응답을 텍스트로 처리
-    .then((data) => {
-      console.log("서브페이지 로드 완료:", data);
-
-      // 'tempo.html'에서 원하는 부분만 추출
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(data, "text/html");
-
-      // tempo.html에서 원하는 부분을 선택
-      // 세번째 <div class="div-page .page3"> 태그 선택
-      const newContent = doc.querySelector(".page3");
-
-      // 해당 요소를 #DIV-FLIPBOOK의 page3에 삽입
-      const page3 = document.querySelector(".div-page.page3"); // page3 선택
-      if (page3) {
-        page3.innerHTML = ""; // 기존 내용 제거
-        page3.appendChild(newContent); // 새 콘텐츠 삽입
-      }
-    })
-    .catch((error) => {
-      console.error("서브페이지 로드 실패:", error);
-    });
-}
