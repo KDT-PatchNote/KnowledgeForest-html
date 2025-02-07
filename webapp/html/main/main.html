@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>지식의 숲</title>
   <!-- jQuery 로드 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- turn.js 로드 -->
@@ -125,32 +125,7 @@
     </div>
   </main>
 
-  <!-- ✅ 모달 기능 추가 -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const loginModal = document.getElementById("loginModal");
-      const openLoginBtn = document.getElementById("openLoginModal");
-      const closeLoginBtn = document.getElementById("closeLoginModal");
 
-      // 로그인 버튼 클릭 시 모달 열기
-      openLoginBtn.addEventListener("click", (event) => {
-        event.preventDefault();
-        loginModal.style.display = "flex";
-      });
-
-      // 닫기 버튼 클릭 시 모달 닫기
-      closeLoginBtn.addEventListener("click", () => {
-        loginModal.style.display = "none";
-      });
-
-      // 모달 배경 클릭 시 닫기
-      window.addEventListener("click", (event) => {
-        if (event.target === loginModal) {
-          loginModal.style.display = "none";
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>

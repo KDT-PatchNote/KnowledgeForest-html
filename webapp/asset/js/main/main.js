@@ -21,7 +21,6 @@
 //   }, 3500);
 // });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".main-div-banner img");
   let currentIndex = 0;
@@ -44,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
   }, 3500);
 });
-
-
-
 
 /**
  * @feature 로그아웃 된 상태에서 스터디 항목을 클릭했을때, 로그인 페이지로 이동시킵니다.
@@ -85,34 +81,32 @@ $(document).ready(function () {
     autoCenter: true,
     pages: totalPages, // 정확한 페이지 수 설정
     when: {
-      turned: function (event, page, view) {
-        console.log("현재 페이지:", page);
+      turning: function (event, page, view) {
+        console.log("책장이 넘어가는 중, 이동할 페이지:", event);
+        console.log("책장이 넘어가는 중, 이동할 페이지:", page);
+        console.log("책장이 넘어가는 중, 이동할 페이지:", view);
+
         if (page === 1 || page === totalPages) {
-
-
-
-
-
-
-
 
           // 📌 책이 덮였을 때 -> 메뉴 이름 숨김 (포스트잇만 유지)
           $(".main-nav-menuwrap").removeClass("open");
+          $(".li-menu").css("transform",`translateX(-100px)`);
         } else {
           // 📌 책이 펼쳐졌을 때 -> 메뉴 이름 표시
           $(".main-nav-menuwrap").addClass("open");
+          $(".li-menu").css("transform",`translateX(0px)`);
+        }
+
+        // 📌 책장을 넘길 때 회원 가입 페이지로 이동 (디자인 변경 없이 유지)
+        if (page === 3 || page === 4) {
+          console.log("회원 가입 페이지로 이동합니다.");
+          setTimeout(() => {
+            // window.open("./../login/join.html", "_self"); // 새 창이 아닌 현재 창에서 이동
+          }, 500); // 0.5초 딜레이 추가 (충돌 방지)
         }
       },
     },
   });
-
-
-
-
-
-
-
-
 
   // 📌 클릭한 위치에 따라 페이지 이동 (왼쪽=이전, 오른쪽=다음)
   $("#DIV-FLIPBOOK").on("click", function (event) {
@@ -135,3 +129,27 @@ $(document).ready(function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loginModal = document.getElementById("loginModal");
+  const openLoginBtn = document.getElementById("openLoginModal");
+  const closeLoginBtn = document.getElementById("closeLoginModal");
+
+  // 로그인 버튼 클릭 시 모달 열기
+  openLoginBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    loginModal.style.display = "flex";
+  });
+
+  // 닫기 버튼 클릭 시 모달 닫기
+  closeLoginBtn.addEventListener("click", () => {
+    loginModal.style.display = "none";
+  });
+
+  // 모달 배경 클릭 시 닫기
+  window.addEventListener("click", (event) => {
+    if (event.target === loginModal) {
+      loginModal.style.display = "none";
+    }
+  });
+});
