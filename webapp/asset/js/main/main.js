@@ -66,8 +66,8 @@ $(document).ready(function () {
           $(".main-nav-menuwrap").addClass("open");
           $(".li-menu").css("transform", `translateX(0px)`);
         }
-        // 예시: 페이지 3에서 서브페이지로 비동기적으로 이동
-        if (page === 3 || page === 4) {
+        // 예시: 페이지 4에서 서브페이지로 비동기적으로 이동
+        if (page === 4 || page === 5) {
           console.log("서브페이지로 비동기적으로 이동합니다.");
           loadSubPage(); // 비동기 콘텐츠 로딩 함수 호출
         }
@@ -76,23 +76,23 @@ $(document).ready(function () {
   });
 
   //클릭한 위치에 따라 페이지 이동 (왼쪽=이전, 오른쪽=다음)
-  $("#DIV-FLIPBOOK").on("click", function (event) {
-    let bookWidth = $(this).width(); // 책의 너비 가져오기
-    let clickX = event.pageX - $(this).offset().left; // 클릭한 X 좌표
-    let currentPage = $(this).turn("page"); // 현재 페이지
+  // $("#DIV-FLIPBOOK").on("click", function (event) {
+  //   let bookWidth = $(this).width(); // 책의 너비 가져오기
+  //   let clickX = event.pageX - $(this).offset().left; // 클릭한 X 좌표
+  //   let currentPage = $(this).turn("page"); // 현재 페이지
 
-    if (clickX < bookWidth / 2) {
-      // 📌 왼쪽 클릭 → 이전 페이지
-      $(this).turn("previous");
-    } else {
-      // 📌 오른쪽 클릭 → 다음 페이지 (마지막 페이지에서는 막기)
-      if (currentPage < totalPages) {
-        $(this).turn("next");
-      } else {
-        return false;
-      }
-    }
-  });
+  //   if (clickX < bookWidth / 2) {
+  //     // 📌 왼쪽 클릭 → 이전 페이지
+  //     $(this).turn("previous");
+  //   } else {
+  //     // 📌 오른쪽 클릭 → 다음 페이지 (마지막 페이지에서는 막기)
+  //     if (currentPage < totalPages) {
+  //       $(this).turn("next");
+  //     } else {
+  //       return false;
+  //     }
+  //   }
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -132,14 +132,26 @@ function loadSubPage() {
       const doc = parser.parseFromString(data, "text/html");
 
       // tempo.html에서 원하는 부분을 선택
-      // 세번째 <div class="div-page .page3"> 태그 선택
-      const newContent = doc.querySelector(".page3");
+      const newContent = doc.querySelector("#STUDYLIST-DIV-PAGE");
 
-      // 해당 요소를 #DIV-FLIPBOOK의 page3에 삽입
-      const page3 = document.querySelector(".div-page.page3"); // page3 선택
+      // 해당 요소를 #DIV-FLIPBOOK의 page4에 삽입
+      const page3 = document.querySelector(".div-page.page4"); // page3 선택
       if (page3) {
         page3.innerHTML = ""; // 기존 내용 제거
         page3.appendChild(newContent); // 새 콘텐츠 삽입
+
+        const script = document.createElement("script");
+        script.src = "../../asset/js/main/tempo.js"; // tempo.js의 실제 경로로 변경 필요
+        document.body.appendChild(script);
+
+        // tempo.html에 포함된 CSS 로드 (링크 태그)
+        const cssLinks = doc.querySelectorAll("link[rel='stylesheet']");
+        cssLinks.forEach((link) => {
+          const newLink = document.createElement("link");
+          newLink.rel = "stylesheet";
+          newLink.href = link.href; // 경로가 올바른지 확인할 것
+          document.head.appendChild(newLink);
+        });
       }
     })
     .catch((error) => {
