@@ -371,6 +371,37 @@ main {
   margin-left: 10px;
 
 }
+.div-quotes-wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.div-greate-people{
+  width: 50%;
+  
+}
+.div-greate-people img{
+  width: 100%;
+}
+.div-quotes{
+  font-size: 30px;
+  font-weight: bold;
+  color: #5a3d31;
+  margin: 20px 0;
+
+}
+
+.div-quotes-author{
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+
+}
+
 
 /* 리스트 스타일 */
 .div-end-study ul {
