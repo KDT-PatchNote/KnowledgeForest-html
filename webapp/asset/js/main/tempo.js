@@ -1,3 +1,9 @@
+// 페이지 로드 되자마자 실행되는 함수
+$(document).ready(function () {
+  console.log("tempo.js 로드 완료");
+  // tempo.js 로드 완료 확인용 로그
+});
+
 const searchInput = document.querySelector(".studylist-input-search");
 const wrapper = document.querySelector(".studylist-div-wrapper");
 
@@ -29,17 +35,14 @@ categoryList.forEach((item) => {
 //
 //스터디 리스트에서 스터디를 선택하면
 //해당 스터디 상세로 이동시키는 함수
-  const studyList = document.querySelectorAll(".studylist-div-grouptitle");
-  studyList.forEach((item) => {
-    item.addEventListener("click", () => {
-      window.location.href = "studylist-detail.html"; // 이동
-    });
+const studyList = document.querySelectorAll(".studylist-div-grouptitle");
+studyList.forEach((item) => {
+  item.addEventListener("click", () => {
+    window.location.href = "studylist-detail.html"; // 이동
   });
+});
 
-  //등록 버튼을 누르면 스터디 등록으로 이동
-  function registerStudy(){
-    window.location.href="./studylist-write.html";
-  }
-
-
-
+//등록 버튼을 누르면 스터디 등록으로 이동
+function registerStudy() {
+  window.location.href = "./studylist-write.html";
+}
